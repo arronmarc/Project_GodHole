@@ -28,7 +28,6 @@ function draw_sprite_3D(sprite, image, x, y, z, isWall, x_frame, y_frame, frame_
     );
 }
 
-
 // Draw sprite in 3D with extensions
 function draw_sprite_3D_ext(sprite, image, x, y, z, xscale, yscale, rot, col, alpha, isWall) {
 	// Create vertex buffer

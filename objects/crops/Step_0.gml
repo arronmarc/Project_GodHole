@@ -4,8 +4,8 @@ if(keyboard_check_pressed(ord("P"))) {
 	}
 	
 if(planting){
-	mx = mouse_x;
-	my = mouse_y;
+	mx = clamp(mouse_x, 0, (room_width div cellSize-1)*cellSize);
+	my = clamp(mouse_y, 0, (room_height div cellSize-1)*cellSize);
 	
 	if(mouse_wheel_up()) selectCrop += 1;
 	if(mouse_wheel_down()) selectCrop -= 1;

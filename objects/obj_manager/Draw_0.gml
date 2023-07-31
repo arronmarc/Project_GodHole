@@ -5,7 +5,7 @@ if (crops.planting = true) {
 var xx = 0;
 var cs = crops.cellSize;
 
-draw_set_alpha(0.1);
+draw_set_alpha(0);
 
 var r = roomWidth div cs;
 repeat (r) {

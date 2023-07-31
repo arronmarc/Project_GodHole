@@ -11,8 +11,8 @@ function instance_create_crop(){
 	var cell = i_grid[# gx, gy];
 	
 	if (cell == 0) {
-		xx = gx*cs;
-		yy = gy*cs;
+		var xx = gx*cs;
+		var yy = gy*cs;
 	
 		//Check for soil
 		var lay_id = layer_get_id("T_Soil");

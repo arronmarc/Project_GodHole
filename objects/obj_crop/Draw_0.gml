@@ -2,6 +2,7 @@ draw_sprite_part(
 	spr_crops, 0, growthStage*frameWidth,
 	cropType*frameHeight, 32, 64, xx,yy
 	);
+	
 //Draw sparkle
 if(sparkle >= 0){
 	draw_sprite(spr_sparkle, sparkle, x+2, y-20);

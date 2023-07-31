@@ -38,6 +38,7 @@
     {"id":{"name":"scr_tile_layers","path":"scripts/scr_tile_layers/scr_tile_layers.yy",},},
     {"id":{"name":"oHitscan","path":"objects/oHitscan/oHitscan.yy",},},
     {"id":{"name":"ChangeWeapon","path":"scripts/ChangeWeapon/ChangeWeapon.yy",},},
+    {"id":{"name":"respawn_crop","path":"scripts/respawn_crop/respawn_crop.yy",},},
     {"id":{"name":"obj_manager","path":"objects/obj_manager/obj_manager.yy",},},
     {"id":{"name":"scr_draw_sprite_3D","path":"scripts/scr_draw_sprite_3D/scr_draw_sprite_3D.yy",},},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},},
