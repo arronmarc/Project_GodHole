@@ -2,7 +2,6 @@
 // Update speed
 hsp = (keyboard_check(ord("D")) - keyboard_check(ord("A"))) * spd;
 vsp = (keyboard_check(ord("S")) - keyboard_check(ord("W"))) * spd;
-zsp += grav;
 
 //Sprinting
 keySprint = keyboard_check(vk_shift);
@@ -71,33 +70,6 @@ if (mouse_check_button(mb_right)) {
     x_frame = 0.9;
 }
 
-
-
-
-
-// Jump
-if ((z >= 0 || place_meeting_3D(x, y, z + 1, obj_collider)) && keyboard_check_pressed(vk_space))
-	zsp = jumpspeed;
-
-// Collide
-// X
-if (place_meeting_3D(x + hsp, y, z, obj_collider)) {
-	while (!place_meeting_3D(x + sign(hsp), y, z, obj_collider)) x += sign(hsp);
-	hsp = 0;
-}
-
-// Y
-if (place_meeting_3D(x, y + vsp, z, obj_collider)) {
-	while (!place_meeting_3D(x, y + sign(vsp), z, obj_collider)) y += sign(vsp);
-	vsp = 0;
-}
-
-// Z
-if (place_meeting_3D(x, y, z + zsp, obj_collider)) {
-	while (!place_meeting_3D(x, y, z + sign(zsp), obj_collider)) z += sign(zsp);
-	zsp = 0;
-}
-
 if(hsp != 0 or vsp != 0) {
 	dir = point_direction(0,0,hsp,vsp);
 	hsp = lengthdir_x(spd, dir);
@@ -107,12 +79,6 @@ if(hsp != 0 or vsp != 0) {
 // Move
 x += hsp;
 y += vsp;
-z += zsp;
 
-// Collide with floor
-if (z > ground_height) {
-	z = ground_height;
-	zsp = 0;
-}
 #endregion
 
