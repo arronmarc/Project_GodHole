@@ -1,4 +1,18 @@
-draw_sprite_3D(sprite_index, image_index, x, y, x_frame, y_frame, frame_size, x_offset, y_offset);
+xpart = floor(x_frame) * frame_size;
+ypart = floor(y_frame) * frame_size;
+xx = x - x_offset;
+yy = y - y_offset;
+
+draw_sprite_part(
+        spr_spritesheet,
+        0,
+        xpart,
+        ypart,
+        frame_size,
+        frame_size,
+        xx,
+        yy
+    );
 
 if(hsp != 0 or vsp != 0) {
 	y_frame = dir/45;

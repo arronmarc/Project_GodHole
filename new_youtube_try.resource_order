@@ -16,7 +16,6 @@
     {"name":"respawn_crop","order":15,"path":"scripts/respawn_crop/respawn_crop.yy",},
     {"name":"obj_manager","order":11,"path":"objects/obj_manager/obj_manager.yy",},
     {"name":"MACROS","order":11,"path":"scripts/MACROS/MACROS.yy",},
-    {"name":"draw_sprite_3D","order":16,"path":"scripts/draw_sprite_3D/draw_sprite_3D.yy",},
     {"name":"PlayerStateFree","order":12,"path":"scripts/PlayerStateFree/PlayerStateFree.yy",},
     {"name":"oBullet","order":9,"path":"objects/oBullet/oBullet.yy",},
     {"name":"r_demo2","order":3,"path":"rooms/r_demo2/r_demo2.yy",},

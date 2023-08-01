@@ -40,7 +40,6 @@
     {"id":{"name":"respawn_crop","path":"scripts/respawn_crop/respawn_crop.yy",},},
     {"id":{"name":"obj_manager","path":"objects/obj_manager/obj_manager.yy",},},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},},
-    {"id":{"name":"draw_sprite_3D","path":"scripts/draw_sprite_3D/draw_sprite_3D.yy",},},
     {"id":{"name":"PlayerStateFree","path":"scripts/PlayerStateFree/PlayerStateFree.yy",},},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
     {"id":{"name":"r_demo2","path":"rooms/r_demo2/r_demo2.yy",},},
