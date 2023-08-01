@@ -1,5 +1,6 @@
 if (sprite != -1) && (mouse_check_button(mb_right))
 {
+	
 	draw_sprite_ext(
 	sprite,
 	image_index,
@@ -11,4 +12,8 @@ if (sprite != -1) && (mouse_check_button(mb_right))
 	image_blend,
 	image_alpha
 	);
+	
 }
+
+
+

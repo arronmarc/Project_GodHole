@@ -13,7 +13,10 @@
     "name": "Objects",
     "path": "folders/Objects.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "par_depthobject",
+    "path": "objects/par_depthobject/par_depthobject.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -34,5 +37,5 @@
     "path": "sprites/spr_crops_picked/spr_crops_picked.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

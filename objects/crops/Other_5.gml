@@ -34,9 +34,5 @@ else {
 //Destroy the data because it gets created every time a room starts
 ds_grid_destroy(ds_crops_instances); 
 
-if (planting){
- planting = false;
-}
-
 
 }

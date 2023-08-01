@@ -46,7 +46,7 @@ if (current_delay == 0) && (projectile != -1)  && (mouse_check_button(mb_right))
 
 	if (ammo[weapon] != 0)
 	{
-		with (instance_create_layer(x+lengthdir_x(length,direction),y+lengthdir_y(length,direction),"Player",projectile))
+		with (instance_create_layer(x+lengthdir_x(length,direction),y+lengthdir_y(length,direction),"Instances",projectile))
 		{
 			direction = other.direction;
 			speed = other.bulletspeed;
@@ -65,17 +65,15 @@ current_delay = max(-1,current_delay-1);
 if (current_delay == -1) current_cd = max(0,current_cd-1);
 current_recoil = max(0,floor(current_recoil*0.8));
 
-
-
 var dir_to_mouse = point_direction(x, y, mouse_x, mouse_y);
 
 if ((dir_to_mouse >= 0) && (dir_to_mouse < 90)) || ((dir_to_mouse > 225) && (dir_to_mouse <= 360))
 {
-    depth = -1000;
+    depth = -100;
 }
 else
 {
-    depth = -100;
+    depth = 0;
 }
 
 

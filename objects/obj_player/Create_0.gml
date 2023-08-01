@@ -1,5 +1,4 @@
 /// @desc Variables
-state = PlayerStateFree;
 spd = 4;
 image_speed = .4;
 

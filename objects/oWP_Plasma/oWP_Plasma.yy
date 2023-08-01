@@ -35,5 +35,5 @@
     "path": "sprites/sWP_Plasma/sWP_Plasma.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

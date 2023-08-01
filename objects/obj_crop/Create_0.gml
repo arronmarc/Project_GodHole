@@ -1,8 +1,6 @@
 frameWidth = 32;
 frameHeight = 64;
 
-z = 0;
-
 cropType = 0;
 daysOld = 0;
 growthStage = 0;
