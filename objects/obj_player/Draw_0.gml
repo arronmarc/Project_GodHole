@@ -14,7 +14,7 @@ draw_sprite_part(
         yy
     );
 
-if(hsp != 0 or vsp != 0) {
+if(moveX != 0 or moveY != 0) {
 	y_frame = dir/45;
 	x_frame += anim_speed/room_speed;
 	if(x_frame >= anim_length) x_frame = 0;

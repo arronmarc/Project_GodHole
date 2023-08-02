@@ -5,4 +5,4 @@ bulletspeed = 3;
 
 direction = point_direction(x,y,mouse_x,mouse_y);
 image_angle = direction;
-image_xscale = max(1,bulletspeed*sprite_width)
+//image_xscale = max(1,bulletspeed*sprite_width)

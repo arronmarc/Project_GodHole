@@ -13,6 +13,7 @@
     {"name":"inst_3A0C70F1","path":"rooms/r_demo/r_demo.yy",},
     {"name":"inst_55F8A4EC","path":"rooms/r_demo/r_demo.yy",},
     {"name":"inst_6718BE42","path":"rooms/r_demo/r_demo.yy",},
+    {"name":"inst_58DBEFA1","path":"rooms/r_demo/r_demo.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -31,6 +32,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"oRoomExit","path":"objects/oRoomExit/oRoomExit.yy",},"propertyId":{"name":"targetY","path":"objects/oRoomExit/oRoomExit.yy",},"value":"288",},
           ],"rotation":0.0,"scaleX":0.5,"scaleY":1.0,"x":320.0,"y":256.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6718BE42","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"crosshair","path":"objects/crosshair/crosshair.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_58DBEFA1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":10.0,"x":384.0,"y":256.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":23,"SerialiseWidth":40,"TileCompressedData":[
 -330,-2147483648,1,479,-39,-2147483648,1,511,-549,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tile_cottage","path":"tilesets/tile_cottage/tile_cottage.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
