@@ -14,7 +14,7 @@ ds_map_add(weapons[0],"automatic",false);
 //AR
 weapons[1] = ds_map_create();
 ds_map_add(weapons[1],"sprite",sWP_AR);
-ds_map_add(weapons[1],"recoil",6);
+ds_map_add(weapons[1],"recoil",8);
 ds_map_add(weapons[1],"recoil_push",8);
 ds_map_add(weapons[1],"damage",1);
 ds_map_add(weapons[1],"projectile",oHitscan);
@@ -27,13 +27,13 @@ ds_map_add(weapons[1],"automatic",false);
 //Plasma
 weapons[2] = ds_map_create();
 ds_map_add(weapons[2],"sprite",sWP_Plasma);
-ds_map_add(weapons[2],"recoil",6);
+ds_map_add(weapons[2],"recoil",8);
 ds_map_add(weapons[2],"recoil_push",8);
 ds_map_add(weapons[2],"damage",3);
 ds_map_add(weapons[2],"projectile",oBullet);
 ds_map_add(weapons[2],"startup",0);
 ds_map_add(weapons[2],"length",5);
-ds_map_add(weapons[2],"cooldown",10);
+ds_map_add(weapons[2],"cooldown",5);
 ds_map_add(weapons[2],"bulletspeed",50);
 ds_map_add(weapons[2],"automatic",true);
 
@@ -46,6 +46,10 @@ ChangeWeapon(0);
 
 //Current cooldown
 current_cd = 0;
-current_delay = -1;
+current_delay = 0;
 current_recoil = 0;
 
+_x = x;
+_imgAngle = image_angle;
+curvePos = 0;
+curveSpd = 0;
