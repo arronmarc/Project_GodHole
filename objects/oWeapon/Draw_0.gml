@@ -1,6 +1,7 @@
 if (sprite != -1) && (mouse_check_button(mb_right))
 {
-	/* //Shadow - draws above player
+	/*
+	//Shadow - draws above player
 	draw_sprite_ext(
 		sprite, 
 		image_index, 

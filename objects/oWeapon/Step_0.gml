@@ -1,7 +1,6 @@
-yoffset = 17;
-xoffset = 16;
+yoffset = -10;
 
-x = obj_player.x + xoffset;
+x = obj_player.x;
 y = obj_player.y + yoffset;
 
 image_angle = direction;
@@ -45,11 +44,7 @@ if (current_delay == 0) && (projectile != -1)  && (mouse_check_button(mb_right))
 {
 	if (ammo[weapon] != 0)
 	{
-		var half_sprite_width = sprite_get_width(sprite_index) / 2;
-		var projectile_radius = sprite_get_width(projectile) / 2;
-		var total_length = half_sprite_width + projectile_radius;
-
-		with (instance_create_layer(x + lengthdir_x(total_length, direction), y + lengthdir_y(total_length, direction), "Instances", projectile)) {
+		with (instance_create_layer(x+lengthdir_x(length, direction), y + lengthdir_y(length, direction), "Instances", projectile)) {
 		    direction = other.direction;
 		    speed = other.bulletspeed;
 		}
@@ -91,7 +86,7 @@ if curvePos >= 1 {
 
 
 
-/*
+
 //For depth sorting based on direction
 var dir_to_mouse = point_direction(x, y, mouse_x, mouse_y);
 
@@ -103,7 +98,7 @@ else
 {
     depth = 0;
 }
-*/
+
 
 if (keyboard_check_pressed(ord("1")) && ammo[1] > 0) ChangeWeapon(1);
 if (keyboard_check_pressed(ord("2")) && ammo[2] > 0) ChangeWeapon(2);

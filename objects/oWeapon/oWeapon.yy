@@ -13,10 +13,7 @@
     "name": "Managers",
     "path": "folders/Objects/Managers.yy",
   },
-  "parentObjectId": {
-    "name": "par_depthobject",
-    "path": "objects/par_depthobject/par_depthobject.yy",
-  },
+  "parentObjectId": null,
   "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -34,5 +31,5 @@
   "solid": false,
   "spriteId": null,
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

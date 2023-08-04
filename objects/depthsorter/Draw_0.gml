@@ -23,18 +23,6 @@ var inst; yy = 0; repeat(inst_num){
 	//Draw yourself
 	with(inst){
 		//Check if instance is of oWeapon type
-        if(object_index == oWeapon){
-            var dir_to_mouse = point_direction(x, y, mouse_x, mouse_y);
-
-            if ((dir_to_mouse >= 0) && (dir_to_mouse < 90)) || ((dir_to_mouse > 225) && (dir_to_mouse <= 360))
-            {
-                depth = -1000;
-            }
-            else
-            {
-                depth = 1000;
-            }
-        }
         event_perform(ev_draw, 0);
 	}
 	yy += 1;
@@ -51,6 +39,7 @@ var viewY = camera_get_view_y(view_camera[0]);
 surface_set_target(shadowSurface);
 draw_clear_alpha(c_black, 0);
 
+/*
 var sx = 10;
 var sy = 15;
 
@@ -67,6 +56,7 @@ x-(sprite_width/2)-viewX,
 y-viewY,
 1);
 }
+*/
 
 gpu_set_fog(false, c_white, 0, 0);
 

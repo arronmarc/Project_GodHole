@@ -53,3 +53,5 @@ _x = x;
 _imgAngle = image_angle;
 curvePos = 0;
 curveSpd = 0;
+
+

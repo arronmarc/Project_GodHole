@@ -119,8 +119,8 @@
   "lineHeight": 14,
   "maintainGms1Font": false,
   "parent": {
-    "name": "new_youtube_try",
-    "path": "new_youtube_try.yyp",
+    "name": "Fonts",
+    "path": "folders/Fonts.yy",
   },
   "pointRounding": 0,
   "ranges": [

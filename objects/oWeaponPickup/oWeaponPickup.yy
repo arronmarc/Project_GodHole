@@ -13,10 +13,7 @@
     "name": "Objects",
     "path": "folders/Objects.yy",
   },
-  "parentObjectId": {
-    "name": "par_depthobject",
-    "path": "objects/par_depthobject/par_depthobject.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -39,5 +36,5 @@
     "path": "sprites/sWP_AR/sWP_AR.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

@@ -87,10 +87,11 @@ if(global.stamina < 0)
 }
 #endregion
 
+
 #region Right mouse button point direction
 if (mouse_check_button(mb_right)) {
     var dir_to_mouse = point_direction(x, y, mouse_x, mouse_y);
-    y_frame = round(dir_to_mouse / 45) % 8; // Calculate the row in the spritesheet, 0-7 for 8 directions.
+    y_frame = ((floor((dir_to_mouse - 45) / 90) + 4) % 4); // Calculate the row in the spritesheet, 0-3 for 4 directions.
 
     if(moveX != 0 || moveY != 0) {
         // Compare the direction of movement and the direction to the mouse
@@ -129,7 +130,9 @@ if(moveX != 0 or moveY != 0) {
 	moveX = lengthdir_x(spd, dir);
 	moveY = lengthdir_y(spd, dir);
 }
+
 #endregion
+
 
 // Move
 x += moveX;
