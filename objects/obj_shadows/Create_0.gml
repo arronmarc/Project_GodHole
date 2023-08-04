@@ -1,0 +1,1 @@
+shadowSurface = surface_create(750, 420);

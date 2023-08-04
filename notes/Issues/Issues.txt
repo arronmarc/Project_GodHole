@@ -1,0 +1,16 @@
+SHADOWS
+Shadows not drawing properly because I'm using 
+draw_sprite_part to draw the player object, would
+need to change how I draw that to work.
+
+Shadows work when specified on specific objects
+in depthsorter draw event but need to find way to have
+them draw on everything. Can't use par_depthobject as
+parent because it doesn't have a sprite. Maybe there is
+a function to say "draw children sprites"?
+
+BULLETS
+Bullets collide with obj_collision at different angles
+based on direction. At larger angles they go through to
+the back of the object.
+No idea why.

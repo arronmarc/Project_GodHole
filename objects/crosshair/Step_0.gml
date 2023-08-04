@@ -1,5 +1,22 @@
-x = mouse_x;
-y = mouse_y;
+var camera = view_camera[0];
+var view_x = camera_get_view_x(camera);
+var view_y = camera_get_view_y(camera);
+var view_width = camera_get_view_width(camera);
+var view_height = camera_get_view_height(camera);
+
+// Get the mouse position
+var _mouse_x = mouse_x;
+var _mouse_y = mouse_y;
+
+// Constrain the mouse position to the view's dimensions
+_mouse_x = clamp(_mouse_x, view_x, view_x + view_width);
+_mouse_y = clamp(_mouse_y, view_y, view_y + view_height);
+
+// Update the position of the object
+x = _mouse_x;
+y = _mouse_y;
+
+
 
 if (mouse_check_button(mb_right)) {
     visible = true;

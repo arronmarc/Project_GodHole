@@ -5,7 +5,7 @@ x = obj_player.x + xoffset;
 y = obj_player.y + yoffset;
 
 image_angle = direction;
-direction = point_direction(x,y-5,mouse_x,mouse_y);
+direction = point_direction(x,y,mouse_x,mouse_y);
 
 
 if (direction > 90) && (direction < 270) 
@@ -45,12 +45,15 @@ if (current_delay == 0) && (projectile != -1)  && (mouse_check_button(mb_right))
 {
 	if (ammo[weapon] != 0)
 	{
-		
-		with (instance_create_layer(_x+lengthdir_x(length,direction),y+lengthdir_y(length,direction),"Instances",projectile))
-		{
-			direction = other.direction;
-			speed = other.bulletspeed;
+		var half_sprite_width = sprite_get_width(sprite_index) / 2;
+		var projectile_radius = sprite_get_width(projectile) / 2;
+		var total_length = half_sprite_width + projectile_radius;
+
+		with (instance_create_layer(x + lengthdir_x(total_length, direction), y + lengthdir_y(total_length, direction), "Instances", projectile)) {
+		    direction = other.direction;
+		    speed = other.bulletspeed;
 		}
+
 		ammo[weapon] -= 1;
 	}
 	current_recoil = _x;
