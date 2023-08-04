@@ -1,5 +1,8 @@
 /// @desc Variables
-spd = 4;
+w_spd = 2;
+n_spd = 4;
+r_spd = 8;
+spd = n_spd;
 image_speed = .4;
 
 x_offset = 10;
@@ -16,7 +19,7 @@ anim_counter = 0;
 
 global.stamina = 100;
 global.staminamax = 100;
-sprintSpeed = 8;
+
 
 if (global.targetX != -1)
 {

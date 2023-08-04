@@ -4,46 +4,57 @@ input_left = keyboard_check(keyboard_check(ord("A")));
 input_right = keyboard_check(keyboard_check(ord("D")));
 input_up = keyboard_check(keyboard_check(ord("W")));
 input_down = keyboard_check(keyboard_check(ord("S")));
+input_walk = keyboard_check(keyboard_check(vk_control));
 input_sprint = keyboard_check(keyboard_check(vk_shift));
 
-moveX = 0;
-moveY = 0;
+//Alter speed
+if(input_walk or input_sprint){
+	spd = abs((input_walk*w_spd) - (input_sprint*r_spd));
+} else {
+	spd = n_spd;
+}
 
+/* //Old 8 directional slter speed
 // Update speed
 moveX = (keyboard_check(ord("D")) - keyboard_check(ord("A"))) * spd;
 moveY = (keyboard_check(ord("S")) - keyboard_check(ord("W"))) * spd;
+*/
 
+//Reset move variables
+moveX = 0;
+moveY = 0;
 
-
+//Intended movement
 moveY = (input_down - input_up) * spd;
-if(moveY == 0){ moveX = (input_right - input_left) * spd; }
+moveX = (input_right - input_left) * spd;
+
+// Normalize diagonal movement
+if (moveX != 0 && moveY != 0) {
+    moveX /= sqrt(2);
+    moveY /= sqrt(2);
+}
+
 
 //Collision checks
 //Horizontal
 if(moveX != 0){
-if(place_meeting(x+moveX, y, obj_collision)){
-	repeat(abs(moveX)){
-if(!place_meeting(x+sign(moveX), y, obj_collision)){
-	x += sign(moveX);
-		} else {
-			break;
+	if(place_meeting(x+moveX, y, obj_collision)){
+		repeat(abs(moveX)){
+			if(!place_meeting(x+sign(moveX), y, obj_collision)){ x += sign(moveX); } 
+			else { break; }
 		}
+		moveX = 0;
 	}
-	moveX = 0;
-}
 }
 //Vertical
 if(moveY != 0){
-if(place_meeting(x, y+moveY, obj_collision)){
-	repeat(abs(moveY)){
-if(!place_meeting(x, y+sign(moveY), obj_collision)){
-	y += sign(moveY);
-		} else {
-			break;
+	if(place_meeting(x, y+moveY, obj_collision)){
+		repeat(abs(moveY)){
+			if(!place_meeting(x, y+sign(moveY), obj_collision)){ y += sign(moveY); } 
+			else { break; }
 		}
+		moveY = 0;
 	}
-	moveY = 0;
-}
 }
 
 #region Sprinting
@@ -52,11 +63,11 @@ keySprint = keyboard_check(vk_shift);
 if(keySprint) && (global.stamina > 0)
 {
 	global.stamina -= 1
-	spd = sprintSpeed
+	spd = r_spd;
 }
 else 
 {
-	spd = 4;
+	spd = n_spd;
 }
 
 
