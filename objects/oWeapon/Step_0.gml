@@ -7,6 +7,7 @@ image_angle = direction;
 direction = point_direction(x,y,mouse_x,mouse_y);
 
 
+
 if (direction > 90) && (direction < 270) 
 {
 	image_yscale = -1; 
@@ -44,8 +45,8 @@ if (current_delay == 0) && (projectile != -1)  && (mouse_check_button(mb_right))
 {
 	if (ammo[weapon] != 0)
 	{
-		with (instance_create_layer(x+lengthdir_x(length, direction), y + lengthdir_y(length, direction), "Instances", projectile)) {
-		    direction = other.direction;
+		with (instance_create_layer(x+lengthdir_x(other.length, direction), y + lengthdir_y(other.length, direction), "Instances", projectile)) {
+		    //direction = other.direction;
 		    speed = other.bulletspeed;
 		}
 
@@ -66,11 +67,19 @@ current_recoil = max(0,floor(current_recoil*0.005));
 curvePos += curveSpd;//move the animation along
 var curveStruct = animcurve_get(acRecoil);
 
-
 //change the guns angle
 var channel = animcurve_get_channel(curveStruct,"angle");
 var angvalue = animcurve_channel_evaluate(channel,curvePos);
-_imgAngle = image_angle - (angvalue*sign(image_yscale));
+
+
+if (mouse_check_button(mb_right) && mouse_check_button(mb_left)) {
+	var aim = point_direction(x,y,mouse_x,mouse_y);
+	_imgAngle = image_angle - (angvalue*sign(image_yscale)) + random_range(aim-5,aim+5);
+} else {
+	_imgAngle = image_angle - (angvalue*sign(image_yscale));
+}
+		
+
 
 //move the guns x pos
 var channel = animcurve_get_channel(curveStruct,"x");

@@ -70,13 +70,28 @@ if(pickup_slot != -1){
 }
 
 else if(ss_item != item.none){
+	//Drop item into game world
+	if(mouse_check_button_pressed(mb_middle)){
+		inv_grid[# 1, selected_slot] -= 1;
+		//destory item in inventory if it was the last one
+		if(inv_grid[# 1, selected_slot] == 0) {
+			inv_grid[# 0, selected_slot] = item.none;
+		}
+		//create the item
+		var inst = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_item);
+		with(inst){
+				item_num = ss_item;
+				x_frame = item_num mod (spr_width/cell_size);
+				y_frame = item_num div (spr_width/cell_size);
+		}
+		show_debug_message("Dropped an item.");
+	}
+	
+	//Drop picked up item into a new slot
 	if(mouse_check_button_pressed(mb_left)){
 		pickup_slot = selected_slot;
 	}
 }
-
-
-
 
 
 
