@@ -1,87 +1,38 @@
-var anim_lengtho = 9;
-var frame_size = 64;
-var anim_speedo = 12;
+//obj_player draw event
 
-if		(moveX < 0) y_frame = 9;
-else if (moveX > 0) y_frame = 11;
-else if (moveY < 0) y_frame = 8;
-else if (moveY > 0) y_frame = 10;
-else x_frame = 0;
-
-var xx = x-x_offset;
-var yy = y-y_offset;
-
-//Increment for animation
-if(x_frame + (anim_speedo/60) < anim_lengtho) { x_frame += anim_speedo/60; }
-else {x_frame = 1; }
-
-//Draw character base
-draw_sprite_part(spr_base, 0, floor(x_frame)*frame_size, y_frame*frame_size, frame_size, frame_size, xx ,yy);
-
-//Draw character feet
-draw_sprite_part(spr_feet, 0, floor(x_frame)*frame_size, y_frame*frame_size, frame_size, frame_size, xx ,yy);
-
-//Draw character legs
-draw_sprite_part(spr_legs, 0, floor(x_frame)*frame_size, y_frame*frame_size, frame_size, frame_size, xx ,yy);
-
-//Draw character shirt
-draw_sprite_part(spr_torso, 0, floor(x_frame)*frame_size, y_frame*frame_size, frame_size, frame_size, xx ,yy);
-
-//Draw character hair
-draw_sprite_part(spr_hair, 0, floor(x_frame)*frame_size, y_frame*frame_size, frame_size, frame_size, xx ,yy);
-
-
-//draw_rectangle_color(bbox_left, bbox_top, bbox_right, bbox_bottom, c_yellow, c_yellow, c_yellow, c_yellow, true);
+//flip the gun image depending on which side it's on
+var flippo = 1;
+if (facingdirection > 90) && (facingdirection < 270) { flippo = -1; } else { flippo = 1; }
 
 
 
+//draw the gun below if facing direction <180deg (depth ordering)
+//if (facingdirection<180) {
+//draw_sprite_ext(sprite3,0,hipx+lengthdir_x(2,facingdirection),hipy,1,flippo,point_direction(x,y,mouse_x,mouse_y),c_white,1) }
 
 
 
+//drawing the body
+draw_sprite_ext(sprite0,0,hipx,hipy+2*sin(degtorad(b))-6,1.8+abs(lengthdir_x(0.5,facingdirection+90)),3,0,c_white,1)
 
+//drawing the head
+draw_sprite_ext(sprite0,0,hipx+lengthdir_x(3,facingdirection),hipy+sin(degtorad(b)+0.5)-16,0.7,1,0,c_white,1)
 
+///drawing the IK legs
+draw_set_color(c_white)
+draw_leg(hipx,hipy,thigh,calf,motion_counter,4)
+draw_leg(hipx,hipy,thigh,calf,motion_counter+180,-4)
 
-/*
-xpart = floor(x_frame) * frame_size;
-ypart = floor(y_frame) * frame_size;
-xx = x - x_offset;
-yy = y - y_offset;
-
-draw_sprite_part_ext(
-		spr_spritesheet, 
-		0, 
-		xpart+2, 
-		ypart+2,
-		frame_size, 
-		frame_size, 
-		xx, 
-		yy, 
-		image_xscale, 
-		image_yscale, 
-		c_navy, 
-		.2
-);
-
-
-
-
-draw_sprite_part(
-        spr_spritesheet,
-        0,
-        xpart,
-        ypart,
-        frame_size,
-        frame_size,
-        xx,
-        yy
-    );
-
-
-if(moveX != 0 or moveY != 0) {
-	y_frame = dir/45;
-	x_frame += anim_speed/room_speed;
-	if(x_frame >= anim_length) x_frame = 0;
-} else {
-	x_frame = 0.9;
+if (facingdirection >= 250 && facingdirection <= 360) {
+draw_leg(hipx,hipy-10,thigh,calf,motion_counter,-7)
 }
-*/
+if (facingdirection >= 90 && facingdirection <= 250) {
+draw_leg(hipx,hipy-10,thigh,calf,motion_counter,7)
+}
+///
+
+
+//draw the gun above if facing direction >=180deg (depth ordering)
+//if (facingdirection>=180) {
+//draw_sprite_ext(sprite3,0,hipx+lengthdir_x(2,facingdirection),hipy,1,flippo,point_direction(x,y,mouse_x,mouse_y),c_white,1) }
+

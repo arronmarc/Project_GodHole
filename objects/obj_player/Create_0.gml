@@ -1,34 +1,17 @@
+//obj_player create event
+IK_create(10,8) //initialist the IK system
+
+dir=0 //variable used for movement system only but not necessary
+b=0 //this is to make the object "bounce" while running - just for game feel
+
 /// @desc Variables
-w_spd = 2;
-n_spd = 4;
-r_spd = 8;
+w_spd = 1;
+n_spd = 2;
+r_spd = 4;
 spd = n_spd;
-//image_speed = .4;
-
-
-x_offset = sprite_get_xoffset(mask_index);
-y_offset = sprite_get_yoffset(mask_index);
-
-x_frame = 1;
-y_frame = 8;
-
-spr_base = spr_base_male_1;
-spr_torso = spr_torso_male_shirt_white;
-spr_legs = spr_legs_male_green;
-spr_hair = spr_hair_male_messy_raven;
-spr_feet = spr_feet_male_boots_brown;
-
-anim_length = 4;
-anim_speed = 8;
-dir = 0;
-image_xscale = 1;
-anim_counter = 0; 
-
-
 
 global.stamina = 100;
 global.staminamax = 100;
-
 
 if (global.targetX != -1)
 {

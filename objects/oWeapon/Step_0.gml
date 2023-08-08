@@ -1,11 +1,11 @@
-yoffset = -10;
+//oWeapon step event
+yoffset = -20;
 
 x = obj_player.x;
 y = obj_player.y + yoffset;
 
 image_angle = direction;
 direction = point_direction(x,y,mouse_x,mouse_y);
-
 
 
 if (direction > 90) && (direction < 270) 
@@ -16,6 +16,8 @@ else
 {
 	image_yscale = 1;
 }
+
+
 
 
 var mouseb;
@@ -78,7 +80,7 @@ if (mouse_check_button(mb_right) && mouse_check_button(mb_left)) {
 } else {
 	_imgAngle = image_angle - (angvalue*sign(image_yscale));
 }
-		
+
 
 
 //move the guns x pos
@@ -94,8 +96,6 @@ if curvePos >= 1 {
 }
 
 
-
-
 //For depth sorting based on direction
 var dir_to_mouse = point_direction(x, y, mouse_x, mouse_y);
 
@@ -107,7 +107,6 @@ else
 {
     depth = 0;
 }
-
 
 if (keyboard_check_pressed(ord("1")) && ammo[1] > 0) ChangeWeapon(1);
 if (keyboard_check_pressed(ord("2")) && ammo[2] > 0) ChangeWeapon(2);

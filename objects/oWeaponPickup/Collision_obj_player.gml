@@ -4,4 +4,3 @@ with (oWeapon)
 	ammo[weapon] += 500;
 }
 instance_destroy()
-
