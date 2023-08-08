@@ -37,6 +37,9 @@ info_y = inv_UI_y + (9 * scale);
 slots_x = info_x;
 slots_y = inv_UI_y + (40 * scale);
 
+desc_x = info_x;
+desc_y = inv_UI_y + (156 * scale);
+
 //Player info
 //0 = GOLD
 //1 = SILVER
@@ -78,10 +81,56 @@ enum item {
 	axe = 13,
 	potion = 14,
 	starfish = 15,
-	muchroom = 16,
+	mushroom = 16,
 	height = 17
 	
 }
+
+#region Create items info grid
+
+ds_items_info = ds_grid_create(2, item.height);
+
+//Item names
+var z = 0, i = 0;
+ds_items_info[# z, i++] = "Nothing";
+ds_items_info[# z, i++] = "Tomato";
+ds_items_info[# z, i++] = "Potato";
+ds_items_info[# z, i++] = "Carrot";
+ds_items_info[# z, i++] = "Artichoke";
+ds_items_info[# z, i++] = "Chilli";
+ds_items_info[# z, i++] = "Gourd";
+ds_items_info[# z, i++] = "Corn";
+ds_items_info[# z, i++] = "Wood";
+ds_items_info[# z, i++] = "Stone";
+ds_items_info[# z, i++] = "Bucket";
+ds_items_info[# z, i++] = "Chair";
+ds_items_info[# z, i++] = "Picture";
+ds_items_info[# z, i++] = "Axe";
+ds_items_info[# z, i++] = "Potion";
+ds_items_info[# z, i++] = "Starfish";
+ds_items_info[# z, i++] = "Mushroom";
+
+//Item descriptions
+var z = 1, i = 0;
+ds_items_info[# z, i++] = "Empty slot.";
+ds_items_info[# z, i++] = "It's a fruit.";
+ds_items_info[# z, i++] = "It's a vegetable.";
+ds_items_info[# z, i++] = "It's a vegetable.";
+ds_items_info[# z, i++] = "It's a vegetable.";
+ds_items_info[# z, i++] = "It's a vegetable.";
+ds_items_info[# z, i++] = "It's a vegetable.";
+ds_items_info[# z, i++] = "It's a vegetable.";
+ds_items_info[# z, i++] = "It came from a tree.";
+ds_items_info[# z, i++] = "Found in the ground.";
+ds_items_info[# z, i++] = "Great for holding water. Great for holding water. Great for holding water.";
+ds_items_info[# z, i++] = "For sitting etc.";
+ds_items_info[# z, i++] = "For looking at.";
+ds_items_info[# z, i++] = "Chops real nice.";
+ds_items_info[# z, i++] = "Doesn't do anything.";
+ds_items_info[# z, i++] = "Sea boy.";
+ds_items_info[# z, i++] = "It's a fungi.";
+
+#endregion
 
 var yy = 0; repeat(inv_slots){
 	ds_inventory[# 0, yy] = irandom_range(1, item.height-1);
