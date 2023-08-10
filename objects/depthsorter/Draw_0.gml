@@ -1,4 +1,5 @@
 //Resize the grid
+
 var inst_num = instance_number(par_depthobject);
 var dgrid = ds_depthgrid;
 
@@ -24,6 +25,7 @@ var inst; yy = 0; repeat(inst_num){
 	with(inst){
 		//Check if instance is of oWeapon type
         event_perform(ev_draw, 0);
+		
 	}
 	yy += 1;
 }

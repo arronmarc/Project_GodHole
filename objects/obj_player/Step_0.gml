@@ -1,4 +1,5 @@
 #region MOVEMENT
+
 //Update input
 input_left = keyboard_check(keyboard_check(ord("A")));
 input_right = keyboard_check(keyboard_check(ord("D")));

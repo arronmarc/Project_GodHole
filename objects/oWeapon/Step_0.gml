@@ -74,7 +74,9 @@ var angvalue = animcurve_channel_evaluate(channel,curvePos);
 
 if (mouse_check_button(mb_right) && mouse_check_button(mb_left)) {
 	var aim = point_direction(x,y,mouse_x,mouse_y);
-	_imgAngle = image_angle - (angvalue*sign(image_yscale)) + random_range(aim-5,aim+5);
+	//Use this line for random angles
+	//_imgAngle = image_angle - (angvalue*sign(image_yscale)) + random_range(aim-5,aim+5);
+	_imgAngle = image_angle - (angvalue*sign(image_yscale));
 } else {
 	_imgAngle = image_angle - (angvalue*sign(image_yscale));
 }

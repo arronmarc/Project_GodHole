@@ -47,7 +47,9 @@
   "resources": [
     {"id":{"name":"sFrontstamina","path":"sprites/sFrontstamina/sFrontstamina.yy",},},
     {"id":{"name":"PlayerStateDead","path":"scripts/PlayerStateDead/PlayerStateDead.yy",},},
+    {"id":{"name":"spr_depthgrass","path":"sprites/spr_depthgrass/spr_depthgrass.yy",},},
     {"id":{"name":"spr_tile_terrain","path":"sprites/spr_tile_terrain/spr_tile_terrain.yy",},},
+    {"id":{"name":"test_obj","path":"objects/test_obj/test_obj.yy",},},
     {"id":{"name":"oHitscan","path":"objects/oHitscan/oHitscan.yy",},},
     {"id":{"name":"spr_hair_female_ponytail_raven","path":"sprites/spr_hair_female_ponytail_raven/spr_hair_female_ponytail_raven.yy",},},
     {"id":{"name":"spr_feet_male_boots_brown","path":"sprites/spr_feet_male_boots_brown/spr_feet_male_boots_brown.yy",},},
@@ -96,6 +98,7 @@
     {"id":{"name":"merge_number","path":"scripts/merge_number/merge_number.yy",},},
     {"id":{"name":"spr_spritesheet","path":"sprites/spr_spritesheet/spr_spritesheet.yy",},},
     {"id":{"name":"spr_inventory_UI","path":"sprites/spr_inventory_UI/spr_inventory_UI.yy",},},
+    {"id":{"name":"oGrass","path":"objects/oGrass/oGrass.yy",},},
     {"id":{"name":"sCrosshair","path":"sprites/sCrosshair/sCrosshair.yy",},},
     {"id":{"name":"spr_tilemap_custom","path":"sprites/spr_tilemap_custom/spr_tilemap_custom.yy",},},
     {"id":{"name":"spr_base_male_1","path":"sprites/spr_base_male_1/spr_base_male_1.yy",},},
@@ -132,6 +135,7 @@
     {"id":{"name":"oWP_Plasma","path":"objects/oWP_Plasma/oWP_Plasma.yy",},},
     {"id":{"name":"sPlayerDie","path":"sprites/sPlayerDie/sPlayerDie.yy",},},
     {"id":{"name":"sound_machinegun","path":"sounds/sound_machinegun/sound_machinegun.yy",},},
+    {"id":{"name":"sh_grass","path":"shaders/sh_grass/sh_grass.yy",},},
     {"id":{"name":"r_demo","path":"rooms/r_demo/r_demo.yy",},},
   ],
   "RoomOrderNodes": [
