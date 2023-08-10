@@ -35,3 +35,5 @@ IK_step(thigh,calf) //run the IK system
 
 ///JUST FOR THE DEMO
 bounce_scr() //not necessary for IK
+
+arm_move_dir(mouse_x, mouse_y, 1, true, obj_player.x, obj_player.y)

@@ -19,3 +19,6 @@ if (global.targetX != -1)
 	y= global.targetY;
 	direction = global.targetDirection;
 }
+
+arm_initialize(30, 2, spr_arm)
+arm_initialize_seg(2, 15);

@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_character_mask",
-    "path": "sprites/spr_character_mask/spr_character_mask.yy",
+    "name": "spr_player_head",
+    "path": "sprites/spr_player_head/spr_player_head.yy",
   },
   "spriteMaskId": null,
   "visible": false,
