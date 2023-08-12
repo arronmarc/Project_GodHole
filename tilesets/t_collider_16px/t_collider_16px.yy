@@ -15,10 +15,7 @@
     "name": "Tilesets",
     "path": "folders/Tilesets.yy",
   },
-  "spriteId": {
-    "name": "s_collider_16px",
-    "path": "sprites/s_collider_16px/s_collider_16px.yy",
-  },
+  "spriteId": null,
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "Default",

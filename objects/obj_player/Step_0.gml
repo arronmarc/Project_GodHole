@@ -16,3 +16,6 @@ if (rollTimer > 0) {
 }
 
 
+//Update the position of the occluder to match this instance's position
+occluder.x = x;
+occluder.y = y;
