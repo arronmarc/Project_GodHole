@@ -5,7 +5,7 @@ if (mouse_check_button(mb_right)) {
 
     var _dir = point_direction(x, y-25, mouse_x, mouse_y);
 
-	draw_line(x, y-25, mouse_x, mouse_y);
+	//draw_line(x, y-40, mouse_x, mouse_y);
 
     // Adjust the angle based on the character's orientation
     if (image_xscale < 0) {

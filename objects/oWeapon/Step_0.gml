@@ -1,6 +1,7 @@
-yoffset = -10;
+yoffset = -40;
+xoffset = -10;
 
-x = obj_player.x;
+x = obj_player.x + xoffset;
 y = obj_player.y + yoffset;
 
 image_angle = direction;

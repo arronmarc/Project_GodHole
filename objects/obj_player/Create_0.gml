@@ -29,6 +29,10 @@ skidTimer = 0;
 skidFriction = 0.5;  // Adjust this to achieve the desired skidding effect
 lastMovedDirection = 0; // default to right (0 degrees in GM:S)
 
+//Pixel shader setup
+pixel = shader_get_uniform(sh_pixel,"pixel");
+size = 1;
+
 
 global.stamina = 500;
 global.staminamax = 500;
