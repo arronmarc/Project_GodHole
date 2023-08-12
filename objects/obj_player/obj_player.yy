@@ -4,9 +4,8 @@
   "name": "obj_player",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":58,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -34,12 +33,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_character_mask",
-    "path": "sprites/spr_character_mask/spr_character_mask.yy",
+    "name": "spr_default",
+    "path": "sprites/spr_default/spr_default.yy",
   },
-  "spriteMaskId": {
-    "name": "spr_character_mask",
-    "path": "sprites/spr_character_mask/spr_character_mask.yy",
-  },
+  "spriteMaskId": null,
   "visible": false,
 }

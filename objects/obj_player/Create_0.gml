@@ -1,33 +1,37 @@
-/// @desc Variables
-w_spd = 2;
+//Create event
+state = PlayerStateFree;
+
+skeleton_animation_mix("Idle","Walk",0.03);
+skeleton_animation_mix("Walk","Idle",0.03);
+skeleton_animation_mix("Idle","Run",0.03);
+skeleton_animation_mix("Run","Idle",0.03);
+skeleton_animation_mix("Run","Crouch",0.03);
+skeleton_animation_mix("Crouch","Run",0.03);
+skeleton_animation_mix("Idle","Crouch",0.03);
+skeleton_animation_mix("Crouch","Idle",0.03);
+skeleton_animation_mix("Idle crouch","Crouch",0.03);
+skeleton_animation_mix("Crouch","Idle crouch",0.03);
+skeleton_animation_mix("Idle","Idle crouch",0.03);
+skeleton_animation_mix("Idle crouch","Idle",0.03);
+
+skeleton_attachment_set("Arm_bottom2", "Arm_bottom")
+
+w_spd = 1;
 n_spd = 4;
 r_spd = 8;
 spd = n_spd;
-//image_speed = .4;
+isCrouching = false;
+rollSpd = 10;
+rollDistance = 10;
+rollTimer = 0;
+isRolling = false;
+skidTimer = 0;
+skidFriction = 0.5;  // Adjust this to achieve the desired skidding effect
+lastMovedDirection = 0; // default to right (0 degrees in GM:S)
 
 
-x_offset = sprite_get_xoffset(mask_index);
-y_offset = sprite_get_yoffset(mask_index);
-
-x_frame = 1;
-y_frame = 8;
-
-spr_base = spr_base_male_1;
-spr_torso = spr_torso_male_shirt_white;
-spr_legs = spr_legs_male_green;
-spr_hair = spr_hair_male_messy_raven;
-spr_feet = spr_feet_male_boots_brown;
-
-anim_length = 4;
-anim_speed = 8;
-dir = 0;
-image_xscale = 1;
-anim_counter = 0; 
-
-
-
-global.stamina = 100;
-global.staminamax = 100;
+global.stamina = 500;
+global.staminamax = 500;
 
 
 if (global.targetX != -1)
