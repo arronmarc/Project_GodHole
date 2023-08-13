@@ -17,5 +17,8 @@ function AttachWeapon(){
             image_xscale = sign(moveX);
         }
     }
+	
+	
+	
 
 }

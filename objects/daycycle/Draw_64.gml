@@ -1,3 +1,5 @@
+//Draw GUI event for daycycle
+
 if(draw_daylight){
 var c = light_colour;
 draw_set_alpha(darkness);

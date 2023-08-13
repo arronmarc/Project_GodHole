@@ -1,3 +1,5 @@
+//Create event for daycycle
+
 seconds = 0;
 minutes = 0;
 hours = 0;
@@ -6,10 +8,10 @@ day = 1;
 season = 1;
 year = 1;
 
-time_increment = 10 //seconds per step
+time_increment = 100 //seconds per step
 time_pause = true;
 
-max_darkness = 0.7;
+max_darkness = 0.4;
 darkness = 0;
 light_colour = c_black;
 draw_daylight = false;

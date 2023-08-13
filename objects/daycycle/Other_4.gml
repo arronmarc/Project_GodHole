@@ -1,3 +1,5 @@
+//Room start event for daycycle
+
 switch(room){
 	case r_demo:
 	case r_demo2: draw_daylight = true; break;

@@ -1,3 +1,6 @@
+//Step event for daycycle
+
+
 //Pause the day/night cycle
 if(keyboard_check_pressed(ord("T"))){ time_pause = !time_pause; }
 if(time_pause) exit;
@@ -33,6 +36,7 @@ if(draw_daylight){
 			pend = phase.nighttime;
 			
 	} else {														//night
+			
 			darks = [max_darkness];
 			colours = [merge_colour(c_black,c_navy,0.3)];
 			pstart = phase.nighttime;
@@ -59,6 +63,7 @@ if(draw_daylight){
 	}
 	
 	#endregion
+
 }
 
 #region Cycle check

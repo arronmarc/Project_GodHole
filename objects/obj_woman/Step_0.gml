@@ -1,29 +1,27 @@
-//Collision checks
-//Horizontal
-if(moveX != 0){
-	if(place_meeting(x+moveX, y, obj_collision)){
-		repeat(abs(moveX)){
-			if(!place_meeting(x+sign(moveX), y, obj_collision)){ x += sign(moveX); } 
-			else { break; }
-		}
-		moveX = 0;
-	}
+if (moveX > 0) {
+    image_xscale = 1; // Facing right
+} else if (moveX < 0) {
+    image_xscale = -1; // Facing left
 }
-//Vertical
-if(moveY != 0){
-	if(place_meeting(x, y+moveY, obj_collision)){
-		repeat(abs(moveY)){
-			if(!place_meeting(x, y+sign(moveY), obj_collision)){ y += sign(moveY); } 
-			else { break; }
-		}
-		moveY = 0;
-	}
+
+
+if (moveX != 0 or moveY != 0) {
+      
+        if skeleton_animation_get() != "Walk" {
+            skeleton_animation_set("Walk");
+        }
+    } else {
+        if skeleton_animation_get() != "Idle" {
+            skeleton_animation_set("Idle");
+        }
 }
+
+	
+// Check for collisions
+var move_values = CollisionCheck(moveX, moveY);
 
 
 // Move
 x += moveX;
 y += moveY;
-
-
 

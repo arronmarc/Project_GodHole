@@ -33,7 +33,6 @@ lastMovedDirection = 0; // default to right (0 degrees in GM:S)
 pixel = shader_get_uniform(sh_pixel,"pixel");
 size = 1;
 
-
 global.stamina = 500;
 global.staminamax = 500;
 

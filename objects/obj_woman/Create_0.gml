@@ -1,23 +1,24 @@
-/// @desc Variables
+//Create event
+skeleton_animation_mix("Idle","Walk",0.03);
+skeleton_animation_mix("Walk","Idle",0.03);
+skeleton_animation_mix("Idle","Run",0.03);
+skeleton_animation_mix("Run","Idle",0.03);
+skeleton_animation_mix("Run","Crouch",0.03);
+skeleton_animation_mix("Crouch","Run",0.03);
+skeleton_animation_mix("Idle","Crouch",0.03);
+skeleton_animation_mix("Crouch","Idle",0.03);
+skeleton_animation_mix("Idle crouch","Crouch",0.03);
+skeleton_animation_mix("Crouch","Idle crouch",0.03);
+skeleton_animation_mix("Idle","Idle crouch",0.03);
+skeleton_animation_mix("Idle crouch","Idle",0.03);
+
+skeleton_attachment_set("Arm_bottom2", "Arm_bottom")
+
 w_spd = 1;
 n_spd = 4;
 r_spd = 8;
 spd = w_spd;
-//image_speed = .4;
-
 moveX = 0;
 moveY = 0;
-
-x_offset = sprite_get_xoffset(mask_index);
-y_offset = sprite_get_yoffset(mask_index);
-
-x_frame = 1;
-y_frame = 8;
-
-spr_base = spr_base_female_1;
-spr_torso = spr_torso_female_sleeveless_white;
-spr_legs = spr_legs_female_pants_teal;
-spr_hair = spr_hair_female_ponytail_raven;
-spr_feet = spr_feet_female_boots_black;
 
 alarm[1] = 1;
