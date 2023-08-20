@@ -11,13 +11,11 @@ year = 1;
 time_increment = 100 //seconds per step
 time_pause = true;
 
-max_darkness = 0.4;
-darkness = 0;
-light_colour = c_black;
+max_darkness = 1;
+global.darkness = 0;
 draw_daylight = false;
 
-guiWidth = display_get_gui_width();
-guiHeight = display_get_gui_height();
+global.isDay = false;
 
 enum phase {
 	sunrise = 6,

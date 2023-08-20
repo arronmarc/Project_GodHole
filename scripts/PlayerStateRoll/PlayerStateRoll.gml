@@ -34,5 +34,5 @@ function PlayerStateRoll() {
         state = PlayerFinishRoll;
     }
 
-    show_debug_message("Rolling in direction: " + string(lastMoveDir));
+
 }

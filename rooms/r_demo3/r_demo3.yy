@@ -20,7 +20,7 @@
 -2147483648,2,126,127,-9,-2147483648,2,399,400,-7,-2147483648,7,158,159,-2147483648,-2147483648,88,89,90,-4,
 -2147483648,2,431,432,-11,-2147483648,3,120,121,122,-4,-2147483648,2,463,464,-11,-2147483648,3,152,153,
 154,-41,-2147483648,3,845,846,847,-3,-2147483648,2,875,876,-12,-2147483648,9,877,878,879,-2147483648,1018,
--2147483648,907,908,1001,-37,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tile_terrain","path":"tilesets/tile_terrain/tile_terrain.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-2147483648,907,908,1001,-37,-2147483648,],"TileDataFormat":1,},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4CD2558A_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oWeapon","path":"objects/oWeapon/oWeapon.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52B01C57_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oRoomExit","path":"objects/oRoomExit/oRoomExit.yy",},"properties":[
@@ -32,7 +32,7 @@
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Walls","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
 -60,488,-180,0,],"TileDataFormat":1,},"tilesetId":{"name":"tile_cottage","path":"tilesets/tile_cottage/tile_cottage.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Floor","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
--220,621,-7,0,-2,621,-11,0,],"TileDataFormat":1,},"tilesetId":{"name":"tile_terrain","path":"tilesets/tile_terrain/tile_terrain.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-220,621,-7,0,-2,621,-11,0,],"TileDataFormat":1,},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Rooms",

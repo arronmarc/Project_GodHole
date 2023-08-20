@@ -13,7 +13,7 @@ grass_rect_ver = 48; //Vertical (y) size of rectangle
 //----------------
 
 //General variables
-grass_number = 50000; //Number of grass sprites inside the room
+grass_number = 10000; //Number of grass sprites inside the room
 grass_sprite = spr_depthgrass; //Sprite used for the grass
 
 grass_random_image = true; //Can the grass use any sub-image from the sprite, at random? 
@@ -34,8 +34,8 @@ pattern_size = 1; //Sway pattern size
 bugfix = false; // Enable this if facing a specific bug (see Docs)
 
 //DISCARDED
-//grass_player_collision = noone;
-//grass_bend_amount = 5;
+grass_player_collision = noone;
+grass_bend_amount = 5;
 #endregion
 
 #region DO NOT TWEAK
@@ -50,8 +50,8 @@ if (grass_animate){
 	uni_spd = shader_get_uniform(sh_grass, "wind_spd");
 	uni_patbool = shader_get_uniform(sh_grass, "patbool");
 	uni_pattern = shader_get_uniform(sh_grass, "pattern");
-	//uni_pl_pos = shader_get_uniform(sh_grass, "pl_pos");
-	//uni_bend = shader_get_uniform(sh_grass, "bend");
+	uni_pl_pos = shader_get_uniform(sh_grass, "pl_pos");
+	uni_bend = shader_get_uniform(sh_grass, "bend");
 }
 
 //depth

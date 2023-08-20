@@ -33,9 +33,9 @@
 379,380,379,380,379,380,379,380,379,380,379,380,380,379,380,379,380,379,380,-3,379,30,380,379,380,379,380,379,380,379,380,379,379,380,379,380,379,380,379,380,
 379,380,379,380,379,380,379,380,379,380,379,380,-17,0,4,379,380,379,380,-36,0,4,379,380,379,380,-36,0,4,379,380,379,380,-36,0,-3,379,1,380,-36,
 0,4,379,380,379,380,-36,0,4,379,380,379,380,-12,0,-7,-2147483648,-17,0,4,379,380,379,380,-8,0,-11,-2147483648,-17,0,4,379,380,379,380,-8,0,-21,-2147483648,-7,
-0,4,379,380,379,380,-8,0,-23,-2147483648,-17,0,-11,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tile_terrain","path":"tilesets/tile_terrain/tile_terrain.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+0,4,379,380,379,380,-8,0,-23,-2147483648,-17,0,-11,-2147483648,],"TileDataFormat":1,},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Base_terrain","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":23,"SerialiseWidth":40,"TileCompressedData":[
--733,351,1,383,-78,351,1,383,-107,351,],"TileDataFormat":1,},"tilesetId":{"name":"tile_terrain","path":"tilesets/tile_terrain/tile_terrain.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-733,351,1,383,-78,351,1,383,-107,351,],"TileDataFormat":1,},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Rooms",

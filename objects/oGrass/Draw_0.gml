@@ -15,13 +15,13 @@ if (grass_animate){
 	shader_set_uniform_f(uni_patbool, grass_pattern);
 	shader_set_uniform_f(uni_pattern, 0.1/pattern_size);
 	
-	//if (grass_player_collision!=noone){
-	//	shader_set_uniform_f(uni_pl_pos, grass_player_collision.x, grass_player_collision.y);
-	//}else{
-	//	shader_set_uniform_f(uni_pl_pos, -1000, -1000);
-	//}
+	if (grass_player_collision!=noone){
+		shader_set_uniform_f(uni_pl_pos, grass_player_collision.x, grass_player_collision.y);
+	}else{
+		shader_set_uniform_f(uni_pl_pos, -1000, -1000);
+	}
 	
-	//shader_set_uniform_f(uni_bend, grass_bend_amount);
+	shader_set_uniform_f(uni_bend, grass_bend_amount);
 }
 
 //Submit vertex buffer

@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_tile_terrain",
-  "bbox_bottom": 1023,
+  "bbox_bottom": 1151,
   "bbox_left": 0,
-  "bbox_right": 1023,
+  "bbox_right": 1151,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8076c4c4-7bf4-4069-a86c-c6496f305554",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"192b03be-3ebd-4230-854c-b9b8782a0abc",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 1024,
+  "height": 1152,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d06909d7-323d-4d0f-809d-c58f0274af4b","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d84dd313-65f2-4d07-a40a-2edc5fbc856d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8076c4c4-7bf4-4069-a86c-c6496f305554","path":"sprites/spr_tile_terrain/spr_tile_terrain.yy",},},},"Disabled":false,"id":"e89b7f9f-5afe-48a1-a8a7-44a1cf9d9cc3","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"192b03be-3ebd-4230-854c-b9b8782a0abc","path":"sprites/spr_tile_terrain/spr_tile_terrain.yy",},},},"Disabled":false,"id":"24fcc0c4-2428-4205-bc0f-9ec6920a71b2","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1024,
+  "width": 1152,
 }
