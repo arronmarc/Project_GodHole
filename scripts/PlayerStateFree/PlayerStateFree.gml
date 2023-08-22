@@ -23,9 +23,25 @@ function PlayerStateFree(){
     }
 
     // 3. CALCULATE MOVEMENT
+	// Determine target speed based on input and state
+	var targetSpeed;
+	if (_inputX != 0 || _inputY != 0) { // If there's any movement input
+	    targetSpeed = spd; // Target speed is whichever speed is currently active
+	} else {
+	    targetSpeed = 0; // If there's no input, target speed is 0
+	}
 
-    moveX = _inputX * spd;
-    moveY = _inputY * spd;
+	// Accelerate or decelerate towards the target speed
+	if (currentSpeed < targetSpeed) {
+	    currentSpeed = min(currentSpeed + aSpeed, targetSpeed); // Accelerate
+	} else if (currentSpeed > targetSpeed) {
+	    currentSpeed = max(currentSpeed - dSpeed, targetSpeed); // Decelerate
+	}
+
+	// Now apply currentSpeed to the movement
+	moveX = _inputX * currentSpeed;
+	moveY = _inputY * currentSpeed;
+
 
     // Normalize diagonal movement
     if (moveX != 0 && moveY != 0) {

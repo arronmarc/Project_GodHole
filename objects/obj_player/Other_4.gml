@@ -14,3 +14,7 @@ occluder.AddEdge(bbox_left  - x, bbox_top    - y, bbox_right - x, bbox_top    - 
 occluder.AddEdge(bbox_right - x, bbox_top    - y, bbox_right - x, bbox_bottom - y);
 occluder.AddEdge(bbox_right - x, bbox_bottom - y, bbox_left  - x, bbox_bottom - y);
 occluder.AddEdge(bbox_left  - x, bbox_bottom - y, bbox_left  - x, bbox_top    - y);
+
+light = new BulbLight(objLightController.renderer, spr_torch, 0, x, y);
+light.RemoveFromRenderer(objLightController.renderer);
+light_active = false;

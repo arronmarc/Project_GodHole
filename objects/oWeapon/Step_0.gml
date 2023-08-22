@@ -111,7 +111,7 @@ else
     depth = 0;
 }
 
-
 if (keyboard_check_pressed(ord("1")) && ammo[1] > 0) ChangeWeapon(1);
 if (keyboard_check_pressed(ord("2")) && ammo[2] > 0) ChangeWeapon(2);
 if (keyboard_check_pressed(ord("0"))) ChangeWeapon(0);
+

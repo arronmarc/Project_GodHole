@@ -1,5 +1,8 @@
 function PlayerStateRoll() {
+
+
     if (!isRolling) {
+		global.stamina -= 100;
         isRolling = true;
         spd = rollSpd;
         moveDistanceRemaining = rollDistance; 
@@ -25,6 +28,7 @@ function PlayerStateRoll() {
     // Apply the movement
     x += move_values[0];
     y += move_values[1];
+	
 
     moveDistanceRemaining = max(0, moveDistanceRemaining - spd);
 

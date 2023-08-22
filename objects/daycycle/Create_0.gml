@@ -8,7 +8,7 @@ day = 1;
 season = 1;
 year = 1;
 
-time_increment = 100 //seconds per step
+time_increment = 10 //seconds per step
 time_pause = true;
 
 max_darkness = 1;

@@ -3,7 +3,7 @@
 if (!global.isDay) {
     // Interpolation code remains unchanged
     var dayColor = c_white; 
-    var nightColor = c_dkgray; 
+    var nightColor = c_navy; 
   ///Draw End Event for objLightController
 
 // Interpolation between day and night colors based on global.darkness
