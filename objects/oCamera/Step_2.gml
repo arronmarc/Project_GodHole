@@ -39,14 +39,25 @@ else
     crosshair.visible = true;   // Show crosshair
 
     // Control the crosshair's position with the right thumbstick
+    var aimSpeedFactor = 50; // Adjust this for speed. Lower is slower.
     var aimX = gamepad_axis_value(0, gp_axisrh);
     var aimY = gamepad_axis_value(0, gp_axisrv);
     
     if (abs(aimX) > 0.2 || abs(aimY) > 0.2) {
-        crosshair.x = obj_player.x + aimX * (RES_W / 2);
-        crosshair.y = obj_player.y + aimY * (RES_H / 2);
+        crosshair.x += aimX * aimSpeedFactor;
+        crosshair.y += aimY * aimSpeedFactor;
     }
     
+    // Keep the crosshair within a specific range from the player for better control
+    var maxDist = RES_W / 1;  // This can be adjusted to your liking.
+    var distance = point_distance(obj_player.x, obj_player.y, crosshair.x, crosshair.y);
+    
+    if (distance > maxDist) {
+        var dir = point_direction(obj_player.x, obj_player.y, crosshair.x, crosshair.y);
+        crosshair.x = obj_player.x + lengthdir_x(maxDist, dir);
+        crosshair.y = obj_player.y + lengthdir_y(maxDist, dir);
+    }
+
     // Camera targets a point between the player and the crosshair
     targetX = (crosshair.x + obj_player.x) / 2 - RES_W/2;
     targetY = (crosshair.y + obj_player.y) / 2 - RES_H/2;
@@ -54,7 +65,7 @@ else
     targetH = RES_H * focusZoom;
 }
 
-// Boundary checks for the camera movement (as in your existing code)
+// Boundary checks for the camera movement
 if (obj_player.x < leftBound)
 {
     targetX -= (leftBound - obj_player.x) * panFactor;
@@ -73,7 +84,7 @@ else if (obj_player.y > bottomBound)
     targetY += (obj_player.y - bottomBound) * panFactor;
 }
 
-// Lerp and other functions to smoothen the camera movement (again, as in your existing code)
+// Lerp and other functions to smoothen the camera movement
 var lerpSpeed = 0.05; 
 camX = lerp(camX, targetX, lerpSpeed);
 camY = lerp(camY, targetY, lerpSpeed);

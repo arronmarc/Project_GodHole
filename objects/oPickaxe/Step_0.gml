@@ -1,3 +1,7 @@
+if (!global.pause) 
+{
+
+
 rotation = lerp(rotation, 45, 0.1);
 
 image_angle = rotation * obj_player.image_xscale;
@@ -19,3 +23,4 @@ with (_breakable) {
 	}
 }
 if (cooldown > 0) cooldown--;
+}

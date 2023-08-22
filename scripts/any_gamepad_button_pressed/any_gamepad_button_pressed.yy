@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Script343",
+  "name": "any_gamepad_button_pressed",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

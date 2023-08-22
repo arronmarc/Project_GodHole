@@ -25,6 +25,8 @@ if (hp <= 0) {
 			type = _res;
 			
 			sprite_index = global.itemSprite[_res];
+			
+			z = -other.sprite_height / 2;
 		}
 		
 	}

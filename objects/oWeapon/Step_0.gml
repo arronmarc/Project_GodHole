@@ -1,3 +1,7 @@
+if (!global.pause) 
+{
+
+
 yoffset = -40;
 xoffset = -10;
 
@@ -6,18 +10,6 @@ y = obj_player.y + yoffset;
 
 
 bulletDirection = point_direction(x, y, crosshair.x, crosshair.y);
-image_angle = bulletDirection;
-
-
-
-if (bulletDirection > 90) && (bulletDirection < 270) 
-{
-	image_yscale = -1; 
-}
-else 
-{
-	image_yscale = 1;
-}
 
 
 var mouseb;
@@ -43,12 +35,14 @@ if (mouseb)
 }
 
 
-if (current_delay == 0) && (projectile != -1) && (input_check("shoot"))
+if (current_delay == 0) && (projectile != -1) && (input_check("aim")) && (input_check("shoot"))
 {
+	
 	if (ammo[weapon] != 0)
 	{
-		with (instance_create_layer(x+lengthdir_x(other.length, direction), y + lengthdir_y(other.length, direction), "Instances", projectile)) {
+		with (instance_create_layer(x+lengthdir_x(other.length, bulletDirection), y + lengthdir_y(other.length, bulletDirection), "Instances", projectile)) {
 		    speed = other.bulletspeed;
+			
 		}
 
 		ammo[weapon] -= 1;
@@ -77,7 +71,7 @@ if (input_check("aim") && input_check("shoot")) {
 	var aim = point_direction(x, y, crosshair.x, crosshair.y);
 
 	//Use this line for random angles
-	_imgAngle = image_angle - (angvalue*sign(image_yscale)) + random_range(aim-5,aim+5);
+	//_imgAngle = image_angle - (angvalue*sign(image_yscale)) + random_range(aim-5,aim+5);
 	_imgAngle = image_angle - (angvalue*sign(image_yscale));
 } else {
 	_imgAngle = image_angle - (angvalue*sign(image_yscale));
@@ -117,3 +111,4 @@ if (input_check_pressed("weapon1") && ammo[1] > 0) ChangeWeapon(1);
 if (input_check_pressed("weapon2") && ammo[2] > 0) ChangeWeapon(2);
 if input_check_pressed("weapon0") ChangeWeapon(0);
 
+}

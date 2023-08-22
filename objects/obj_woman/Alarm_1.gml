@@ -16,3 +16,4 @@ if(idle == false){
 
 
 alarm[1] = random_range(20, 30);
+

@@ -29,6 +29,7 @@ skidTimer = 0;
 skidFriction = 0.5;  // Adjust this to achieve the desired skidding effect
 lastMovedDirection = 0; // default to right (0 degrees in GM:S)
 
+
 heldItem = instance_create_layer(x, y, "Instances", oPickaxe);
 
 aSpeed = 0.4; // Acceleration speed

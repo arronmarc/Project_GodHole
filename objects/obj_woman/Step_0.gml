@@ -1,3 +1,6 @@
+if (!global.pause) 
+{
+
 if (moveX > 0) {
     image_xscale = 1; // Facing right
 } else if (moveX < 0) {
@@ -25,3 +28,4 @@ var move_values = CollisionCheck(moveX, moveY);
 x += moveX;
 y += moveY;
 
+}

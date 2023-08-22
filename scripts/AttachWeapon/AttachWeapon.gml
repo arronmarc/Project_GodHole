@@ -3,8 +3,7 @@ function AttachWeapon(){
     //HANDLE ORIENTATION BASED ON MOUSE
 
     if (input_check("aim")) {
-		///Room Start Event for objLight
-		
+				
         if (mouse_x < x) {
             image_xscale = -1;  // Face left
         } else if (mouse_x > x) {

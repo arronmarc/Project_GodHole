@@ -31,7 +31,6 @@ return {
 		crouch: input_binding_key(vk_control),
 		light: input_binding_key("L"),
         
-        //No aiming verbs since we use the mouse for that (see below for aiming verb examples)
 		aim: input_binding_mouse_button(mb_right),
         shoot: input_binding_mouse_button(mb_left),
         

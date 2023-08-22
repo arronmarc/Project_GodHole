@@ -2,6 +2,6 @@
 audio_play_sound(sound_bullet,1,false);
 bulletspeed = 1;
 
-direction = point_direction(x,y,mouse_x,mouse_y);
+direction = point_direction(x, y, crosshair.x, crosshair.y)
 image_angle = direction;
 image_xscale = max(1,bulletspeed*sprite_width)

@@ -1,4 +1,6 @@
 //Step event
+if (!global.pause) 
+{
 //Update input
 input_left = input_check("left");
 input_right = input_check("right");
@@ -20,9 +22,7 @@ if (input_check("light")) {
 
 light.x = x;
 light.y = y-30;
-light.angle = point_direction(x, y, mouse_x, mouse_y);
-
-
+light.angle = point_direction(x, y, crosshair.x, crosshair.y);
 
 script_execute(state);
 
@@ -34,3 +34,4 @@ if (rollTimer > 0) {
 //Update the position of the occluder to match this instance's position
 occluder.x = x;
 occluder.y = y;
+}

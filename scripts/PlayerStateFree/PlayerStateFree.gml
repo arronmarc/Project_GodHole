@@ -1,5 +1,6 @@
 function PlayerStateFree(){
-
+if (!global.pause) 
+{
     // 1. INPUT HANDLING
     var _inputX = input_right - input_left;
     var _inputY = input_down - input_up;
@@ -115,4 +116,5 @@ function PlayerStateFree(){
     if (moveX != 0 || moveY != 0) {
         lastMovedDirection = point_direction(0, 0, moveX, moveY);
     }
+}
 }

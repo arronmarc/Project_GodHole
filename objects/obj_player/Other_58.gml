@@ -1,9 +1,11 @@
+if (!global.pause) 
+{
 if (input_check("aim")) {
     var _map_left_arm = ds_map_create();
 
     skeleton_bone_state_get("Left arm bone bottom", _map_left_arm);
 
-    var _dir = point_direction(x, y-25, mouse_x, mouse_y);
+    var _dir = point_direction(x, y-25, crosshair.x, crosshair.y);
 
 	//draw_line(x, y-40, mouse_x, mouse_y);
 
@@ -18,3 +20,8 @@ if (input_check("aim")) {
 
     ds_map_destroy(_map_left_arm);
 }
+
+}
+
+
+	
