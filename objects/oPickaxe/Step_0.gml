@@ -2,7 +2,7 @@ rotation = lerp(rotation, 45, 0.1);
 
 image_angle = rotation * obj_player.image_xscale;
 
-var _mousePress = mouse_check_button(mb_left);
+var _mousePress = input_check("shoot");
 
 var _breakable = instance_position(mouse_x, mouse_y, oBreakableParent);
 

@@ -1,17 +1,14 @@
 //Step event
 //Update input
-input_left = keyboard_check(ord("A"));
-input_right = keyboard_check(ord("D"));
-input_up = keyboard_check(ord("W"));
-input_down = keyboard_check(ord("S"));
-keySprint = keyboard_check(vk_shift);
-keyRoll = keyboard_check(vk_space);
-keyCrouch = keyboard_check_pressed(vk_control);
+input_left = input_check("left");
+input_right = input_check("right");
+input_up = input_check("up");
+input_down = input_check("down");
+keySprint = input_check("sprint");
+keyRoll = input_check("roll");
+keyCrouch = input_check("crouch");
 
-
-
-
-if (keyboard_check_pressed(ord("L"))) {
+if (input_check("light")) {
     light_active = !light_active;  // Toggle the light state
     
     if (light_active) {

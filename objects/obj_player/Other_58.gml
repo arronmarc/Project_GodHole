@@ -1,4 +1,4 @@
-if (mouse_check_button(mb_right)) {
+if (input_check("aim")) {
     var _map_left_arm = ds_map_create();
 
     skeleton_bone_state_get("Left arm bone bottom", _map_left_arm);

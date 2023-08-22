@@ -1,4 +1,4 @@
-/* if (sprite != -1) && (mouse_check_button(mb_right))
+/* if (sprite != -1) && (input_check("aim"))
 {	
 	draw_sprite_ext(
 	sprite,

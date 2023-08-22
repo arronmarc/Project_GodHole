@@ -4,12 +4,13 @@ xoffset = -10;
 x = obj_player.x + xoffset;
 y = obj_player.y + yoffset;
 
-image_angle = direction;
-direction = point_direction(x,y,mouse_x,mouse_y);
+
+bulletDirection = point_direction(x, y, crosshair.x, crosshair.y);
+image_angle = bulletDirection;
 
 
 
-if (direction > 90) && (direction < 270) 
+if (bulletDirection > 90) && (bulletDirection < 270) 
 {
 	image_yscale = -1; 
 }
@@ -22,12 +23,12 @@ else
 var mouseb;
 if (automatic)
 {
-	mouseb = mouse_check_button(mb_left); 
+	mouseb = input_check("shoot"); 
 	
 }
 else 
 {
-	mouseb = mouse_check_button_pressed(mb_left);
+	mouseb = input_check_pressed("shoot");
 	
 }
 
@@ -42,12 +43,11 @@ if (mouseb)
 }
 
 
-if (current_delay == 0) && (projectile != -1)  && (mouse_check_button(mb_right))
+if (current_delay == 0) && (projectile != -1) && (input_check("shoot"))
 {
 	if (ammo[weapon] != 0)
 	{
 		with (instance_create_layer(x+lengthdir_x(other.length, direction), y + lengthdir_y(other.length, direction), "Instances", projectile)) {
-		    //direction = other.direction;
 		    speed = other.bulletspeed;
 		}
 
@@ -73,10 +73,11 @@ var channel = animcurve_get_channel(curveStruct,"angle");
 var angvalue = animcurve_channel_evaluate(channel,curvePos);
 
 
-if (mouse_check_button(mb_right) && mouse_check_button(mb_left)) {
-	var aim = point_direction(x,y,mouse_x,mouse_y);
+if (input_check("aim") && input_check("shoot")) {
+	var aim = point_direction(x, y, crosshair.x, crosshair.y);
+
 	//Use this line for random angles
-	//_imgAngle = image_angle - (angvalue*sign(image_yscale)) + random_range(aim-5,aim+5);
+	_imgAngle = image_angle - (angvalue*sign(image_yscale)) + random_range(aim-5,aim+5);
 	_imgAngle = image_angle - (angvalue*sign(image_yscale));
 } else {
 	_imgAngle = image_angle - (angvalue*sign(image_yscale));
@@ -100,7 +101,8 @@ if curvePos >= 1 {
 
 
 //For depth sorting based on direction
-var dir_to_mouse = point_direction(x, y, mouse_x, mouse_y);
+var dir_to_mouse = point_direction(x, y, crosshair.x, crosshair.y);
+
 
 if ((dir_to_mouse >= 0) && (dir_to_mouse < 90)) || ((dir_to_mouse > 225) && (dir_to_mouse <= 360))
 {
@@ -111,7 +113,7 @@ else
     depth = 0;
 }
 
-if (keyboard_check_pressed(ord("1")) && ammo[1] > 0) ChangeWeapon(1);
-if (keyboard_check_pressed(ord("2")) && ammo[2] > 0) ChangeWeapon(2);
-if (keyboard_check_pressed(ord("0"))) ChangeWeapon(0);
+if (input_check_pressed("weapon1") && ammo[1] > 0) ChangeWeapon(1);
+if (input_check_pressed("weapon2") && ammo[2] > 0) ChangeWeapon(2);
+if input_check_pressed("weapon0") ChangeWeapon(0);
 

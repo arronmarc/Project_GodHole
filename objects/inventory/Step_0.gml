@@ -39,7 +39,7 @@ var inv_grid = ds_inventory;
 var ss_item = inv_grid[# 0, selected_slot];
 
 if(pickup_slot != -1){
-	if(mouse_check_button_pressed(mb_left)){
+	if(input_check("shoot")){
 		if(!mouse_in_inventory){
 		
 		//Drop item into game world
@@ -112,7 +112,7 @@ else if(ss_item != item.none){
 	}
 	
 	//Drop picked up item into a new slot
-	if(mouse_check_button_pressed(mb_left)){
+	if(input_check("shoot")){
 		pickup_slot = selected_slot;
 	}
 }

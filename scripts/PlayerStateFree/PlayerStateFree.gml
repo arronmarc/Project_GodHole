@@ -1,9 +1,15 @@
 function PlayerStateFree(){
 
     // 1. INPUT HANDLING
-
     var _inputX = input_right - input_left;
     var _inputY = input_down - input_up;
+
+	// Check if any gamepad button is pressed or thumbstick moved beyond a threshold
+	if (any_gamepad_button_pressed() || abs(input_check("aim_left")) > 0.1 || abs(input_check("aim_right")) > 0.1 || abs(input_check("aim_up")) > 0.1 || abs(input_check("aim_down")) > 0.1) {
+
+	    _inputX += gamepad_axis_value(0, gp_axislh); 
+	    _inputY += gamepad_axis_value(0, gp_axislv); 
+	}
 
     // 2. SPEED ADJUSTMENTS BASED ON STATE
 

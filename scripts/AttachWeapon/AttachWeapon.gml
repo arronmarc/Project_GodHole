@@ -2,7 +2,7 @@ function AttachWeapon(){
 
     //HANDLE ORIENTATION BASED ON MOUSE
 
-    if (mouse_check_button(mb_right)) {
+    if (input_check("aim")) {
 		///Room Start Event for objLight
 		
         if (mouse_x < x) {

@@ -41,7 +41,7 @@ function PlayerStateCrouch() {
     // 4. HANDLE SPRITE DIRECTION
 
     // Set the direction based on mouse input first
-    if (mouse_check_button(mb_right)) {
+    if (input_check("aim")) {
         if (mouse_x < x) {
             image_xscale = -1;  // Face left
         } else if (mouse_x > x) {
