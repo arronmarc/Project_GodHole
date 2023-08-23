@@ -1,22 +1,21 @@
 //Create event
-
 // Resolution
 #macro RES_W 960
 #macro RES_H 540
 #macro RES_SCALE 1.5
-
 #macro CAM_SMOOTH 0.1
 
-//Enable views
 view_enabled = true;
 view_visible[0] = true;
-
 
 aSpeed = 5; // Acceleration rate
 mSpeed = 40;   // Maximum speed
 threshold = 20;
-returning_to_player = false;
-centering_on_player = false;
+
+shakeLength = 0;
+shakeMagnitude = 0;
+shakeRemain = 0;
+
 
 camXSpeed = 0;
 camYSpeed = 0;
@@ -25,6 +24,9 @@ camYSpeed = 0;
 camera = camera_create_view(0, 0, RES_W, RES_H);
 
 view_set_camera(0, camera);
+
+viewWidthHalf = camera_get_view_width(camera) * 0.5;
+viewHeightHalf = camera_get_view_height(camera) * 0.5;
 
 //Resize window & application surface
 window_set_size(RES_W * RES_SCALE, RES_H * RES_SCALE);
@@ -44,8 +46,4 @@ window_set_position(display_width/2 - window_width/2, display_height/2 - window_
 //Mouse previous
 mouse_x_previous = device_mouse_x_to_gui(0);
 mouse_y_previous = device_mouse_y_to_gui(0);
-
-
-
-
 

@@ -1,6 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
 if (crops.planting = true) {
 var xx = 0;
 var cs = crops.cellSize;

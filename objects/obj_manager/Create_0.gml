@@ -15,3 +15,6 @@ invList = ds_list_create();
 
 global.pause = false;
 pauseSurf = -1;
+
+show_debug_message("Application Surface: " + string(surface_get_width(application_surface)) + "x" + string(surface_get_height(application_surface)));
+show_debug_message("Pause Surface: " + string(surface_get_width(pauseSurf)) + "x" + string(surface_get_height(pauseSurf)));

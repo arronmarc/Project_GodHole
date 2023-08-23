@@ -1,4 +1,8 @@
 function PlayerStateFree(){
+
+
+
+
 if (!global.pause) 
 {
     // 1. INPUT HANDLING

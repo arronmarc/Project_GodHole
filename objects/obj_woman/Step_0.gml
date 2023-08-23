@@ -1,3 +1,12 @@
+
+if (global.pause) {
+    image_speed = 0;
+    return; // Exit the function early since the game is paused.
+}
+else {
+    image_speed = 1; // Resume the animation. Adjust this value if your standard playback speed is different.
+}
+
 if (!global.pause) 
 {
 
@@ -21,7 +30,7 @@ if (moveX != 0 or moveY != 0) {
 
 	
 // Check for collisions
-var move_values = CollisionCheck(moveX, moveY);
+CollisionCheck(moveX, moveY);
 
 
 // Move

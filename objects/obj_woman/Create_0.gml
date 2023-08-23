@@ -1,3 +1,4 @@
+
 //Create event
 skeleton_animation_mix("Idle","Walk",0.03);
 skeleton_animation_mix("Walk","Idle",0.03);

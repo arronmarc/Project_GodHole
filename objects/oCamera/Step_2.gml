@@ -95,6 +95,17 @@ camH = lerp(camH, targetH, CAM_SMOOTH);
 camX = clamp(camX, 0, room_width - camW);
 camY = clamp(camY, 0, room_height - camH);
 
+// Apply screenshake if needed
+if (shakeRemain > 0) {
+    var dir = point_direction(obj_player.x, obj_player.y, crosshair.x, crosshair.y) + 180; // Opposite direction of mouse
+        var recoilX = lengthdir_x(shakeRemain, dir);
+		var recoilY = lengthdir_y(shakeRemain, dir);
+        camX += recoilX;
+		camY += recoilY;
+    shakeRemain = max(0, shakeRemain - ((1/shakeLength) * shakeMagnitude));
+}
+        
+
 // Apply camera position and size
 camera_set_view_pos(camera, camX, camY);
 camera_set_view_size(camera, camW, camH);

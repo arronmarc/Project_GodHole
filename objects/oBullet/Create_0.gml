@@ -1,5 +1,4 @@
 /// @description Essential entity setup
-
 audio_play_sound(sound_machinegun,1,false);
 aim = point_direction(x, y, crosshair.x, crosshair.y);
 
@@ -14,6 +13,8 @@ light.angle = point_direction(x, y, crosshair.x, crosshair.y);
 // Initialize alpha and fade speed for light
 alphaValue = 1; // Start fully opaque
 fadeSpeed = 0.09; // Adjust this value to control the fade speed
+
+Screenshake(10, 5);
 
 /*
 //For creating casings on fire
