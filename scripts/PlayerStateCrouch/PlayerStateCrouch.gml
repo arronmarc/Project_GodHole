@@ -27,17 +27,24 @@ if (!global.pause)
     y += move_values[1];
 
 
-    // 3. HANDLE ANIMATIONS
-
-    if (moveX != 0 or moveY != 0) {
-        if skeleton_animation_get() != "Crouch" {
-            skeleton_animation_set("Crouch");
+  // 3. HANDLE ANIMATIONS
+        if (moveX != 0 or moveY != 0) {
+            if skeleton_animation_get() != "Crouch" {
+                skeleton_animation_set("Crouch");
+            }
+            // Handle sound for moving while crouched
+            if (!audio_is_playing(sound_crouch)) {
+                audio_play_sound(sound_crouch, 1, true);
+            }
+        } else {
+            if skeleton_animation_get() != "Crouch idle" {
+                skeleton_animation_set("Crouch idle");
+            }
+            // Stop the sound if not moving
+            if (audio_is_playing(sound_crouch)) {
+                audio_stop_sound(sound_crouch);
+            }
         }
-    } else {
-        if skeleton_animation_get() != "Crouch idle" {
-            skeleton_animation_set("Crouch idle");
-        }
-    }
 
     // 4. HANDLE SPRITE DIRECTION
 

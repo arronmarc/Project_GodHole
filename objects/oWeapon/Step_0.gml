@@ -58,14 +58,13 @@ if (current_delay == -1) current_cd = max(0,current_cd-1);
 current_recoil = max(0,floor(current_recoil*0.005));
 
 
-
+/*
 curvePos += curveSpd;//move the animation along
 var curveStruct = animcurve_get(acRecoil);
 
 //change the guns angle
 var channel = animcurve_get_channel(curveStruct,"angle");
 var angvalue = animcurve_channel_evaluate(channel,curvePos);
-
 
 if (input_check("aim") && input_check("shoot")) {
 	var aim = point_direction(x, y, crosshair.x, crosshair.y);
@@ -77,13 +76,10 @@ if (input_check("aim") && input_check("shoot")) {
 	_imgAngle = image_angle - (angvalue*sign(image_yscale));
 }
 		
-
-
 //move the guns x pos
 var channel = animcurve_get_channel(curveStruct,"x");
 var xvalue = animcurve_channel_evaluate(channel,curvePos);
 _x = x-lengthdir_x(xvalue,_imgAngle);
-
 
 //reset at the end of the animation
 if curvePos >= 1 {
@@ -91,7 +87,7 @@ if curvePos >= 1 {
 	curvePos = 0;
 }
 
-
+*/
 
 
 //For depth sorting based on direction

@@ -29,7 +29,6 @@ skidTimer = 0;
 skidFriction = 0.5;  // Adjust this to achieve the desired skidding effect
 lastMovedDirection = 0; // default to right (0 degrees in GM:S)
 
-
 heldItem = instance_create_layer(x, y, "Instances", oPickaxe);
 
 aSpeed = 0.4; // Acceleration speed
@@ -47,3 +46,14 @@ if (global.targetX != -1)
 	y= global.targetY;
 	direction = global.targetDirection;
 }
+
+
+
+var _map_left_arm = ds_map_create();
+skeleton_bone_state_get("Left arm bone bottom", _map_left_arm);
+original_bone_y = _map_left_arm[? "y"];
+ds_map_destroy(_map_left_arm);
+
+recoil_amount = 20;      // Amount the bone will move during recoil
+recoil_time = 0;        // Counter to keep track of recoil effect duration
+recoil_duration = 5;    // Number of frames the recoil effect should last

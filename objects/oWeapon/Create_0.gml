@@ -19,9 +19,9 @@ ds_map_add(weapons[1],"recoil_push",8);
 ds_map_add(weapons[1],"damage",1);
 ds_map_add(weapons[1],"projectile",oHitscan);
 ds_map_add(weapons[1],"startup",0);
-ds_map_add(weapons[1],"length",60);
+ds_map_add(weapons[1],"length",100);
 ds_map_add(weapons[1],"cooldown",0.4);
-ds_map_add(weapons[1],"bulletspeed",40);
+ds_map_add(weapons[1],"bulletspeed",50);
 ds_map_add(weapons[1],"automatic",false);
 
 //Plasma

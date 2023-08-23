@@ -2,12 +2,24 @@
 var _cam = view_camera[0];
 var _camX = camera_get_view_x(_cam);
 var _camY = camera_get_view_y(_cam);
+
+light.AddToRenderer(objLightController.renderer); 
+light.x = x;
+light.y = y;
+
+alphaValue -= fadeSpeed; 
+if (alphaValue < 0) alphaValue = 0; // Ensure the alpha doesn't go below 0
+
+// Assuming the BulbLight object has a property or method to set alpha:
+light.alpha = alphaValue;
+
 if (!point_in_rectangle(x,y,_camX,_camY,_camX+camera_get_view_width(_cam),_camY+camera_get_view_height(_cam)))
 {
+	light.RemoveFromRenderer(objLightController.renderer);
 	instance_destroy();	
 }
 
-if(place_meeting(x, y, obj_collision)){
+if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)){
 	repeat(6){
 	with (instance_create_depth(x,y,depth-1,oParticle)){
 		debris = false;
@@ -38,5 +50,6 @@ repeat(2){
 		motion_add(other.image_angle+random_range(-40,40),random_range(-1,-6))
 	}
 }
+	light.RemoveFromRenderer(objLightController.renderer);
 	instance_destroy();
 }

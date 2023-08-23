@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sHitscan",
-  "bbox_bottom": 0,
+  "bbox_bottom": 4,
   "bbox_left": 0,
   "bbox_right": 9,
   "bbox_top": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 1,
+  "height": 5,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a0ce7893-c700-4c7e-abb0-74f9205e45d2","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},

@@ -47,8 +47,8 @@ repeat(2){
 		sprite_index = sDebris
 		image_index = random(image_number-1)
 		image_speed = 0;
-		fric = 0.8
-		motion_add(other.image_angle+random_range(-40,40),random_range(-1,-6))
+		fric = 0.4
+		motion_add(other.image_angle+random_range(-40,40),random_range(-2,-12))
 	}
 }
 	light.RemoveFromRenderer(objLightController.renderer);
