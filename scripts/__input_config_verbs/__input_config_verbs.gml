@@ -30,6 +30,7 @@ return {
 		roll: input_binding_key(vk_space),
 		crouch: input_binding_key(vk_control),
 		light: input_binding_key("L"),
+		attack: input_binding_key("E"),
         
 		aim: input_binding_mouse_button(mb_right),
         shoot: input_binding_mouse_button(mb_left),
@@ -51,6 +52,7 @@ return {
 		sprint: input_binding_gamepad_button(gp_face1),
 		crouch: input_binding_gamepad_button(gp_stickl),
 		light: input_binding_gamepad_button(gp_stickr),
+		attack: input_binding_gamepad_button(gp_face3),
         
         aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
         aim_down:  input_binding_gamepad_axis(gp_axisrv, false),

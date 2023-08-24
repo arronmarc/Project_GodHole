@@ -1,8 +1,4 @@
 function PlayerStateFree(){
-
-
-
-
 if (!global.pause) 
 {
     // 1. INPUT HANDLING
@@ -69,48 +65,46 @@ if (!global.pause)
 
 
 	// 5. HANDLE ANIMATIONS
-var desired_sound = noone;  // Default to no sound
+	var desired_sound = noone;  // Default to no sound
 
-if (moveX != 0 or moveY != 0) {
-    if (isCrouching) {
-        if skeleton_animation_get() != "Crouch" {
-            skeleton_animation_set("Crouch");
-        }
-    } else if (keySprint && global.stamina > 0) {
-        if skeleton_animation_get() != "Run" {
-            skeleton_animation_set("Run");
-        }
-        desired_sound = sound_run;
-    } else {
-        if skeleton_animation_get() != "Walk" {
-            skeleton_animation_set("Walk");
-        }
-        desired_sound = sound_walk;
-    }
-} else {
-    if isCrouching {
-        if skeleton_animation_get() != "Crouch idle" {
-            skeleton_animation_set("Crouch idle");
-        }
-    } else {
-        if skeleton_animation_get() != "Idle" {
-            skeleton_animation_set("Idle");
-        }
-    }
-}
+	if (moveX != 0 or moveY != 0) {
+	    if (isCrouching) {
+	        if skeleton_animation_get() != "Crouch" {
+	            skeleton_animation_set("Crouch");
+	        }
+	    } else if (keySprint && global.stamina > 0) {
+	        if skeleton_animation_get() != "Run" {
+	            skeleton_animation_set("Run");
+	        }
+	        desired_sound = sound_run;
+	    } else {
+	        if skeleton_animation_get() != "Walk" {
+	            skeleton_animation_set("Walk");
+	        }
+	        desired_sound = sound_walk;
+	    }
+	} else {
+	    if isCrouching {
+	        if skeleton_animation_get() != "Crouch idle" {
+	            skeleton_animation_set("Crouch idle");
+	        }
+	    } else {
+	        if skeleton_animation_get() != "Idle" {
+	            skeleton_animation_set("Idle");
+	        }
+	    }
+	}
 
-// Sound Management
-var all_sounds = [sound_walk, sound_run, sound_crouch];
-for (var i = 0; i < array_length(all_sounds); i++) {
-    var s = all_sounds[i];
-    if (s == desired_sound && !audio_is_playing(s)) {
-        audio_play_sound(s, 1, true);
-    } else if (s != desired_sound && audio_is_playing(s)) {
-        audio_stop_sound(s);
-    }
-}
-
-
+	// Sound Management
+	var all_sounds = [sound_walk, sound_run, sound_crouch];
+	for (var i = 0; i < array_length(all_sounds); i++) {
+	    var s = all_sounds[i];
+	    if (s == desired_sound && !audio_is_playing(s)) {
+	        audio_play_sound(s, 1, true);
+	    } else if (s != desired_sound && audio_is_playing(s)) {
+	        audio_stop_sound(s);
+	    }
+	}
 
 
 	AttachWeapon();

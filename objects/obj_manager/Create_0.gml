@@ -16,5 +16,12 @@ invList = ds_list_create();
 global.pause = false;
 pauseSurf = -1;
 
+//Crafting menu
+cMenuScroll = 0;
+cMenuHeight = 0;
+
 show_debug_message("Application Surface: " + string(surface_get_width(application_surface)) + "x" + string(surface_get_height(application_surface)));
 show_debug_message("Pause Surface: " + string(surface_get_width(pauseSurf)) + "x" + string(surface_get_height(pauseSurf)));
+
+viewWidthHalf = camera_get_view_width(view_camera[0]) * 0.5;
+viewHeightHalf = camera_get_view_height(view_camera[0]) * 0.1;

@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "Lighting",
+    "path": "folders/Objects/Managers/Lighting.yy",
   },
   "parentObjectId": null,
   "persistent": false,

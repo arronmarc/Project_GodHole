@@ -18,8 +18,8 @@
     "path": "folders/Objects/Managers.yy",
   },
   "parentObjectId": {
-    "name": "par_depthobject",
-    "path": "objects/par_depthobject/par_depthobject.yy",
+    "name": "oBreakableParent",
+    "path": "objects/oBreakableParent/oBreakableParent.yy",
   },
   "persistent": true,
   "physicsAngularDamping": 0.1,
