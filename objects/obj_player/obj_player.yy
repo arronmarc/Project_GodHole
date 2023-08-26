@@ -39,9 +39,6 @@
     "name": "spr_default",
     "path": "sprites/spr_default/spr_default.yy",
   },
-  "spriteMaskId": {
-    "name": "spr_character_mask",
-    "path": "sprites/spr_character_mask/spr_character_mask.yy",
-  },
+  "spriteMaskId": null,
   "visible": false,
 }

@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sound_walk.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.32,
 }

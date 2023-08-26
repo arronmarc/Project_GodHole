@@ -1,0 +1,1 @@
+lightColor = c_white;
