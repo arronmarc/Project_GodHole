@@ -13,13 +13,25 @@ for (var i=0; i<_listSize; i++) {
 	var _arr = _list[| i];
 	
 	//Check item
-	if (_arr[0] == _item) {
+	if (is_array(_arr) && _arr[0] == _item) {
 		_arr[@ 1] += _count;
 		
 		return true;
 			
 		}
 	}
+	
+	for (var i = 0; i < _listSize; i++) {
+		
+		var _arr = _list[| i];
+		
+		if (!is_array(_arr)) {
+			_list[| i] = [_item, _count];
+			
+			return true;
+		}
+	}
+	
 	
 	//Inventory is full
 	if (_listSize >= INV_SIZE) {

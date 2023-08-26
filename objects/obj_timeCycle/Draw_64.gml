@@ -4,6 +4,7 @@
 if alpha <= .35 draw_set_colour(c_blue);
 if alpha > .35 draw_set_colour(c_white);
 
+/*
 if global.dateCalendarOn    {
     draw_text(32, 16, string_hash_to_newline("Clock:  " + string(global.curClock)));
     draw_text(32, 32, string_hash_to_newline(string(global.curDayTime)));
@@ -21,7 +22,7 @@ if !global.dateCalendarOn    {
     draw_text(32, 48, string_hash_to_newline(string(global.curDayTime)));
     draw_text(32, 64, string_hash_to_newline("ALPHA:  " + string(alpha)));
     }
-
+*/
 
 
 

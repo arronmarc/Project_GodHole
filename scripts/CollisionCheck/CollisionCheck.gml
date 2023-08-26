@@ -2,6 +2,8 @@ function CollisionCheck(_moveX, _moveY){
     // Horizontal
     if(_moveX != 0){
         if(place_meeting(x + _moveX, y, obj_collision) || place_meeting(x + _moveX, y, oBreakableParent)){
+			global.health--;
+			spd = 0;
             repeat(abs(_moveX)){
                 if(!place_meeting(x + sign(_moveX), y, obj_collision) && !place_meeting(x + sign(_moveX), y, oBreakableParent)){
                     x += sign(_moveX);

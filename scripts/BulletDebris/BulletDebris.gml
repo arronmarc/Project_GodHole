@@ -36,7 +36,7 @@ repeat(2){
 }
 
 
-if(place_meeting(x, y, obj_woman)){
+if(place_meeting(x, y, obj_enemy)){
 	repeat(6){
 	with (instance_create_depth(x,y,depth-1,oParticle)){
 		debris = false;

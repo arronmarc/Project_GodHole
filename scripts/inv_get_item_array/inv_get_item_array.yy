@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "PlayerStateDead",
+  "name": "inv_get_item_array",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Player states",
-    "path": "folders/Scripts/Player states.yy",
+    "name": "Inventory",
+    "path": "folders/Scripts/Inventory.yy",
   },
 }

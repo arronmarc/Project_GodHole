@@ -1,6 +1,8 @@
 //Create event
 state = PlayerStateFree;
 
+skeleton_skin_set("Default body");
+
 skeleton_animation_mix("Idle","Walk",0.03);
 skeleton_animation_mix("Walk","Idle",0.03);
 skeleton_animation_mix("Idle","Run",0.03);
@@ -42,7 +44,8 @@ skeleton_bone_state_get("Gun bone", _map_temp);
 original_bone_y = _map_temp[? "y"];
 ds_map_destroy(_map_temp);
 
-
+global.health = 1;
+global.healthmax = 50;
 global.stamina = 500;
 global.staminamax = 500;
 

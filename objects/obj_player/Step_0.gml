@@ -29,5 +29,6 @@ if (rollTimer > 0) {
 occluder.x = x;
 occluder.y = y;
 
-}
 
+
+}

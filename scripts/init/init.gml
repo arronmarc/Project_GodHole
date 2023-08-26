@@ -24,10 +24,19 @@ enum ITEM {
 	initItem(ITEM.STONE, "Stone", sStone, []);
 	initItem(ITEM.IRON, "Iron", sIron, []);
 	
-	initItem(ITEM.POTION, "Potion", sPotion, []);
-	initItem(ITEM.SYRUP, "Syrup", sSyrup, []);
-	initItem(ITEM.BLOCK_WOOD, "Wood Block", sBlock_Wood, []);
-	initItem(ITEM.BLOCK_IRON, "Iron Block", sBlock_Iron, []);
+	initItem(ITEM.POTION, "Potion", sPotion, [
+		[ITEM.APPLE, 4]
+	]);
+	initItem(ITEM.SYRUP, "Syrup", sSyrup, [
+		[ITEM.ORANGE, 4],
+		[ITEM.APPLE, 2]
+	]);
+	initItem(ITEM.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
+		[ITEM.WOOD, 2]
+	]);
+	initItem(ITEM.BLOCK_IRON, "Iron Block", sBlock_Iron, [
+	[ITEM.IRON, 2]
+	]);
 	
 
 //Inventory

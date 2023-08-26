@@ -1,3 +1,4 @@
+skeleton_skin_set("Enemy");
 
 //Create event
 skeleton_animation_mix("Idle","Walk",0.03);

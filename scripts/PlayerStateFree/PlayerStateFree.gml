@@ -83,6 +83,12 @@ function HandleAnimations() {
 function HandleMovementAnimations() {
     var sound_to_play;
     
+	if (global.health <= 0) {
+        if (skeleton_animation_get() != "Die") {
+            skeleton_animation_set("Die", false);
+        }
+    } else {
+	
     if (isCrouching) {
         SetAnimationIfDifferent("Crouch");
     } 
@@ -96,6 +102,7 @@ function HandleMovementAnimations() {
     }
 
     return sound_to_play;
+	}
 }
 
 function HandleIdleAnimations() {
