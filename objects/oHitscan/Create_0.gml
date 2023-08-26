@@ -8,6 +8,7 @@ image_angle = direction;
 image_xscale = max(1,sprite_width)
 
 light = new BulbLight(objLightController.renderer, spr_bulletLight, 0, x, y);
+light.AddToRenderer(objLightController.renderer); 
 light.angle = point_direction(x, y, crosshair.x, crosshair.y);
 
 // Initialize alpha and fade speed

@@ -1,57 +1,49 @@
 if (!global.pause) 
 {
-
-
-yoffset = -40;
+yoffset = -45;
 xoffset = -10;
 
 x = obj_player.x + xoffset;
 y = obj_player.y + yoffset;
 
-
 bulletDirection = point_direction(x, y, crosshair.x, crosshair.y);
-
 
 var mouseb;
 if (automatic)
-{
-	mouseb = input_check("shoot"); 
-	
-}
-else 
-{
-	mouseb = input_check_pressed("shoot");
-	
-}
-
+{ mouseb = input_check("shoot");}
+else { mouseb = input_check_pressed("shoot"); }
 if (mouseb)
-{
-	if (current_cd == 0)
-	{
-		current_cd = cooldown;
-		current_delay = startup;
-		
-	}
-}
-
+{ if (current_cd == 0) { current_cd = cooldown; current_delay = startup; } }
 
 if (current_delay == 0) && (projectile != -1) && (input_check("aim")) && (input_check("shoot"))
 {
-	
+	var _map_temp = ds_map_create();
+	with (obj_player) {
+	    skeleton_bone_state_get("Gun bone", _map_temp);
+	}
+	var gun_bone_x = _map_temp[? "worldX"];
+	var gun_bone_y = _map_temp[? "worldY"];
+
+
 	if (ammo[weapon] != 0)
 	{
-		with (instance_create_layer(x+lengthdir_x(other.length, bulletDirection), y + lengthdir_y(other.length, bulletDirection), "Instances", projectile)) {
+		// Now use the bone's x and y values to spawn the projectile
+		with (instance_create_layer(gun_bone_x + lengthdir_x(other.length, bulletDirection), gun_bone_y + lengthdir_y(other.length, bulletDirection), "Instances", projectile)) {
 		    speed = other.bulletspeed;
-			
 		}
 
 		ammo[weapon] -= 1;
 	}
+	show_debug_message("gun_bone_x: " + string(gun_bone_x));
+	show_debug_message("gun_bone_y: " + string(gun_bone_y));
+
+	ds_map_destroy(_map_temp);
+	
 	current_recoil = _x;
 	curvePos = 0;
 	curveSpd = 0.01;
-	
 }
+
 
 current_delay = max(-1,current_delay-1);
 if (current_delay == -1) current_cd = max(0,current_cd-1);
@@ -105,6 +97,7 @@ else
 
 if (input_check_pressed("weapon1") && ammo[1] > 0) ChangeWeapon(1);
 if (input_check_pressed("weapon2") && ammo[2] > 0) ChangeWeapon(2);
+if (input_check_pressed("weapon3") && ammo[3] > 0) ChangeWeapon(3);
 if input_check_pressed("weapon0") ChangeWeapon(0);
 
 }

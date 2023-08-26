@@ -1,62 +1,44 @@
 if (!global.pause) 
 {
-
-if (input_check("aim")) {
-    var _map_left_arm = ds_map_create();
-    skeleton_bone_state_get("Left arm bone bottom", _map_left_arm);
-
-    var _dir = point_direction(x, y-25, crosshair.x, crosshair.y);
-
-    // Adjust the angle based on the character's orientation
-    if (image_xscale < 0) {
-        _dir = 180 - _dir;
-    }
-
-    // If the shoot button is pressed, add a random jitter to the angle
-    if (input_check("shoot")) {
-        _dir += random_range(-10, 10);  // Adjust the range as needed for your desired amount of jitter
-    }
-
-    ds_map_replace(_map_left_arm, "angle", _dir-260);
-    skeleton_bone_state_set("Left arm bone bottom", _map_left_arm);
-    ds_map_destroy(_map_left_arm);
-}
-
-
-
+// Create the ds_map for the bone state
 var _map_left_arm = ds_map_create();
-skeleton_bone_state_get("Left arm bone bottom", _map_left_arm);
-var currentX = _map_left_arm[? "x"];
+skeleton_bone_state_get("Gun bone", _map_left_arm);
 
-if (input_check("shoot")) {
-    // Apply recoil
-    if (recoil_time <= 0) {
-        ds_map_replace(_map_left_arm, "y", original_bone_y - recoil_amount);
-        recoil_time = recoil_duration;
+// If the player is aiming
+if (input_check("aim")) {
+    // Calculate direction to crosshair
+    var gun_direction = point_direction(x, y, crosshair.x, crosshair.y);
+    
+    // Adjust for default gun orientation
+    gun_direction -= 95;
+    
+    // If the crosshair is on the left side of the player, flip the player's image
+    if (crosshair.x < x) {
+        image_xscale = -1;  // Face left
+
+        // Correct the gun direction
+        gun_direction = 180 + (180 - gun_direction);
     } else {
-        // Reduce recoil_time
-        recoil_time--;
-        // If half the duration has passed, reset the bone to the original position
-        if (recoil_time <= recoil_duration / 2) {
-            ds_map_replace(_map_left_arm, "y", original_bone_y);
-        }
+        image_xscale = 1;   // Face right
     }
+    
+    // Add randomness for shooting
+    if (input_check("shoot")) {
+        gun_direction += random_range(-10, 10);
+    }
+
+    ds_map_replace(_map_left_arm, "angle", gun_direction);
+    
 } else {
-    // If not shooting, ensure bone is at its original position
-    if (currentX != original_bone_y) {
-        ds_map_replace(_map_left_arm, "y", original_bone_y);
+    // If not aiming, flip the player based on the movement direction
+    if (moveX != 0) {
+        image_xscale = sign(moveX);
     }
-    recoil_time = 0; // Reset recoil_time if not shooting
 }
 
-skeleton_bone_state_set("Left arm bone bottom", _map_left_arm);
+// Set the bone state and destroy the ds_map just once at the end
+skeleton_bone_state_set("Gun bone", _map_left_arm);
 ds_map_destroy(_map_left_arm);
 
 
-
-
-
 }
-
-
-	

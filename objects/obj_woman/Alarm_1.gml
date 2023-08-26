@@ -1,4 +1,6 @@
 
+
+if (hp > 0) {
 moveX = 0;
 moveY = 0;
 
@@ -17,3 +19,4 @@ if(idle == false){
 
 alarm[1] = random_range(20, 30);
 
+}

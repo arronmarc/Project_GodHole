@@ -4,8 +4,6 @@ var view_y = camera_get_view_y(camera);
 var view_width = camera_get_view_width(camera);
 var view_height = camera_get_view_height(camera);
 
-thumbstick_speed_factor = 0.1; // This determines the speed of the crosshair movement with thumbstick
-
 var move_x = 0;
 var move_y = 0;
 var thumbstick_x = gamepad_axis_value(0, gp_axisrh);

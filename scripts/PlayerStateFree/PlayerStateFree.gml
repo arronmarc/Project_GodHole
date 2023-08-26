@@ -1,135 +1,148 @@
-function PlayerStateFree(){
-if (!global.pause) 
-{
-    // 1. INPUT HANDLING
-    var _inputX = input_right - input_left;
-    var _inputY = input_down - input_up;
+function PlayerStateFree() {
+    if (!global.pause) 
+    {
+        // 1. INPUT HANDLING
+        HandleInput();
 
-	// Check if any gamepad button is pressed or thumbstick moved beyond a threshold
-	if (any_gamepad_button_pressed() || abs(input_check("aim_left")) > 0.1 || abs(input_check("aim_right")) > 0.1 || abs(input_check("aim_up")) > 0.1 || abs(input_check("aim_down")) > 0.1) {
+        // 2. SPEED ADJUSTMENTS BASED ON STATE
+        AdjustSpeed();
 
-	    _inputX += gamepad_axis_value(0, gp_axislh); 
-	    _inputY += gamepad_axis_value(0, gp_axislv); 
-	}
+        // 3. CALCULATE AND APPLY MOVEMENT
+        CalculateMove();
 
-    // 2. SPEED ADJUSTMENTS BASED ON STATE
+        // 4. HANDLE ANIMATIONS AND SOUNDS
+        HandleAnimations();
 
-    // Adjust speed based on keys and states
+        // 5. CROUCH TOGGLE
+        HandleCrouchToggle();
+
+        // 6. HANDLE ROLL STATE
+        HandleRollState();
+
+        // 7. SAVE LAST MOVED DIRECTION
+        SaveLastMoveDirection();
+    }
+}
+
+function HandleInput() {
+    self._inputX = input_right - input_left;
+    self._inputY = input_down - input_up;
+
+    if (any_gamepad_button_pressed() || abs(input_check("aim_left")) > 0.1 || abs(input_check("aim_right")) > 0.1 || abs(input_check("aim_up")) > 0.1 || abs(input_check("aim_down")) > 0.1) {
+        self._inputX += gamepad_axis_value(0, gp_axislh); 
+        self._inputY += gamepad_axis_value(0, gp_axislv); 
+    }
+}
+
+function AdjustSpeed() {
     if (keySprint && global.stamina > 0) {
         global.stamina -= 1;
         spd = r_spd;
-    } else if (isCrouching) {
+    } 
+    else if (isCrouching) {
         spd = w_spd;
-    } else {
+    } 
+    else {
         spd = n_spd;
     }
 
-    // Handle stamina regeneration
     if(!keySprint) {
         global.stamina = clamp(global.stamina + 1, 0, 500);
     }
+}
 
-    // 3. CALCULATE MOVEMENT
-	// Determine target speed based on input and state
-	var targetSpeed;
-	if (_inputX != 0 || _inputY != 0) { // If there's any movement input
-	    targetSpeed = spd; // Target speed is whichever speed is currently active
-	} else {
-	    targetSpeed = 0; // If there's no input, target speed is 0
-	}
+function CalculateMove() {
+    var targetSpeed = (self._inputX != 0 || self._inputY != 0) ? spd : 0;
+    currentSpeed += clamp(targetSpeed - currentSpeed, -dSpeed, aSpeed);
+    
+    moveX = self._inputX * currentSpeed;
+    moveY = self._inputY * currentSpeed;
 
-	// Accelerate or decelerate towards the target speed
-	if (currentSpeed < targetSpeed) {
-	    currentSpeed = min(currentSpeed + aSpeed, targetSpeed); // Accelerate
-	} else if (currentSpeed > targetSpeed) {
-	    currentSpeed = max(currentSpeed - dSpeed, targetSpeed); // Decelerate
-	}
-
-	// Now apply currentSpeed to the movement
-	moveX = _inputX * currentSpeed;
-	moveY = _inputY * currentSpeed;
-
-
-    // Normalize diagonal movement
     if (moveX != 0 && moveY != 0) {
         moveX /= sqrt(2);
         moveY /= sqrt(2);
     }
 
-      // Check for collisions
     var move_values = CollisionCheck(moveX, moveY);
-
-    // Apply the movement
     x += move_values[0];
     y += move_values[1];
+}
 
+function HandleAnimations() {
+    var desired_sound = noone;
+    
+    if (moveX != 0 or moveY != 0) {
+        desired_sound = HandleMovementAnimations();
+    } else {
+        HandleIdleAnimations();
+    }
 
-	// 5. HANDLE ANIMATIONS
-	var desired_sound = noone;  // Default to no sound
+    ManageSounds(desired_sound);
+}
 
-	if (moveX != 0 or moveY != 0) {
-	    if (isCrouching) {
-	        if skeleton_animation_get() != "Crouch" {
-	            skeleton_animation_set("Crouch");
-	        }
-	    } else if (keySprint && global.stamina > 0) {
-	        if skeleton_animation_get() != "Run" {
-	            skeleton_animation_set("Run");
-	        }
-	        desired_sound = sound_run;
-	    } else {
-	        if skeleton_animation_get() != "Walk" {
-	            skeleton_animation_set("Walk");
-	        }
-	        desired_sound = sound_walk;
-	    }
-	} else {
-	    if isCrouching {
-	        if skeleton_animation_get() != "Crouch idle" {
-	            skeleton_animation_set("Crouch idle");
-	        }
-	    } else {
-	        if skeleton_animation_get() != "Idle" {
-	            skeleton_animation_set("Idle");
-	        }
-	    }
-	}
+function HandleMovementAnimations() {
+    var sound_to_play;
+    
+    if (isCrouching) {
+        SetAnimationIfDifferent("Crouch");
+    } 
+    else if (keySprint && global.stamina > 0) {
+        SetAnimationIfDifferent("Run");
+        sound_to_play = sound_run;
+    } 
+    else {
+        SetAnimationIfDifferent("Walk");
+        sound_to_play = sound_walk;
+    }
 
-	// Sound Management
-	var all_sounds = [sound_walk, sound_run, sound_crouch];
-	for (var i = 0; i < array_length(all_sounds); i++) {
-	    var s = all_sounds[i];
-	    if (s == desired_sound && !audio_is_playing(s)) {
-	        audio_play_sound(s, 1, true);
-	    } else if (s != desired_sound && audio_is_playing(s)) {
-	        audio_stop_sound(s);
-	    }
-	}
+    return sound_to_play;
+}
 
+function HandleIdleAnimations() {
+    if (isCrouching) {
+        SetAnimationIfDifferent("Crouch idle");
+    } else {
+        SetAnimationIfDifferent("Idle");
+    }
+}
 
-	AttachWeapon();
+function SetAnimationIfDifferent(anim_name) {
+    if (skeleton_animation_get() != anim_name) {
+        skeleton_animation_set(anim_name);
+    }
+}
 
-    // 7. CROUCH TOGGLE
+function ManageSounds(desired_sound) {
+    var all_sounds = [sound_walk, sound_run, sound_crouch];
+    for (var i = 0; i < array_length(all_sounds); i++) {
+        var s = all_sounds[i];
+        if (s == desired_sound && !audio_is_playing(s)) {
+            audio_play_sound(s, 1, true);
+        } else if (s != desired_sound && audio_is_playing(s)) {
+            audio_stop_sound(s);
+        }
+    }
+}
 
+function HandleCrouchToggle() {
     if (keyCrouch) {
         if (!isCrouching) {
             state = PlayerStateCrouch;
             isCrouching = true;
         } else {
-            isCrouching = false;  // Reset to stand up
+            isCrouching = false;
         }
     }
+}
 
-    // 8. HANDLE ROLL STATE
-
+function HandleRollState() {
     if (keyRoll) {
         state = PlayerStateRoll;
     }
+}
 
-    // 9. SAVE LAST MOVED DIRECTION
-
+function SaveLastMoveDirection() {
     if (moveX != 0 || moveY != 0) {
         lastMovedDirection = point_direction(0, 0, moveX, moveY);
     }
-}
 }

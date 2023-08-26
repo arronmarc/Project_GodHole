@@ -15,6 +15,8 @@ skeleton_animation_mix("Idle crouch","Idle",0.03);
 
 skeleton_attachment_set("Arm_bottom2", "Arm_bottom")
 
+hp = 5;
+
 w_spd = 1;
 n_spd = 4;
 r_spd = 8;
@@ -23,3 +25,6 @@ moveX = 0;
 moveY = 0;
 
 alarm[1] = 1;
+
+animation_start_time = 0;
+animation_playing = false;

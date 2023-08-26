@@ -11,6 +11,8 @@ global.targetDirection = 0;
 
 debrisSurf = surface_create(room_width,room_height);
 
+light_created = false;
+
 invList = ds_list_create();
 
 global.pause = false;

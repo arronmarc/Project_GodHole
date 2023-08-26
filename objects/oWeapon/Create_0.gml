@@ -37,6 +37,19 @@ ds_map_add(weapons[2],"cooldown",5);
 ds_map_add(weapons[2],"bulletspeed",40);
 ds_map_add(weapons[2],"automatic",true);
 
+//Fireball
+weapons[3] = ds_map_create();
+ds_map_add(weapons[3],"sprite",sWP_Fireball);
+ds_map_add(weapons[3],"recoil",8);
+ds_map_add(weapons[3],"recoil_push",8);
+ds_map_add(weapons[3],"damage",3);
+ds_map_add(weapons[3],"projectile",oFireball);
+ds_map_add(weapons[3],"startup",0);
+ds_map_add(weapons[3],"length",60);
+ds_map_add(weapons[3],"cooldown",5);
+ds_map_add(weapons[3],"bulletspeed",5);
+ds_map_add(weapons[3],"automatic",false);
+
 
 weapon = 0;
 ammo[array_length_1d(weapons)-1] = 0;
