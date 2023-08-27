@@ -1,5 +1,5 @@
 function init(){
-
+global.enemyfearmax = 100;
 gml_pragma("global", "init()");
 
 

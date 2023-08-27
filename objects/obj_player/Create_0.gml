@@ -1,7 +1,16 @@
 //Create event
+spd=1.5 //set the speed
+xx=x //"smooth" x position
+yy=y//"smooth" y position
+fear=0 //player's fear level (used to interact with the shooter ai)
+fear_max=400
+
+global.enemyfearmax=100  //set the enemy's max fear when they spawn in
+
 state = PlayerStateFree;
 
 skeleton_skin_set("Default body");
+skeleton_attachment_set("Gun", "Gun")
 
 skeleton_animation_mix("Idle","Walk",0.03);
 skeleton_animation_mix("Walk","Idle",0.03);

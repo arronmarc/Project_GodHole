@@ -2,7 +2,7 @@
 // Resolution
 #macro RES_W 960
 #macro RES_H 540
-#macro RES_SCALE 1.5
+#macro RES_SCALE 2
 #macro CAM_SMOOTH 0.1
 
 view_enabled = true;

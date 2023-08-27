@@ -27,7 +27,7 @@ if (current_delay == 0) && (projectile != -1) && (input_check("aim")) && (input_
 
 	if (ammo[weapon] != 0)
 	{
-		// Now use the bone's x and y values to spawn the projectile
+		//Use the bone's x and y values to spawn the projectile
 		with (instance_create_layer(gun_bone_x + lengthdir_x(other.length, bulletDirection), gun_bone_y + lengthdir_y(other.length, bulletDirection), "Instances", projectile)) {
 		    speed = other.bulletspeed;
 		}
@@ -81,6 +81,9 @@ if curvePos >= 1 {
 
 */
 
+if (input_check_pressed("weapon1") && ammo[1] > 0) ChangeWeapon(1);
+if (input_check_pressed("weapon2") && ammo[2] > 0) ChangeWeapon(2);
+if input_check_pressed("weapon0") ChangeWeapon(0);
 
 //For depth sorting based on direction
 var dir_to_mouse = point_direction(x, y, crosshair.x, crosshair.y);
@@ -95,9 +98,5 @@ else
     depth = 0;
 }
 
-if (input_check_pressed("weapon1") && ammo[1] > 0) ChangeWeapon(1);
-if (input_check_pressed("weapon2") && ammo[2] > 0) ChangeWeapon(2);
-if (input_check_pressed("weapon3") && ammo[3] > 0) ChangeWeapon(3);
-if input_check_pressed("weapon0") ChangeWeapon(0);
 
 }

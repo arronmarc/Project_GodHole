@@ -21,7 +21,10 @@ function PlayerStateFree() {
 
         // 7. SAVE LAST MOVED DIRECTION
         SaveLastMoveDirection();
+
     }
+	
+	
 }
 
 function HandleInput() {

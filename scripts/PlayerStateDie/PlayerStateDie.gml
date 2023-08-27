@@ -4,8 +4,7 @@ function PlayerStateDie() {
         skeleton_animation_set("Die", true); 
     }
 	
-    moveX = 0;
-    moveY = 0;
+    spd = 0;
 	
 	global.targetX = -1;
 	global.targetY = -1;

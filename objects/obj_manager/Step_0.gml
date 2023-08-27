@@ -17,3 +17,7 @@ if (global.pause) {
 	}
 	
 }
+
+if (keyboard_check_pressed(ord("Y"))) {
+    global.lightingCycle = !global.lightingCycle;
+}
