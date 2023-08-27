@@ -1,0 +1,11 @@
+{
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_search",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Hunter Sub scipts",
+    "path": "folders/Scripts/Hunter AI Scripts/Hunter Sub scipts.yy",
+  },
+}

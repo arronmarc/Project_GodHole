@@ -1,0 +1,11 @@
+{
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_hunt_step",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Hunter AI Scripts",
+    "path": "folders/Scripts/Hunter AI Scripts.yy",
+  },
+}
