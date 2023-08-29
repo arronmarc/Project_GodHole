@@ -16,7 +16,7 @@ function scr_assault(argument0, argument1, argument2) {
 	    can_shoot=0
 
 	//if further than 30px or no line of sight....
-	if point_distance(x,y,argument0.x,argument0.y) > 30 or collision_line(x,y,argument0.x,argument0.y,argument1,1,1)
+	if point_distance(x,y,argument0.x,argument0.y) > 60 or collision_line(x,y,argument0.x,argument0.y,argument1,1,1)
 	{            
 	    mp_potential_step(argument0.x,argument0.y,argument2,0) //move towards enemy
 	    fear-=1  //decrease fear levels

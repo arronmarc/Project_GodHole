@@ -13,7 +13,7 @@ grass_rect_ver = 48; //Vertical (y) size of rectangle
 //----------------
 
 //General variables
-grass_number = 10000; //Number of grass sprites inside the room
+grass_number = 20000; //Number of grass sprites inside the room
 grass_sprite = spr_depthgrass; //Sprite used for the grass
 
 grass_random_image = true; //Can the grass use any sub-image from the sprite, at random? 

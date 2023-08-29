@@ -1,0 +1,59 @@
+skeleton.png
+size:2023,616
+filter:Linear,Linear
+pma:true
+Enemy/Arm_bottom
+bounds:53,8,8,22
+rotate:90
+Enemy/Arm_top
+bounds:44,18,9,19
+Enemy/Gun
+bounds:2,16,48,14
+rotate:90
+Enemy/Head
+bounds:2,2,12,19
+rotate:90
+Enemy/Leg bottom
+bounds:23,5,11,28
+rotate:90
+Enemy/Leg top
+bounds:44,39,9,25
+Enemy/Torso
+bounds:18,18,24,46
+New skin/Cloak
+bounds:572,184,430,835
+rotate:90
+New skin/Gun
+bounds:2,66,548,160
+rotate:90
+New skin/Gun 2
+bounds:665,9,421,173
+New skin/Head
+bounds:1454,68,131,154
+New skin/Left arm bottom
+bounds:1600,44,105,338
+New skin/Left arm top
+bounds:1817,32,103,228
+New skin/Left leg bottom
+bounds:1409,224,189,390
+New skin/Left leg top
+bounds:1088,23,159,364
+offsets:0,0,160,364
+rotate:90
+New skin/Right arm bottom
+bounds:1707,262,120,314
+rotate:90
+New skin/Right arm top
+bounds:1707,20,108,240
+New skin/Right leg bottom
+bounds:1600,384,230,367
+rotate:90
+New skin/Right leg top
+bounds:305,10,136,358
+rotate:90
+New skin/Sword
+bounds:164,66,548,139
+offsets:0,0,549,139
+rotate:90
+New skin/Torso
+bounds:305,148,265,466

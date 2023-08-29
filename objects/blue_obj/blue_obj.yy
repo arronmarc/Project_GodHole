@@ -13,8 +13,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "AI",
+    "path": "folders/Objects/AI.yy",
   },
   "parentObjectId": {
     "name": "blue_parent",

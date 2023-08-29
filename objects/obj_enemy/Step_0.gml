@@ -10,9 +10,9 @@ if (!global.pause)
 {
 	#region Movement and animations
     if (moveX > 0) {
-        image_xscale = 1; // Facing right
+        image_xscale = 0.07; // Facing right
     } else if (moveX < 0) {
-        image_xscale = -1; // Facing left
+        image_xscale = -0.07; // Facing left
     }
 
     // Check for the death condition first.

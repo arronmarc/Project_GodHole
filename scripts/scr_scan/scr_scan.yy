@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Hunter Sub scipts",
-    "path": "folders/Scripts/Hunter AI Scripts/Hunter Sub scipts.yy",
+    "path": "folders/Scripts/AI/Hunter AI Scripts/Hunter Sub scipts.yy",
   },
 }

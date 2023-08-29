@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "AI",
+    "path": "folders/Objects/AI.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": true,
-  "spriteId": null,
+  "spriteId": {
+    "name": "sCol",
+    "path": "sprites/sCol/sCol.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

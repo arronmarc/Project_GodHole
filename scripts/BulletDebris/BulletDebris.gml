@@ -36,7 +36,7 @@ repeat(2){
 }
 
 
-if(place_meeting(x, y, obj_enemy)){
+if(place_meeting(x, y, obj_enemy)) or (place_meeting(x, y, drone)) or (place_meeting(x, y, red_obj)){
 	repeat(6){
 	with (instance_create_depth(x,y,depth-1,oParticle)){
 		debris = false;

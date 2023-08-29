@@ -14,11 +14,13 @@ function scr_find_cover(argument0, argument1, argument2) {
 	if !collision_line(x+lengthdir_x(argument0.sprite_width,point_direction(argument0.x,argument0.y,x,y)),y+lengthdir_y(argument0.sprite_width,point_direction(argument0.x,argument0.y,x,y)),argument1.x,argument1.y,argument0,1,1)
 	//if line of sight....
 	{
+		in_cover = false;
 	    //pathfind to a point behind the nearest wall relative to the enemy
 	    mp_potential_step(argument0.x+lengthdir_x(argument0.sprite_width,point_direction(argument1.x,argument1.y,argument0.x,argument0.y)),argument0.y+lengthdir_y(argument0.sprite_width,point_direction(argument1.x,argument1.y,argument0.x,argument0.y)),argument2*2,0)
 	}
 	else
 	{
+		in_cover = true;
 	    //if there is no line of sight (you are in cover), then decrease your fear level.
 	    fear-=1
 	}

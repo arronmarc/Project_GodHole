@@ -1,18 +1,9 @@
-skeleton_skin_set("Enemy");
+image_xscale = 0.07;
+image_yscale = 0.07;
 
-//Create event
-skeleton_animation_mix("Idle","Walk",0.03);
-skeleton_animation_mix("Walk","Idle",0.03);
-skeleton_animation_mix("Idle","Run",0.03);
-skeleton_animation_mix("Run","Idle",0.03);
-skeleton_animation_mix("Run","Crouch",0.03);
-skeleton_animation_mix("Crouch","Run",0.03);
-skeleton_animation_mix("Idle","Crouch",0.03);
-skeleton_animation_mix("Crouch","Idle",0.03);
-skeleton_animation_mix("Idle crouch","Crouch",0.03);
-skeleton_animation_mix("Crouch","Idle crouch",0.03);
-skeleton_animation_mix("Idle","Idle crouch",0.03);
-skeleton_animation_mix("Idle crouch","Idle",0.03);
+//skeleton_skin_set("Enemy");
+
+SmoothAnimTrans()
 
 hp = 5;
 

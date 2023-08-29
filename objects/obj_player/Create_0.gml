@@ -1,29 +1,18 @@
 //Create event
-spd=1.5 //set the speed
-xx=x //"smooth" x position
-yy=y//"smooth" y position
-fear=0 //player's fear level (used to interact with the shooter ai)
-fear_max=400
+image_xscale = 0.07;
+image_yscale = 0.07;
 
-global.enemyfearmax=100  //set the enemy's max fear when they spawn in
+fear=0; //player's fear level (used to interact with the shooter ai)
+fear_max=400;
+
+global.enemyfearmax=100;  //set the enemy's max fear when they spawn in
 
 state = PlayerStateFree;
 
 skeleton_skin_set("Default body");
-skeleton_attachment_set("Gun", "Gun")
+skeleton_attachment_set("Gun", "Gun");
 
-skeleton_animation_mix("Idle","Walk",0.03);
-skeleton_animation_mix("Walk","Idle",0.03);
-skeleton_animation_mix("Idle","Run",0.03);
-skeleton_animation_mix("Run","Idle",0.03);
-skeleton_animation_mix("Run","Crouch",0.03);
-skeleton_animation_mix("Crouch","Run",0.03);
-skeleton_animation_mix("Idle","Crouch",0.03);
-skeleton_animation_mix("Crouch","Idle",0.03);
-skeleton_animation_mix("Idle crouch","Crouch",0.03);
-skeleton_animation_mix("Crouch","Idle crouch",0.03);
-skeleton_animation_mix("Idle","Idle crouch",0.03);
-skeleton_animation_mix("Idle crouch","Idle",0.03);
+SmoothAnimTrans()
 
 w_spd = 1;
 n_spd = 4;

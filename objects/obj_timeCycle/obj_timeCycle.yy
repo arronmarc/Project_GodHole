@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "timeCycle",
-    "path": "folders/Objects/DayNightCycle++/timeCycle.yy",
+    "name": "DayNightCycle++",
+    "path": "folders/Objects/DayNightCycle++.yy",
   },
   "parentObjectId": null,
   "persistent": true,

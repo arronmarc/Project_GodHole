@@ -22,8 +22,7 @@ function scr_hunt_step(argument0, argument1, argument2, argument3, argument4) {
     
 	    scr_search(0.7)   //search randomly
     
-	   if (instance_exists(target) && !collision_line(x,y,target.x,target.y,argument1,1,1))
-   //if line of sight to enemy...
+	   if (instance_exists(target) && !collision_line(x,y,target.x,target.y,argument1,1,1))   //if line of sight to enemy...
 	    && distance_to_point(target.x,target.y) < argument4       //and within a certain distance....
 	    && (abs(angle_difference(look_dir,point_direction(x,y,target.x,target.y))) < argument3 //and within the view cone
 	    or distance_to_point(target.x,target.y) < sprite_width/2)  //or just really close!

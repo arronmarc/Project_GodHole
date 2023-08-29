@@ -11,19 +11,19 @@ function draw_lightSources() {
 	//REMOVE or COMMENT OUTSIDE OF EXAMPLE SCENE
 	if alpha > 0  { //This just stops the resource use during the middle of the day. Adjust as needed.
 	    with(obj_fireTest) {
-	        draw_set_blend_mode(bm_src_color);
+	        gpu_set_blendmode(bm_src_color);
 	        draw_sprite_ext(spr_lightSource_four,image_index,x,y,glowSize,glowSize,0,c_white,1);
-	        draw_set_blend_mode(bm_normal);
+	        gpu_set_blendmode(bm_normal);
 	        }
 	    with(obj_fireTest_dead) {
-	        draw_set_blend_mode(bm_src_color);
+	        gpu_set_blendmode(bm_src_color);
 	        draw_sprite_ext(spr_lightSource_three,image_index,x,y,glowSize,glowSize,0,c_white,.5);
-	        draw_set_blend_mode(bm_normal);
+	        gpu_set_blendmode(bm_normal);
 	        }
 	    with(obj_lightTest) {
-	        draw_set_blend_mode(c_purple);
+	        gpu_set_blendmode(c_purple);
 	        draw_sprite_ext(spr_lightSource_two,image_index,x,y,glowSize,glowSize,0,lightColor,.5);
-	        draw_set_blend_mode(bm_normal);
+	        gpu_set_blendmode(bm_normal);
 	        }
 	    }
 	//-----------------------------------------------------------------------------------------------------

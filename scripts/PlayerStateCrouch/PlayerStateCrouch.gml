@@ -51,9 +51,9 @@ if (!global.pause)
     // Set the direction based on mouse input first
     if (input_check("aim")) {
         if (mouse_x < x) {
-            image_xscale = -1;  // Face left
+            image_xscale = -0.07;  // Face left
         } else if (mouse_x > x) {
-            image_xscale = 1;   // Face right
+            image_xscale = 0.07;   // Face right
         }
     } else {
         // If not adjusting for mouse input, then check the movement direction

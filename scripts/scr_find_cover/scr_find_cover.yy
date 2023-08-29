@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Shooter Sub scripts",
-    "path": "folders/Scripts/Shooter AI scripts/Shooter Sub scripts.yy",
+    "path": "folders/Scripts/AI/Shooter AI scripts/Shooter Sub scripts.yy",
   },
 }

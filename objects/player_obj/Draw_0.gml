@@ -1,2 +1,2 @@
-draw_sprite(sCol,2,xx,yy)
+draw_sprite(sCol,2,x,y)
 

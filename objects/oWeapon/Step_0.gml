@@ -34,9 +34,6 @@ if (current_delay == 0) && (projectile != -1) && (input_check("aim")) && (input_
 
 		ammo[weapon] -= 1;
 	}
-	show_debug_message("gun_bone_x: " + string(gun_bone_x));
-	show_debug_message("gun_bone_y: " + string(gun_bone_y));
-
 	ds_map_destroy(_map_temp);
 	
 	current_recoil = _x;

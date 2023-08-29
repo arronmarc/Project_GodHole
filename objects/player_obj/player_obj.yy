@@ -16,13 +16,10 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "AI",
+    "path": "folders/Objects/AI.yy",
   },
-  "parentObjectId": {
-    "name": "blue_parent",
-    "path": "objects/blue_parent/blue_parent.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

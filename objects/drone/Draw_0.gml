@@ -1,5 +1,4 @@
-draw_sprite(sCol,3,xx,yy-20+5*sin(degtorad(b))) //draw sprite
-draw_sprite_ext(sCol,3,xx,yy,1,-0.5,0,c_black,0.2) //draw shadow
+draw_self()
 
 if state = 0{  //if in the search state then draw the view cone with an alpha of 0.1
 draw_set_alpha(0.1)

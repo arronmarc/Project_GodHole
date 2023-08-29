@@ -1,2 +1,1 @@
-draw_sprite(sCol,1,xx,yy)
-
+draw_self();

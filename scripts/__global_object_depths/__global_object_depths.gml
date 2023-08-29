@@ -6,23 +6,25 @@ function __global_object_depths() {
 
 	// insert the generated arrays here
 	global.__objectDepths[0] = 0; // wall_obj
-	global.__objectDepths[1] = 0; // player_obj
-	global.__objectDepths[2] = 0; // blue_obj
-	global.__objectDepths[3] = 0; // red_obj
-	global.__objectDepths[4] = 0; // blue_bullet
-	global.__objectDepths[5] = 0; // red_bullet
-	global.__objectDepths[6] = 0; // blue_parent
-	global.__objectDepths[7] = 0; // drone
+	global.__objectDepths[1] = 0; // obj_player
+	global.__objectDepths[2] = 0; // obj_player
+	global.__objectDepths[3] = 0; // blue_obj
+	global.__objectDepths[4] = 0; // red_obj
+	global.__objectDepths[5] = 0; // blue_bullet
+	global.__objectDepths[6] = 0; // red_bullet
+	global.__objectDepths[7] = 0; // blue_parent
+	global.__objectDepths[8] = 0; // drone
 
 
 	global.__objectNames[0] = "wall_obj";
-	global.__objectNames[1] = "player_obj";
-	global.__objectNames[2] = "blue_obj";
-	global.__objectNames[3] = "red_obj";
-	global.__objectNames[4] = "blue_bullet";
-	global.__objectNames[5] = "red_bullet";
-	global.__objectNames[6] = "blue_parent";
-	global.__objectNames[7] = "drone";
+	global.__objectNames[1] = "obj_player";
+	global.__objectNames[2] = "obj_player";
+	global.__objectNames[3] = "blue_obj";
+	global.__objectNames[4] = "red_obj";
+	global.__objectNames[5] = "blue_bullet";
+	global.__objectNames[6] = "red_bullet";
+	global.__objectNames[7] = "blue_parent";
+	global.__objectNames[8] = "drone";
 
 
 	// create another array that has the correct entries
