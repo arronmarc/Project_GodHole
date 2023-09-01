@@ -18,14 +18,19 @@ function PlayerStateFree() {
 
         // 6. HANDLE ROLL STATE
         HandleRollState();
+		
+		// 6. HANDLE STAB ATTACK
+        HandleAttackStab();
 
-        // 7. SAVE LAST MOVED DIRECTION
+        // 8. SAVE LAST MOVED DIRECTION
         SaveLastMoveDirection();
+
 
     }
 	
 	
 }
+
 
 function HandleInput() {
     self._inputX = input_right - input_left;
@@ -74,6 +79,10 @@ function CalculateMove() {
 function HandleAnimations() {
     var desired_sound = noone;
     
+    if (state == PlayerAttackStab) {
+        return; // Exit the function early if an attack animation is playing.
+    }
+
     if (moveX != 0 or moveY != 0) {
         desired_sound = HandleMovementAnimations();
     } else {
@@ -83,14 +92,9 @@ function HandleAnimations() {
     ManageSounds(desired_sound);
 }
 
+
 function HandleMovementAnimations() {
     var sound_to_play;
-    
-	if (global.health <= 0) {
-        if (skeleton_animation_get() != "Die") {
-            skeleton_animation_set("Die", false);
-        }
-    } else {
 	
     if (isCrouching) {
         SetAnimationIfDifferent("Crouch");
@@ -106,7 +110,6 @@ function HandleMovementAnimations() {
 
     return sound_to_play;
 	}
-}
 
 function HandleIdleAnimations() {
     if (isCrouching) {
@@ -148,6 +151,12 @@ function HandleCrouchToggle() {
 function HandleRollState() {
     if (keyRoll) {
         state = PlayerStateRoll;
+    }
+}
+
+function HandleAttackStab() {
+    if (keyAttack) {
+        state = PlayerAttackStab;
     }
 }
 

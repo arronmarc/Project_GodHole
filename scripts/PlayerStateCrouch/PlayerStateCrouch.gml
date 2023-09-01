@@ -58,7 +58,7 @@ if (!global.pause)
     } else {
         // If not adjusting for mouse input, then check the movement direction
         if (moveX != 0) {
-            image_xscale = sign(moveX);
+            image_xscale = sign(moveX) * 0.07; // Adjusted for 0.07 scaling factor
         }
     }
 

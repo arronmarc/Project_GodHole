@@ -7,10 +7,18 @@ fear_max=400;
 
 global.enemyfearmax=100;  //set the enemy's max fear when they spawn in
 
+global.health = 5;
+global.healthmax = 50;
+global.stamina = 500;
+global.staminamax = 500;
+
+start_timer = false;
+timer = 0;
+
 state = PlayerStateFree;
 
-skeleton_skin_set("Default body");
-skeleton_attachment_set("Gun", "Gun");
+skeleton_skin_set("Human");
+skeleton_attachment_set("Weapon", "Gun");
 
 SmoothAnimTrans()
 
@@ -30,6 +38,10 @@ skidTimer = 0;
 skidFriction = 0.5;
 lastMovedDirection = 0; 
 
+animation_start_time = 0;
+animation_playing = false;
+
+
 //heldItem = instance_create_layer(x, y, "Instances", oPickaxe);
 
 aSpeed = 0.6; // Acceleration speed
@@ -42,10 +54,7 @@ skeleton_bone_state_get("Gun bone", _map_temp);
 original_bone_y = _map_temp[? "y"];
 ds_map_destroy(_map_temp);
 
-global.health = 1;
-global.healthmax = 50;
-global.stamina = 500;
-global.staminamax = 500;
+
 
 if (global.targetX != -1)
 {

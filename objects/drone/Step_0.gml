@@ -1,13 +1,13 @@
+if ((isDead != true) and  (!global.pause)) {
+
 //lerp the sprite's position. Adjust the divider for more or less smoothing.
 xx+=(x-xx)*spd/20
 yy+=(y-yy)*spd/20
 
-if gamemode=0  //patrolling drones mode
-{
+if ((gamemode = 0)) { //patrolling drones mode
     scr_hunt_step(obj_player,wall_obj,0.6,30,250)  //run the hunt script
     
-    if state=1  //spawn enemies if in the alert state
-    {
+    if (state = 1) { //spawn enemies if in the alert state
         if instance_number(red_obj)<3
         {
             var spawndir=point_direction(obj_player.x,obj_player.y,x,y)+irandom_range(-45,45)
@@ -35,9 +35,8 @@ else {
     image_speed = 1; // Resume the animation. Adjust this value if your standard playback speed is different.
 }
 
-if (!global.pause) 
+if (isDead != true) and  (!global.pause) 
 {
-	#region Movement and animations
 	// Determine direction based on "smooth" x position
 	if (xx < x) {
 	    image_xscale = 0.07;  // Facing right
@@ -46,43 +45,25 @@ if (!global.pause)
 	}
 
 
-    // Check for the death condition first.
-    if (hp <= 0) {
-        if (skeleton_animation_get() != "Die") {
-            skeleton_animation_set("Die", false);
-            spd = 0;
-			xx = 0;
-			yy = 0;
-            animation_start_time = current_time;
-            animation_playing = true;
-        }
-	
-    } 
-    else if (spd) {
-        // Only set walking animation if the character is not dying.
-        if skeleton_animation_get() != "Walk" {
-            skeleton_animation_set("Walk");
-        }
-    } 
-    else {
-        // Only set idle animation if the character is not dying.
-        if skeleton_animation_get() != "Idle" {
-            skeleton_animation_set("Idle");
-        }
-    }
-
-    if (animation_playing) {
-        var duration = 40 / 30; 
-        if (current_time - animation_start_time >= duration * 1000) { // Multiply by 1000 because current_time is in milliseconds
-            // Here, the character is already dead, so you don't need to set any other animation.
-            animation_playing = false; // Stop tracking the animation
-        }
-    }
-
-    // Check for collisions
-    CollisionCheck(moveX, moveY);
-
-	#endregion
+    
+}
 
 }
 
+//Die
+if (animation_playing) {
+    var duration = 40 / 30; 
+    if (current_time - animation_start_time >= duration * 1000) { // Multiply by 1000 because current_time is in milliseconds
+        // Here, the character is already dead, so you don't need to set any other animation.
+        animation_playing = false; // Stop tracking the animation
+    }
+}
+	
+if (hp == 0) {
+	isDead = true;
+        
+        spd = 0;
+        animation_start_time = current_time;
+        animation_playing = true;
+        
+}

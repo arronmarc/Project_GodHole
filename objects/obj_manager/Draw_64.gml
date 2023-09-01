@@ -16,3 +16,7 @@
 //	draw_text(_x + 4, _y - 2, _count);
 //}
 
+if instance_exists(red_obj) {
+draw_text(0,0,string_hash_to_newline("Enemy aggression: "+string((1100-global.enemyfearmax)/100)))
+}
+

@@ -1,10 +1,6 @@
 if (!global.pause) 
 {
-yoffset = -45;
-xoffset = -10;
 
-x = obj_player.x + xoffset;
-y = obj_player.y + yoffset;
 
 bulletDirection = point_direction(x, y, crosshair.x, crosshair.y);
 
@@ -17,29 +13,28 @@ if (mouseb)
 
 if (current_delay == 0) && (projectile != -1) && (input_check("aim")) && (input_check("shoot"))
 {
-	var _map_temp = ds_map_create();
-	with (obj_player) {
-	    skeleton_bone_state_get("Gun bone", _map_temp);
-	}
-	var gun_bone_x = _map_temp[? "worldX"];
-	var gun_bone_y = _map_temp[? "worldY"];
+    var player_angle = point_direction(obj_player.x, obj_player.y, crosshair.x, crosshair.y);
+    var offsetDistance = 40; // Distance from the player to spawn the bullet
 
+    var bullet_x = obj_player.x + lengthdir_x(offsetDistance, player_angle);
+    var bullet_y = obj_player.y + lengthdir_y(offsetDistance, player_angle);
 
-	if (ammo[weapon] != 0)
-	{
-		//Use the bone's x and y values to spawn the projectile
-		with (instance_create_layer(gun_bone_x + lengthdir_x(other.length, bulletDirection), gun_bone_y + lengthdir_y(other.length, bulletDirection), "Instances", projectile)) {
-		    speed = other.bulletspeed;
-		}
+    if (ammo[weapon] != 0)
+    {
+        // Spawn the projectile at the calculated endpoint
+        with (instance_create_layer(bullet_x, bullet_y, "Instances", projectile)) {
+            speed = other.bulletspeed;
+            Screenshake(10, 5);
+        }
 
-		ammo[weapon] -= 1;
-	}
-	ds_map_destroy(_map_temp);
-	
-	current_recoil = _x;
-	curvePos = 0;
-	curveSpd = 0.01;
+        ammo[weapon] -= 1;
+    }
+
+    current_recoil = _x;
+    curvePos = 0;
+    curveSpd = 0.01;
 }
+
 
 
 current_delay = max(-1,current_delay-1);

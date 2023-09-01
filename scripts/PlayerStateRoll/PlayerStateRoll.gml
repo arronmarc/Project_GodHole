@@ -24,7 +24,7 @@ function PlayerStateRoll() {
                 skeleton_animation_set("Roll");
             }
 
-            rollTimer = 40; 
+            rollTimer = 14; 
         }
 
         // Check for movement and update the direction

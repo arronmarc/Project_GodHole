@@ -1,9 +1,9 @@
 function CollisionCheck(_moveX, _moveY){
     // Horizontal
     if(_moveX != 0){
-        if(place_meeting(x + _moveX, y, obj_collision) || place_meeting(x + _moveX, y, oBreakableParent)){
+        if(place_meeting(x + _moveX, y, obj_collision) || place_meeting(x + _moveX, y, oBreakableParent) || place_meeting(x + _moveX, y, wall_obj)){
             repeat(abs(_moveX)){
-                if(!place_meeting(x + sign(_moveX), y, obj_collision) && !place_meeting(x + sign(_moveX), y, oBreakableParent)){
+                if(!place_meeting(x + sign(_moveX), y, obj_collision) && !place_meeting(x + sign(_moveX), y, oBreakableParent) || place_meeting(x + _moveX, y, wall_obj)){
                     x += sign(_moveX);
                 } else { 
                     break;
@@ -15,9 +15,9 @@ function CollisionCheck(_moveX, _moveY){
 
     // Vertical
     if(_moveY != 0){
-        if(place_meeting(x, y + _moveY, obj_collision) || place_meeting(x, y + _moveY, oBreakableParent)){
+        if(place_meeting(x, y + _moveY, obj_collision) || place_meeting(x, y + _moveY, oBreakableParent) || place_meeting(x + _moveX, y, wall_obj)){
             repeat(abs(_moveY)){
-                if(!place_meeting(x, y + sign(_moveY), obj_collision) && !place_meeting(x, y + sign(_moveY), oBreakableParent)){
+                if(!place_meeting(x, y + sign(_moveY), obj_collision) && !place_meeting(x, y + sign(_moveY), oBreakableParent) || place_meeting(x + _moveX, y, wall_obj)){
                     y += sign(_moveY);
                 } else { 
                     break;

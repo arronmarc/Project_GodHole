@@ -10,10 +10,28 @@ else {
 if (!global.pause) 
 {
 
-//AI
+
 //fear control - in order to work with the shooter AI
 scr_fear_control(red_bullet)
 fear-=1
+
+//Regenerate health
+if (global.health < 50) {
+    if (!start_timer) {
+        start_timer = true;
+        timer = room_speed * 30;
+    }
+}
+
+if (timer > 0) {
+    timer--;
+} else if (global.health < 50) {
+    global.health = clamp(global.health + 1, 0, 50);
+    timer = room_speed; // Reset timer to 1 second for the next regeneration step
+}
+
+
+
 
 //Update input
 input_left = input_check("left");
@@ -23,12 +41,11 @@ input_down = input_check("down");
 keySprint = input_check("sprint");
 keyRoll = input_check("roll");
 keyCrouch = input_check_pressed("crouch");
+keyAttack = input_check("attack");
 
 script_execute(state);
 
-if (rollTimer > 0) {
-    rollTimer -= 1;
-}
+
 
 //Update the position of the occluder to match this instance's position
 occluder.x = x;

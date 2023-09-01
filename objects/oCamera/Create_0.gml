@@ -16,6 +16,7 @@ shakeLength = 0;
 shakeMagnitude = 0;
 shakeRemain = 0;
 
+currentZoom = 1;
 
 camXSpeed = 0;
 camYSpeed = 0;

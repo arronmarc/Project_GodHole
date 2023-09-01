@@ -31,7 +31,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_pickaxe",
+    "path": "sprites/spr_pickaxe/spr_pickaxe.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

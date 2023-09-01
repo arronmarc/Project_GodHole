@@ -6,5 +6,5 @@ enum TRANS_TYPE
 }
 percent = 0;
 leading = OUT;
-width = RESOLUTION_W;
-height = RESOLUTION_H;
+width = RES_W;
+height = RES_H;

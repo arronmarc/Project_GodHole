@@ -19,9 +19,11 @@ col_alert=make_color_rgb(31,31,31)
 
 //skeleton_skin_set("Enemy");
 skeleton_skin_set("Default body");
+skeleton_attachment_set("Weapon", "Sword");
 
 SmoothAnimTrans()
 
+isDead = false;
 hp = 5;
 
 w_spd = 1.2;

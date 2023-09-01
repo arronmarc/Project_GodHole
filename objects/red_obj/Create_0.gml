@@ -1,7 +1,7 @@
 image_xscale = 0.07;
 image_yscale = 0.07;
 
-spd=1.2 //set the speed
+spd=2 //set the speed
 xx=x //"smooth" x position
 yy=y//"smooth" y position
 scr_shooter_ai_create(global.enemyfearmax) //initialise the shooter ai
@@ -16,6 +16,7 @@ SmoothAnimTrans()
 skeleton_attachment_set("Weapon", "Gun")
 
 hp = 5;
+isDead = false;
 
 w_spd = 1.2;
 n_spd = 4;

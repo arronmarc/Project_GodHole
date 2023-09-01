@@ -1,6 +1,7 @@
 function BulletDebris(){
 
-if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)){
+//Object dust and debris collisions
+if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)) or (place_meeting(x, y, wall_obj)){
 	repeat(6){
 	with (instance_create_depth(x,y,depth-1,oParticle)){
 		debris = false;
@@ -36,7 +37,7 @@ repeat(2){
 }
 
 
-if(place_meeting(x, y, obj_enemy)) or (place_meeting(x, y, drone)) or (place_meeting(x, y, red_obj)){
+if(place_meeting(x, y, red_obj) or place_meeting(x, y, drone)){
 	repeat(6){
 	with (instance_create_depth(x,y,depth-1,oParticle)){
 		debris = false;
