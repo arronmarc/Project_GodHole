@@ -30,7 +30,20 @@ if (timer > 0) {
     timer = room_speed; // Reset timer to 1 second for the next regeneration step
 }
 
+//Regenerate mana
+if (global.mana < 50) {
+    if (!start_timer) {
+        start_timer = true;
+        timer = room_speed * 30;
+    }
+}
 
+if (timer > 0) {
+    timer--;
+} else if (global.mana < 50) {
+    global.mana = clamp(global.mana + 1, 0, 50);
+    timer = room_speed; // Reset timer to 1 second for the next regeneration step
+}
 
 
 //Update input
@@ -41,7 +54,7 @@ input_down = input_check("down");
 keySprint = input_check("sprint");
 keyRoll = input_check("roll");
 keyCrouch = input_check_pressed("crouch");
-keyAttack = input_check("attack");
+keyAttack = input_check_pressed("attack");
 
 script_execute(state);
 

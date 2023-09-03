@@ -1,0 +1,8 @@
+// Inherit the parent event
+event_inherited();
+
+//Resources
+res = [ITEM.WOOD];
+
+hp = 8;
+hpMax = hp;

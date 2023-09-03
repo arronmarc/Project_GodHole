@@ -9,6 +9,10 @@ global.enemyfearmax=100;  //set the enemy's max fear when they spawn in
 
 global.health = 5;
 global.healthmax = 50;
+
+global.mana = 500;
+global.manamax = 500;
+
 global.stamina = 500;
 global.staminamax = 500;
 

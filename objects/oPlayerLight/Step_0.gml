@@ -1,7 +1,7 @@
 x = obj_player.x;
 y = obj_player.y;
 light.x = x;
-light.y = y-30;
+light.y = y;
 
 if (daycycle.draw_daylight == true) {
     if (!light_created) {

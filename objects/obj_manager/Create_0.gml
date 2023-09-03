@@ -4,6 +4,8 @@ room_goto(r_demo);
 
 global.iUI = instance_create_layer(0,0,layer,oUI);
 
+global.P_System=part_system_create_layer(layer, true);
+
 global.targetRoom = -1;
 global.targetX = -1;
 global.targetY = -1;

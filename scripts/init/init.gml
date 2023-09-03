@@ -33,7 +33,7 @@ enum ITEM {
 	]);
 	initItem(ITEM.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
 		[ITEM.WOOD, 2]
-	]);
+	], oWoodBlock);
 	initItem(ITEM.BLOCK_IRON, "Iron Block", sBlock_Iron, [
 	[ITEM.IRON, 2]
 	]);

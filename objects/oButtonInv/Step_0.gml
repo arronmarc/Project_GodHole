@@ -29,6 +29,18 @@ if (hover && input_check("shoot")) {
 				}
 			}
 			break;
+			
+			case ITEM.BLOCK_WOOD:
+				TogglePause();
+				
+				with (obj_player) {
+					placingObj = global.itemPlaceable[_item];
+					
+					event_user(0);
+				}
+				_used = true;
+			
+			break;
 		}
 		
 		//Used

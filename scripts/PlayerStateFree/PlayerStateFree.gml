@@ -154,11 +154,18 @@ function HandleRollState() {
     }
 }
 
+//function HandleAttackStab() {
+//    if (keyAttack) {
+//        state = PlayerAttackStab;
+//    }
+//}
+
 function HandleAttackStab() {
     if (keyAttack) {
-        state = PlayerAttackStab;
+        state = PlayerAttackMagic;
     }
 }
+
 
 function SaveLastMoveDirection() {
     if (moveX != 0 || moveY != 0) {
