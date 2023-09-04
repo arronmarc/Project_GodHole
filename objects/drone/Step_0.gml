@@ -60,8 +60,7 @@ if (animation_playing) {
 }
 	
 if (hp == 0) {
-	isDead = true;
-        
+		isDead = true;
         spd = 0;
         animation_start_time = current_time;
         animation_playing = true;

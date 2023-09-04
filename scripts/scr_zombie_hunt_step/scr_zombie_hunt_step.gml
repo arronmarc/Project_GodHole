@@ -24,50 +24,51 @@ function scr_zombie_hunt_step(argument0, argument1, argument2, argument3, argume
         }
     }
 
-////////HUNT STATE/////////
+    ////////HUNT STATE/////////
 
-if (state == 1) {
-    look_dir = point_direction(x, y, seenx, seeny); //change the look direction to be looking at the last known location
-    
-    if (!collision_line(x, y, target.x, target.y, argument1, 1, 0)) //if there is line of sight to the enemy....
-    {
-        seenx = target.x;  //...then update the last seen location
-        seeny = target.y;
-    }
+    if (state == 1) {
+        // Check if target is visible
+        var canSeeTarget = !collision_line(x, y, target.x, target.y, argument1, 1, 0);
+        
+        if (canSeeTarget) {
+            seenx = target.x;  // Update the last seen location
+            seeny = target.y;
+        }
 
-    if (distance_to_point(seenx, seeny) > 0) {  //if not at the last seen location...
-        if (isFollowing) {
+        if (distance_to_point(seenx, seeny) > 0) {  //if not at the last seen location...
             if (isAttacking) {
+                // Perform the attack logic
+                if (attackTimer == 0) {
+                    // Play attack animation
+                    skeleton_animation_set("Sword stab", false);
+                }
+                
+                attackTimer += 1;
+                if (attackTimer == 8) {
+                    // Perform attack action
+                    // Reset the timer and cooldown
+                    attackTimer = 0;
+                    attackCooldown = room_speed * 5; // 5 seconds cooldown
+                    isAttacking = false; // Reset the attack state after attacking
+                }
+            } else if (distance_to_point(target.x, target.y) <= 30) {
+                isAttacking = true; // Start attacking
                 spd = 0;  // Stop movement during attack
             } else {
-                mp_potential_step(seenx, seeny, argument2, 1);  //move toward the last seen location
-            }
-        }
-        
-        if (isAttacking) {
-            // Perform the attack logic
-            if (attackTimer == 0) {
-                // Play attack animation
-                skeleton_animation_set("Sword stab", false);
-            }
-            
-            attackTimer += 1;
-            if (attackTimer == 8) {
-                // Perform attack action
-                // Reset the timer and cooldown
-                attackTimer = 0;
-                attackCooldown = room_speed * 5; // 5 seconds cooldown
-                isAttacking = false; // Reset the attack state after attacking
+                // Move towards target
+                isFollowing = true;
+                spd = argument2;
+                move_towards_point(target.x, target.y, spd);
             }
         } else {
-            // Cooldown between attacks
-            if (attackCooldown > 0) {
-                attackCooldown -= 1;
+            isFollowing = true;
+            // Move towards last seen location
+            mp_potential_step(seenx, seeny, argument2, 1);
+            // If we are close to the last seen location, switch to searching
+            if (point_distance(x, y, seenx, seeny) < 5) {
+                isFollowing = false;
+                state = 0;  // Switch back to search mode
             }
         }
-    } else {
-        state = 0;  //if arrived at the last seen location then switch back to search mode
     }
-}
-
 }
