@@ -2,6 +2,7 @@ function init(){
 global.enemyfearmax = 100;
 gml_pragma("global", "init()");
 
+#macro PLACING_GRID_SIZE 16
 
 //Items
 enum ITEM {
@@ -25,18 +26,18 @@ enum ITEM {
 	initItem(ITEM.IRON, "Iron", sIron, []);
 	
 	initItem(ITEM.POTION, "Potion", sPotion, [
-		[ITEM.APPLE, 4]
+		[ITEM.APPLE, 2]
 	]);
 	initItem(ITEM.SYRUP, "Syrup", sSyrup, [
-		[ITEM.ORANGE, 4],
-		[ITEM.APPLE, 2]
+		[ITEM.ORANGE, 1],
+		[ITEM.APPLE, 1]
 	]);
 	initItem(ITEM.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
 		[ITEM.WOOD, 2]
 	], oWoodBlock);
 	initItem(ITEM.BLOCK_IRON, "Iron Block", sBlock_Iron, [
 	[ITEM.IRON, 2]
-	]);
+	], oIronBlock);
 	
 
 //Inventory

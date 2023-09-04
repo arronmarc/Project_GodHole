@@ -19,10 +19,21 @@ if (hover && input_check("shoot")) {
 			}
 			break;
 			
+			case ITEM.SYRUP:
+			with (obj_player) {
+				if (global.mana < global.manamax) {
+					global.mana += 100;
+					_used = true;
+					
+					if (global.mana > global.manamax) global.mana = global.manamax;
+				}
+			}
+			break;
+			
 			case ITEM.APPLE:
 			with (obj_player) {
 				if (global.health < global.healthmax) {
-					global.health ++ ;
+					global.health += 5 ;
 					_used = true;
 					
 					if (global.health > global.healthmax) global.health = global.healthmax;
@@ -31,6 +42,7 @@ if (hover && input_check("shoot")) {
 			break;
 			
 			case ITEM.BLOCK_WOOD:
+			case ITEM.BLOCK_IRON:
 				TogglePause();
 				
 				with (obj_player) {
@@ -41,6 +53,8 @@ if (hover && input_check("shoot")) {
 				_used = true;
 			
 			break;
+			
+			
 		}
 		
 		//Used

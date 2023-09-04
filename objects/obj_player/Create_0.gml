@@ -45,6 +45,11 @@ lastMovedDirection = 0;
 animation_start_time = 0;
 animation_playing = false;
 
+//Placing mode
+placingMode = false;
+placingObj = noone;
+placingInst = noone;
+
 
 //heldItem = instance_create_layer(x, y, "Instances", oPickaxe);
 

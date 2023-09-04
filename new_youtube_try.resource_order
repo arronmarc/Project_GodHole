@@ -324,6 +324,7 @@
     {"name":"input_trigger_effect_set_pause","order":5,"path":"scripts/input_trigger_effect_set_pause/input_trigger_effect_set_pause.yy",},
     {"name":"input_gamepad_is_connected","order":10,"path":"scripts/input_gamepad_is_connected/input_gamepad_is_connected.yy",},
     {"name":"input_accessibility_verb_toggle_set","order":7,"path":"scripts/input_accessibility_verb_toggle_set/input_accessibility_verb_toggle_set.yy",},
+    {"name":"oIronBlock","order":2,"path":"objects/oIronBlock/oIronBlock.yy",},
     {"name":"__input_config_general","order":3,"path":"scripts/__input_config_general/__input_config_general.yy",},
     {"name":"__input_system_tick","order":3,"path":"scripts/__input_system_tick/__input_system_tick.yy",},
     {"name":"obj_crop","order":4,"path":"objects/obj_crop/obj_crop.yy",},

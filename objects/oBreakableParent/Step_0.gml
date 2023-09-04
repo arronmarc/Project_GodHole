@@ -4,6 +4,7 @@ if (hp <= 0) {
 	
 	//How many resources to create
 	var _resCount = choose(1,1,1,1,2,2,3);
+	if (resCount != -1) _resCount = resCount;
 	
 	var _resMax = array_length(res);
 	
