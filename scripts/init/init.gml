@@ -15,7 +15,28 @@ enum ITEM {
 	POTION,
 	SYRUP,
 	BLOCK_WOOD,
-	BLOCK_IRON
+	BLOCK_IRON,
+	
+	TOMATO_SEED,
+    TOMATO,
+        
+    POTATO_SEED,
+    POTATO,
+        
+    CARROT_SEED,
+    CARROT,
+        
+    ARTICHOKE_SEED,
+    ARTICHOKE,
+        
+    CHILLI_SEED,
+    CHILLI,
+        
+    GOURD_SEED,
+    GOURD,
+        
+    CORN_SEED,
+    CORN
 	}
 	
 	initItem(ITEM.APPLE, "Apple", sApple, []);
@@ -38,6 +59,27 @@ enum ITEM {
 	initItem(ITEM.BLOCK_IRON, "Iron Block", sBlock_Iron, [
 	[ITEM.IRON, 2]
 	], oIronBlock);
+	
+	initItem(ITEM.TOMATO_SEED, "Tomato Seed", sTomatoSeed, []);
+    initItem(ITEM.TOMATO, "Tomato", sTomato, []);
+    
+    initItem(ITEM.POTATO_SEED, "Potato Seed", sPotatoSeed, []);
+    initItem(ITEM.POTATO, "Potato", sPotato, []);
+    
+    initItem(ITEM.CARROT_SEED, "Carrot Seed", sCarrotSeed, []);
+    initItem(ITEM.CARROT, "Carrot", sCarrot, []);
+    
+    initItem(ITEM.ARTICHOKE_SEED, "Artichoke Seed", sArtichokeSeed, []);
+    initItem(ITEM.ARTICHOKE, "Artichoke", sArtichoke, []);
+    
+    initItem(ITEM.CHILLI_SEED, "Chilli Seed", sChilliSeed, []);
+    initItem(ITEM.CHILLI, "Chilli", sChilli, []);
+    
+    initItem(ITEM.GOURD_SEED, "Gourd Seed", sGourdSeed, []);
+    initItem(ITEM.GOURD, "Gourd", sGourd, []);
+    
+    initItem(ITEM.CORN_SEED, "Corn Seed", sCornSeed, []);
+    initItem(ITEM.CORN, "Corn", sCorn, []);
 	
 
 //Inventory

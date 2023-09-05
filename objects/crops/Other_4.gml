@@ -1,5 +1,6 @@
-//If the grid hasn't already been created, create it
+//Room start event
 
+//If the grid hasn't already been created, create it
 if (room == r_demo) {
 
 ds_crops_instances = ds_grid_create(room_width div cellSize, room_height div cellSize);

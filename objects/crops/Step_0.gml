@@ -1,3 +1,4 @@
+//Step event
 if(room != r_demo){ planting = false; exit }
 
 #region Planting

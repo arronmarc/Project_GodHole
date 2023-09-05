@@ -1,3 +1,4 @@
+//Draw event
 if(!planting or !ds_exists(ds_crops_instances, ds_type_grid)) { exit }
 
 var cs = cellSize;
