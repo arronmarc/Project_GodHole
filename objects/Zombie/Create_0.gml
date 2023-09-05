@@ -1,4 +1,4 @@
-image_xscale = 0.07;
+image_xscale = -0.07;
 image_yscale = 0.07;
 
 xx=x
@@ -17,12 +17,6 @@ col=make_color_rgb(196,207,160)
 col_look=make_color_rgb(77,83,60)
 col_alert=make_color_rgb(31,31,31)
 
-//skeleton_skin_set("Enemy");
-skeleton_skin_set("Default body");
-skeleton_attachment_set("Weapon", "Sword");
-
-SmoothAnimTrans()
-
 isDead = false;
 hp = 5;
 
@@ -34,5 +28,4 @@ isFollowing = false;
 playerHealth = global.health;
 
 attackCooldown = 0; // Counter for attack cooldown
-hasAttacked = false; // Boolean to track recent attack
 attackTimer = 0;    // Timer for attack animation

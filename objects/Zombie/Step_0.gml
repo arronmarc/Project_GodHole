@@ -1,5 +1,8 @@
-if (!isDead && !global.pause) {
-    if (hp > 0) {
+if (!global.pause) {
+
+	if hp == 0 {
+		isDead = true;
+	} else if (hp > 0) {
         // Lerp the sprite's position. Adjust the divider for more or less smoothing.
         xx += (x - xx) * spd / 20;
         yy += (y - yy) * spd / 20;
@@ -20,9 +23,9 @@ if (!isDead && !global.pause) {
         
         // Determine direction based on "smooth" x position
         if (xx < x) {
-            image_xscale = 0.07;  // Facing right
+            image_xscale = -0.07;  // Facing right
         } else if (xx > x) {
-            image_xscale = -0.07;  // Facing left
+            image_xscale = 0.07;  // Facing left
         }
         
         if (gamemode == 0) { //patrolling drones mode
@@ -30,10 +33,10 @@ if (!isDead && !global.pause) {
         } else {
             move_towards_point(x, -50, 3);
         }
-    } else {
+    } else if (isDead) {
         // If HP is zero, the enemy is dead, so stop everything
-        isDead = true;
         spd = 0;
+		skeleton_animation_set("Die", false);
         animation_start_time = current_time;
         animation_playing = true;
     }

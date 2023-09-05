@@ -58,6 +58,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"sceneObjects","folderPath":"folders/Objects/DayNightCycle++/sceneObjects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Lighting","folderPath":"folders/Objects/Lighting.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Managers","folderPath":"folders/Objects/Managers.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Placeable","folderPath":"folders/Objects/Placeable.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Objects/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Weapons","folderPath":"folders/Objects/Weapons.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"World","folderPath":"folders/Objects/World.yy",},
@@ -95,7 +96,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Weapons","folderPath":"folders/Sprites/Weapons.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tilesets","folderPath":"folders/Tilesets.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Placeable","folderPath":"folders/Objects/Placeable.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"controllerblacklist.csv","CopyToMask":-1,"filePath":"datafiles",},
@@ -438,6 +438,7 @@
     {"id":{"name":"__input_key_get_name","path":"scripts/__input_key_get_name/__input_key_get_name.yy",},},
     {"id":{"name":"spr_inventory_UI","path":"sprites/spr_inventory_UI/spr_inventory_UI.yy",},},
     {"id":{"name":"oPlaceableParent","path":"objects/oPlaceableParent/oPlaceableParent.yy",},},
+    {"id":{"name":"spr_zombie","path":"sprites/spr_zombie/spr_zombie.yy",},},
     {"id":{"name":"input_profile_get","path":"scripts/input_profile_get/input_profile_get.yy",},},
     {"id":{"name":"input_verb_consume","path":"scripts/input_verb_consume/input_verb_consume.yy",},},
     {"id":{"name":"bg_tile","path":"sprites/bg_tile/bg_tile.yy",},},

@@ -1,0 +1,27 @@
+skeleton.png
+size:441,806
+filter:Linear,Linear
+pma:true
+Arm bottom
+bounds:2,457,80,392
+rotate:90
+Arm top
+bounds:2,2,157,194
+rotate:90
+Foot
+bounds:326,160,137,112
+rotate:90
+Hand
+bounds:198,74,85,108
+rotate:90
+Head
+bounds:308,5,131,153
+Leg bottom
+bounds:2,299,156,386
+rotate:90
+Leg top
+bounds:2,161,136,322
+rotate:90
+Torso
+bounds:2,539,265,435
+rotate:90

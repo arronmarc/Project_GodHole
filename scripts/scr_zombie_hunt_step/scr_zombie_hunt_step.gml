@@ -40,7 +40,7 @@ function scr_zombie_hunt_step(argument0, argument1, argument2, argument3, argume
                 // Perform the attack logic
                 if (attackTimer == 0) {
                     // Play attack animation
-                    skeleton_animation_set("Sword stab", false);
+                    skeleton_animation_set("Lunge", false);
                 }
                 
                 attackTimer += 1;
@@ -48,7 +48,7 @@ function scr_zombie_hunt_step(argument0, argument1, argument2, argument3, argume
                     // Perform attack action
                     // Reset the timer and cooldown
                     attackTimer = 0;
-                    attackCooldown = room_speed * 0.1; // 5 seconds cooldown
+                    attackCooldown = room_speed * 10; // 5 seconds cooldown
                     isAttacking = false; // Reset the attack state after attacking
                 }
             } else if (distance_to_point(target.x, target.y) <= 30) {
