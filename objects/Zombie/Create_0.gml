@@ -1,3 +1,6 @@
+skeleton_animation_mix("Walk", "Lunge", 0.3);
+skeleton_animation_mix("Lunge", "Walk", 0.3);
+
 image_xscale = -0.07;
 image_yscale = 0.07;
 
@@ -27,5 +30,5 @@ isAttacking = false;
 isFollowing = false;
 playerHealth = global.health;
 
-attackCooldown = 0; // Counter for attack cooldown
+attackCooldown = global.curSec + 5;
 attackTimer = 0;    // Timer for attack animation

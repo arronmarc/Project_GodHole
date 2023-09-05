@@ -2,6 +2,10 @@ function init(){
 global.enemyfearmax = 100;
 gml_pragma("global", "init()");
 
+#macro TRANSITION_SPEED 0.02
+#macro OUT 0
+#macro IN 1
+
 #macro PLACING_GRID_SIZE 16
 
 //Items

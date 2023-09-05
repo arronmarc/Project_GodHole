@@ -25,6 +25,18 @@ function draw_lightSources() {
 	        draw_sprite_ext(spr_lightSource_two,image_index,x,y,glowSize,glowSize,0,lightColor,.5);
 	        gpu_set_blendmode(bm_normal);
 	        }
+
+	    with(oTorch) {
+	        UpdateTorch()
+	    }
+		
+		with(oPlayerLight) {
+	        gpu_set_blendmode(c_white);
+	        draw_sprite_ext(sprLightPlayer,image_index,obj_player.x,obj_player.y,glowSize,glowSize,0,lightColor,.5);
+	        gpu_set_blendmode(bm_normal);
+	    }
+
+			
 	    }
 	//-----------------------------------------------------------------------------------------------------
 	surface_reset_target();

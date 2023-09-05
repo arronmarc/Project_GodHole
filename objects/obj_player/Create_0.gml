@@ -72,6 +72,5 @@ if (global.targetX != -1)
 	direction = global.targetDirection;
 }
 
-
+currentTorchDir = 0;
 light_active = false;
-light = 0;

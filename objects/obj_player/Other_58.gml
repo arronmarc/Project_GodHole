@@ -28,15 +28,18 @@ if (!global.pause)
         }
 
         ds_map_replace(_map_left_arm, "angle", gun_direction);
+
         
     } else {
         // If not aiming, flip the player based on the movement direction
         if (moveX != 0) {
-            image_xscale = sign(moveX) * 0.07; // Adjusted for 0.07 scaling factor
+            image_xscale = sign(moveX) * 0.07; 
         }
     }
 
     // Set the bone state and destroy the ds_map just once at the end
     skeleton_bone_state_set("Gun bone", _map_left_arm);
     ds_map_destroy(_map_left_arm);
+
+ 
 }

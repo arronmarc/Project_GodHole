@@ -6,6 +6,9 @@
 /// @param max_view_dist
 function scr_zombie_hunt_step(argument0, argument1, argument2, argument3, argument4) {
 
+	// Don't proceed if the enemy is dead
+    if (isDead) return;
+
     var target = argument0; //initialize temp variable for target
 
     //////SEARCH STATE///////

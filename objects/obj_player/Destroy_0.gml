@@ -1,2 +1,2 @@
-if (instance_exists(heldItem)) 
-	instance_destroy(heldItem);
+//if (instance_exists(heldItem)) 
+//	instance_destroy(heldItem);

@@ -32,7 +32,6 @@ repeat(2){
 		motion_add(other.image_angle+random_range(-40,40),random_range(-1,-6))
 	}
 }
-	light.RemoveFromRenderer(objLightController.renderer);
 	instance_destroy();
 }
 
@@ -68,7 +67,6 @@ repeat(2){
 		motion_add(other.image_angle+random_range(-40,40),random_range(-1,-6))
 	}
 }
-	light.RemoveFromRenderer(objLightController.renderer);
 	instance_destroy();
 }
 

@@ -58,12 +58,6 @@ keyAttack = input_check_pressed("attack");
 
 script_execute(state);
 
-
-
-//Update the position of the occluder to match this instance's position
-occluder.x = x;
-occluder.y = y;
-
 if (input_check_pressed("weapon1")) {
 
 	skeleton_attachment_set("Weapon", "Gun")
@@ -80,6 +74,11 @@ if input_check_pressed("weapon0") {
 	
 	skeleton_attachment_set("Weapon", "Unarmed")
 	
+}
+
+// Toggle light_active when the "light" key is first pressed
+if (input_check_pressed("light")) {
+    light_active = !light_active;
 }
 
 
