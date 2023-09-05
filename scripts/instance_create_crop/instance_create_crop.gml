@@ -28,7 +28,7 @@ function instance_create_crop(){
 	
 		//Create the instance
 		var inst = instance_create_layer(xx+(cs/2), yy+(cs/2), "Instances", obj_crop);
-		i_grid[# gx, gy] = inst;
+		i_grid[# gx, gy] = inst.id;  // Store instance id in the grid
 	
 		//Give the crop its characteristics
 		with(inst){

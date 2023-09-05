@@ -1,3 +1,5 @@
+/*
+//User event 1
 /// @description Growing crops
 if(room == r_demo){
 		if(instance_exists(obj_crop)){
@@ -24,3 +26,4 @@ if(room == r_demo){
 		yy += 1;
 	}
 }
+*/
