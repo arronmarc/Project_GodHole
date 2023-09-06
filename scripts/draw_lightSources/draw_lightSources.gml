@@ -35,6 +35,12 @@ function draw_lightSources() {
 	        draw_sprite_ext(sprLightPlayer,image_index,obj_player.x,obj_player.y,glowSize,glowSize,0,lightColor,.5);
 	        gpu_set_blendmode(bm_normal);
 	    }
+		
+		with(oBulletLight) {
+	        gpu_set_blendmode(c_white);
+	        draw_sprite_ext(spr_bulletLight,image_index,x,y,glowSize,glowSize,point_direction(x, y, oBullet.x, oBullet.y),lightColor,1);
+	        gpu_set_blendmode(bm_normal);
+	    }
 
 			
 	    }

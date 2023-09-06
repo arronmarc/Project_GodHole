@@ -12,4 +12,11 @@ if (!point_in_rectangle(x,y,_camX,_camY,_camX+camera_get_view_width(_cam),_camY+
 }
 
 
+
+// Update light position
+with (my_light) {
+    x = other.x;
+    y = other.y;
+}
+
 BulletDebris();

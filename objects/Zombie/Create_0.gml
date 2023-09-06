@@ -23,12 +23,15 @@ col_alert=make_color_rgb(31,31,31)
 isDead = false;
 hp = 5;
 
-animation_start_time = 0;
-animation_playing = false;
-
-isAttacking = false;
-isFollowing = false;
 playerHealth = global.health;
 
-attackCooldown = global.curSec + 5;
-attackTimer = 0;    // Timer for attack animation
+
+enum States {
+    HUNT,
+    LUNGE,
+    DIE
+}
+
+state = States.HUNT;
+lastLeapTime = -5;
+hasSpottedPlayer = false;

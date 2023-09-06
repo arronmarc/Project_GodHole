@@ -7,6 +7,10 @@ direction = random_range(aim-2.5,aim+2.5);
 image_angle = direction;
 image_xscale = max(1,sprite_width)
 
+my_light = instance_create_layer(x, y, "Instances", oBulletLight);
+
+
+
 // Initialize alpha and fade speed for light
 //alphaValue = 1; // Start fully opaque
 //fadeSpeed = 0.05; // Adjust this value to control the fade speed of the light
