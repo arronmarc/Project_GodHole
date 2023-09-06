@@ -8,7 +8,7 @@ if (hover && input_check("shoot")) {
 		var _used = false;
 		
 		switch (_item) {
-			case ITEM.POTION:
+			case INVITEMS.POTION:
 			with (obj_player) {
 				if (global.health < global.healthmax) {
 					global.health += 20;
@@ -19,7 +19,7 @@ if (hover && input_check("shoot")) {
 			}
 			break;
 			
-			case ITEM.SYRUP:
+			case INVITEMS.SYRUP:
 			with (obj_player) {
 				if (global.mana < global.manamax) {
 					global.mana += 100;
@@ -30,7 +30,7 @@ if (hover && input_check("shoot")) {
 			}
 			break;
 			
-			case ITEM.APPLE:
+			case INVITEMS.APPLE:
 			with (obj_player) {
 				if (global.health < global.healthmax) {
 					global.health += 5 ;
@@ -41,8 +41,8 @@ if (hover && input_check("shoot")) {
 			}
 			break;
 			
-			case ITEM.BLOCK_WOOD:
-			case ITEM.BLOCK_IRON:
+			case INVITEMS.BLOCK_WOOD:
+			case INVITEMS.BLOCK_IRON:
 				TogglePause();
 				
 				with (obj_player) {

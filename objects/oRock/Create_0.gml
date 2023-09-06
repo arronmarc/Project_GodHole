@@ -2,7 +2,7 @@
 event_inherited();
 
 //Resources
-res = [ITEM.IRON];
+res = [INVITEMS.IRON];
 
 hp = 8;
 hpMax = hp;

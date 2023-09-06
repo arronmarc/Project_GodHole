@@ -8,25 +8,25 @@ if (fullyGrown) {
     // Dynamically set the res array based on cropType
     switch(cropType) {
         case crop.tomato:
-            res = [ITEM.TOMATO];
+            res = [INVITEMS.TOMATO];
             break;
         case crop.potato:
-            res = [ITEM.POTATO];
+            res = [INVITEMS.POTATO];
             break;
         case crop.carrot:
-            res = [ITEM.CARROT];
+            res = [INVITEMS.CARROT];
             break;
         case crop.artichoke:
-            res = [ITEM.ARTICHOKE];
+            res = [INVITEMS.ARTICHOKE];
             break;
         case crop.chilli:
-            res = [ITEM.CHILLI];
+            res = [INVITEMS.CHILLI];
             break;
         case crop.gourd:
-            res = [ITEM.GOURD];
+            res = [INVITEMS.GOURD];
             break;
         case crop.corn:
-            res = [ITEM.CORN];
+            res = [INVITEMS.CORN];
             break;
         default:
             res = [];

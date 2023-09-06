@@ -3,13 +3,13 @@ global.enemyfearmax = 100;
 gml_pragma("global", "init()");
 
 #macro TRANSITION_SPEED 0.02
-#macro OUT 0
-#macro IN 1
+#macro OUTT 0
+#macro INN 1
 
 #macro PLACING_GRID_SIZE 16
 
 //Items
-enum ITEM {
+enum INVITEMS {
 	APPLE,
 	ORANGE,
 	WOOD,
@@ -43,47 +43,47 @@ enum ITEM {
     CORN
 	}
 	
-	initItem(ITEM.APPLE, "Apple", sApple, []);
-	initItem(ITEM.ORANGE, "Orange", sOrange, []);
-	initItem(ITEM.WOOD, "Wood", sWood, []);
+	initItem(INVITEMS.APPLE, "Apple", sApple, []);
+	initItem(INVITEMS.ORANGE, "Orange", sOrange, []);
+	initItem(INVITEMS.WOOD, "Wood", sWood, []);
 	
-	initItem(ITEM.STONE, "Stone", sStone, []);
-	initItem(ITEM.IRON, "Iron", sIron, []);
+	initItem(INVITEMS.STONE, "Stone", sStone, []);
+	initItem(INVITEMS.IRON, "Iron", sIron, []);
 	
-	initItem(ITEM.POTION, "Potion", sPotion, [
-		[ITEM.APPLE, 2]
+	initItem(INVITEMS.POTION, "Potion", sPotion, [
+		[INVITEMS.APPLE, 2]
 	]);
-	initItem(ITEM.SYRUP, "Syrup", sSyrup, [
-		[ITEM.ORANGE, 1],
-		[ITEM.APPLE, 1]
+	initItem(INVITEMS.SYRUP, "Syrup", sSyrup, [
+		[INVITEMS.ORANGE, 1],
+		[INVITEMS.APPLE, 1]
 	]);
-	initItem(ITEM.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
-		[ITEM.WOOD, 2]
+	initItem(INVITEMS.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
+		[INVITEMS.WOOD, 2]
 	], oWoodBlock);
-	initItem(ITEM.BLOCK_IRON, "Iron Block", sBlock_Iron, [
-	[ITEM.IRON, 2]
+	initItem(INVITEMS.BLOCK_IRON, "Iron Block", sBlock_Iron, [
+	[INVITEMS.IRON, 2]
 	], oIronBlock);
 	
-	initItem(ITEM.TOMATO_SEED, "Tomato Seed", sTomatoSeed, []);
-    initItem(ITEM.TOMATO, "Tomato", sTomato, []);
+	initItem(INVITEMS.TOMATO_SEED, "Tomato Seed", sTomatoSeed, []);
+    initItem(INVITEMS.TOMATO, "Tomato", sTomato, []);
     
-    initItem(ITEM.POTATO_SEED, "Potato Seed", sPotatoSeed, []);
-    initItem(ITEM.POTATO, "Potato", sPotato, []);
+    initItem(INVITEMS.POTATO_SEED, "Potato Seed", sPotatoSeed, []);
+    initItem(INVITEMS.POTATO, "Potato", sPotato, []);
     
-    initItem(ITEM.CARROT_SEED, "Carrot Seed", sCarrotSeed, []);
-    initItem(ITEM.CARROT, "Carrot", sCarrot, []);
+    initItem(INVITEMS.CARROT_SEED, "Carrot Seed", sCarrotSeed, []);
+    initItem(INVITEMS.CARROT, "Carrot", sCarrot, []);
     
-    initItem(ITEM.ARTICHOKE_SEED, "Artichoke Seed", sArtichokeSeed, []);
-    initItem(ITEM.ARTICHOKE, "Artichoke", sArtichoke, []);
+    initItem(INVITEMS.ARTICHOKE_SEED, "Artichoke Seed", sArtichokeSeed, []);
+    initItem(INVITEMS.ARTICHOKE, "Artichoke", sArtichoke, []);
     
-    initItem(ITEM.CHILLI_SEED, "Chilli Seed", sChilliSeed, []);
-    initItem(ITEM.CHILLI, "Chilli", sChilli, []);
+    initItem(INVITEMS.CHILLI_SEED, "Chilli Seed", sChilliSeed, []);
+    initItem(INVITEMS.CHILLI, "Chilli", sChilli, []);
     
-    initItem(ITEM.GOURD_SEED, "Gourd Seed", sGourdSeed, []);
-    initItem(ITEM.GOURD, "Gourd", sGourd, []);
+    initItem(INVITEMS.GOURD_SEED, "Gourd Seed", sGourdSeed, []);
+    initItem(INVITEMS.GOURD, "Gourd", sGourd, []);
     
-    initItem(ITEM.CORN_SEED, "Corn Seed", sCornSeed, []);
-    initItem(ITEM.CORN, "Corn", sCorn, []);
+    initItem(INVITEMS.CORN_SEED, "Corn Seed", sCornSeed, []);
+    initItem(INVITEMS.CORN, "Corn", sCorn, []);
 	
 
 //Inventory
@@ -93,12 +93,12 @@ enum ITEM {
 global.craftingMenu = [
 "CRAFTING",
 "Stats",
-ITEM.POTION,
-ITEM.SYRUP,
+INVITEMS.POTION,
+INVITEMS.SYRUP,
 
 "Building",
-ITEM.BLOCK_WOOD,
-ITEM.BLOCK_IRON
+INVITEMS.BLOCK_WOOD,
+INVITEMS.BLOCK_IRON
 
 ];
 

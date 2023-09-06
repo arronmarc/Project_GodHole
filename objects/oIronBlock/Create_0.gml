@@ -2,7 +2,7 @@
 event_inherited();
 
 //Resources
-res = [ITEM.IRON];
+res = [INVITEMS.IRON];
 resCount = 2;
 
 hp = 12;

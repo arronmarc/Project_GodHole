@@ -2,7 +2,7 @@
 event_inherited();
 
 //Resources
-res = [ITEM.WOOD];
+res = [INVITEMS.WOOD];
 resCount = 2;
 
 hp = 8;

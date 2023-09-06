@@ -2,7 +2,7 @@
 event_inherited();
 
 //Resources
-res = [ITEM.APPLE, ITEM.ORANGE];
+res = [INVITEMS.APPLE, INVITEMS.ORANGE];
 
 hp = 1;
 hpMax = hp;

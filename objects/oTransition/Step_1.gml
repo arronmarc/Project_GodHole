@@ -1,13 +1,13 @@
 /// @description Progress transition
 
 
-if (leading == OUT)
+if (leading == OUTT)
 {
 	percent = min(1, percent + TRANSITION_SPEED);
 	if (percent >= 1) //If screen fully obscured
 	{
 		room_goto(target);
-		leading = IN;
+		leading = INN;
 	}
 }
 else //Leading == IN
