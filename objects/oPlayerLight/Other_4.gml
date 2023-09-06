@@ -1,2 +1,2 @@
-lightColor = c_white;
+lightColor = c_yellow;
 glowSize = 1;

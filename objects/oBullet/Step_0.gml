@@ -11,8 +11,6 @@ if (!point_in_rectangle(x,y,_camX,_camY,_camX+camera_get_view_width(_cam),_camY+
 	instance_destroy();	
 }
 
-
-
 // Update light position
 with (my_light) {
     x = other.x;

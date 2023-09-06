@@ -11,17 +11,17 @@ function draw_lightSources() {
 	//REMOVE or COMMENT OUTSIDE OF EXAMPLE SCENE
 	if alpha > 0  { //This just stops the resource use during the middle of the day. Adjust as needed.
 	    with(obj_fireTest) {
-	        gpu_set_blendmode(bm_src_color);
+	        gpu_set_blendmode(bm_subtract);
 	        draw_sprite_ext(spr_lightSource_four,image_index,x,y,glowSize,glowSize,0,c_white,1);
 	        gpu_set_blendmode(bm_normal);
 	        }
 	    with(obj_fireTest_dead) {
-	        gpu_set_blendmode(bm_src_color);
+	        gpu_set_blendmode(bm_subtract);
 	        draw_sprite_ext(spr_lightSource_three,image_index,x,y,glowSize,glowSize,0,c_white,.5);
 	        gpu_set_blendmode(bm_normal);
 	        }
 	    with(obj_lightTest) {
-	        gpu_set_blendmode(c_purple);
+	        gpu_set_blendmode(bm_subtract);
 	        draw_sprite_ext(spr_lightSource_two,image_index,x,y,glowSize,glowSize,0,lightColor,.5);
 	        gpu_set_blendmode(bm_normal);
 	        }
@@ -31,14 +31,14 @@ function draw_lightSources() {
 	    }
 		
 		with(oPlayerLight) {
-	        gpu_set_blendmode(c_white);
-	        draw_sprite_ext(sprLightPlayer,image_index,obj_player.x,obj_player.y,glowSize,glowSize,0,lightColor,.5);
+	        gpu_set_blendmode(bm_subtract);
+	        draw_sprite_ext(sprLightPlayer,image_index,obj_player.x,obj_player.y,glowSize,glowSize,0,lightColor,1);
 	        gpu_set_blendmode(bm_normal);
 	    }
 		
 		with(oBulletLight) {
-	        gpu_set_blendmode(c_white);
-	        draw_sprite_ext(spr_bulletLight,image_index,x,y,glowSize,glowSize,point_direction(x, y, oBullet.x, oBullet.y),lightColor,1);
+	        gpu_set_blendmode(bm_subtract);
+	        draw_sprite_ext(spr_bulletLight,image_index,x,y,glowSize,glowSize,objDir,lightColor,1);
 	        gpu_set_blendmode(bm_normal);
 	    }
 

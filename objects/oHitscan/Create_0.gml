@@ -7,4 +7,6 @@ direction = random_range(aim-2.5,aim+2.5);
 image_angle = direction;
 image_xscale = max(1,sprite_width)
 
+my_light = instance_create_layer(x, y, "Instances", oBulletLight);
+
 Screenshake(20, 5);

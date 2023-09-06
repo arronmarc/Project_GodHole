@@ -9,7 +9,7 @@ image_xscale = max(1,sprite_width)
 
 my_light = instance_create_layer(x, y, "Instances", oBulletLight);
 
-
+Screenshake(20, 5);
 
 // Initialize alpha and fade speed for light
 //alphaValue = 1; // Start fully opaque
