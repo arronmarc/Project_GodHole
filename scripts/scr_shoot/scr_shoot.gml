@@ -10,7 +10,7 @@ function scr_shoot(argument0, argument1, argument2, argument3) {
 	if rof_timer<=0
 	    {
 	    var bullet; //create a bullet with the following attributes
-	    bullet=instance_create(x,y,argument0) 
+	    bullet=instance_create_layer(x, y, "Instances", oBulletEnemy)
 	    bullet.speed=argument1
 	    bullet.direction=argument2
 		bullet.image_angle = argument3;

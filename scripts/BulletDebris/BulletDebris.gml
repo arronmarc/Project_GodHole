@@ -24,7 +24,7 @@ repeat(3){
 
 repeat(2){
 	with (instance_create_depth(x,y,depth+5,oParticle)){
-		debris = true
+		debris = false
 		sprite_index = sDebris
 		image_index = random(image_number-1)
 		image_speed = 0;
@@ -59,7 +59,7 @@ repeat(3){
 
 repeat(2){
 	with (instance_create_depth(x,y,depth+5,oParticle)){
-		debris = true
+		debris = false
 		sprite_index = sBloodPools
 		image_index = random(image_number-1)
 		image_speed = 0;

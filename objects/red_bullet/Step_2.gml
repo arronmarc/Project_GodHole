@@ -1,4 +1,3 @@
-depth=-y
 image_angle=direction
 
 

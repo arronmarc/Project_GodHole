@@ -1,10 +1,3 @@
-//if (instance_exists(heldItem)) {
-//	heldItem.x = x + 13 *image_xscale;
-//	heldItem.y = y - 30;
-//}
-
-depth=-y
-
 //Placing mode
 if (placingMode and instance_exists(placingInst)) {
 	var _colliding = false;

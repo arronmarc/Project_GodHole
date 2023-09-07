@@ -6,6 +6,8 @@ gml_pragma("global", "init()");
 #macro OUTT 0
 #macro INN 1
 
+#macro INV_SIZE 12
+
 #macro PLACING_GRID_SIZE 16
 
 //Items
@@ -85,9 +87,6 @@ enum INVITEMS {
     initItem(INVITEMS.CORN_SEED, "Corn Seed", sCornSeed, []);
     initItem(INVITEMS.CORN, "Corn", sCorn, []);
 	
-
-//Inventory
-#macro INV_SIZE 12
 
 //Crafting menu
 global.craftingMenu = [

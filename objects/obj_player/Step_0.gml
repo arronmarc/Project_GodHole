@@ -80,7 +80,4 @@ if input_check_pressed("weapon0") {
 if (input_check_pressed("light")) {
     light_active = !light_active;
 }
-
-
-
 }

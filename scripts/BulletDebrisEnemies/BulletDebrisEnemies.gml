@@ -1,7 +1,7 @@
 function BulletDebrisEnemies(){
 
 //Object dust and debris collisions
-if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)) or (place_meeting(x, y, wall_obj)){
+if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)){
 	repeat(6){
 	with (instance_create_depth(x,y,depth-1,oParticle)){
 		debris = false;

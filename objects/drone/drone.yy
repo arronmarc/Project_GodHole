@@ -4,7 +4,6 @@
   "name": "drone",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":58,"eventType":7,"isDnD":false,},
@@ -18,7 +17,10 @@
     "name": "AI",
     "path": "folders/Objects/AI.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "par_depthobject",
+    "path": "objects/par_depthobject/par_depthobject.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -39,5 +41,5 @@
     "path": "sprites/spr_default/spr_default.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

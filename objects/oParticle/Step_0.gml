@@ -9,7 +9,7 @@ switch(debris){
 		break;
 		case true:
 		if(speed<=0){
-			surface_set_target(obj_manager.debrisSurf)
+			surface_set_target(debrisSurf)
 			draw_self()
 			surface_reset_target()
 			instance_destroy()

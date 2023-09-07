@@ -1,4 +1,3 @@
-depth=-y
 image_angle=direction
 
 if position_meeting(x+hspeed,y+vspeed,wall_obj){

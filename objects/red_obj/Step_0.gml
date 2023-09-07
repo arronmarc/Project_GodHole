@@ -1,4 +1,4 @@
-if (isDead != true) and (!global.pause)  {
+if (isDead != true)  {
 
 //lerp the sprite's position. Adjust the divider for more or less smoothing.
 xx+=(x-xx)*spd/8
@@ -8,7 +8,7 @@ yy+=(y-yy)*spd/8
 if fear<fear_max/2 && instance_number(red_obj)<4 && !instance_exists(drone)
 {
     repeat(3)
-    instance_create(irandom(room_width),-30,red_obj)
+	instance_create_layer(random(room_width), -30, "Instances", red_obj)
     fear=fear_max
 }
 
@@ -19,21 +19,12 @@ if instance_exists(obj_player) //if enemy exists then run the shooter AI
     
     scr_shooter_ai_step(var_target_enemy,wall_obj,spd,assaulter,blue_bullet) //run shooter ai
 
+if (global.curSec - time_spawned >= 5) {
     if (can_shoot = 1) {
-	
-		scr_shoot(oBulletEnemy,20,point_direction(x,y,var_target_enemy.x,var_target_enemy.y)+irandom_range(-2,2), point_direction(x,y,var_target_enemy.x,var_target_enemy.y)); //shoot if allowed!
+			scr_shoot(oBulletEnemy,20,point_direction(x,y,var_target_enemy.x,var_target_enemy.y)+irandom_range(-2,2), point_direction(x,y,var_target_enemy.x,var_target_enemy.y)); //shoot if allowed!
+		}
 	}
-
 }
-
-if (global.pause) {
-    image_speed = 0;
-    return; // Exit the function early since the game is paused.
-}
-else {
-    image_speed = 1; // Resume the animation. Adjust this value if your standard playback speed is different.
-}
-
 
 // Determine direction based on "smooth" x position
 if (xx < x) and (isDead != true) {

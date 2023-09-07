@@ -8,6 +8,8 @@ scr_shooter_ai_create(global.enemyfearmax) //initialise the shooter ai
 assaulter=instance_number(red_obj) mod 2 //AI will be an assaulter on each even number.
 in_cover = false;                        //Assaulters can charge the enemy
 
+time_spawned = global.curSec;
+
 //skeleton_skin_set("Enemy");
 skeleton_skin_set("Default body");
 

@@ -1,4 +1,4 @@
-if ((isDead != true) and  (!global.pause)) {
+if (isDead != true) {
 
 //lerp the sprite's position. Adjust the divider for more or less smoothing.
 xx+=(x-xx)*spd/20
@@ -11,7 +11,7 @@ if ((gamemode = 0)) { //patrolling drones mode
         if instance_number(red_obj)<3
         {
             var spawndir=point_direction(obj_player.x,obj_player.y,x,y)+irandom_range(-45,45)
-            instance_create(room_width/2+lengthdir_x(500,spawndir),room_height/2+lengthdir_y(500,spawndir),red_obj)
+			instance_create_layer(room_width/2+lengthdir_x(500,spawndir), room_height/2+lengthdir_y(500,spawndir), "Instances", red_obj)
         }   
     }
 
@@ -21,31 +21,18 @@ else   //all out war mode!
     move_towards_point(x,-50,3)
     if yy<-30
     {
-        instance_create(random(room_width),-50,red_obj)
+		instance_create_layer(random(room_width), -50, "Instances", red_obj)
         instance_destroy()
     }
 }
 
-
-if (global.pause) {
-    image_speed = 0;
-    return; // Exit the function early since the game is paused.
-}
-else {
-    image_speed = 1; // Resume the animation. Adjust this value if your standard playback speed is different.
-}
-
-if (isDead != true) and  (!global.pause) 
-{
+if (isDead != true) {
 	// Determine direction based on "smooth" x position
 	if (xx < x) {
 	    image_xscale = 0.07;  // Facing right
 	} else if (xx > x) {
 	    image_xscale = -0.07;  // Facing left
 	}
-
-
-    
 }
 
 }
