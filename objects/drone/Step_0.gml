@@ -51,5 +51,7 @@ if (hp == 0) {
         spd = 0;
         animation_start_time = current_time;
         animation_playing = true;
+		instance_destroy(oEnemyCone);
         
 }
+

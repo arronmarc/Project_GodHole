@@ -22,6 +22,7 @@ enum INVITEMS {
 	SYRUP,
 	BLOCK_WOOD,
 	BLOCK_IRON,
+	BLOCK_WALL,
 	
 	TOMATO_SEED,
     TOMATO,
@@ -62,9 +63,14 @@ enum INVITEMS {
 	initItem(INVITEMS.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
 		[INVITEMS.WOOD, 2]
 	], oWoodBlock);
+	
 	initItem(INVITEMS.BLOCK_IRON, "Iron Block", sBlock_Iron, [
 	[INVITEMS.IRON, 2]
 	], oIronBlock);
+	
+	initItem(INVITEMS.BLOCK_WALL, "Wall Block", sBlock_Wall, [
+	[INVITEMS.STONE, 2]
+	], wall_obj);
 	
 	initItem(INVITEMS.TOMATO_SEED, "Tomato Seed", sTomatoSeed, []);
     initItem(INVITEMS.TOMATO, "Tomato", sTomato, []);
@@ -97,7 +103,8 @@ INVITEMS.SYRUP,
 
 "Building",
 INVITEMS.BLOCK_WOOD,
-INVITEMS.BLOCK_IRON
+INVITEMS.BLOCK_IRON,
+INVITEMS.BLOCK_WALL,
 
 ];
 

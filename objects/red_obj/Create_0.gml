@@ -29,4 +29,3 @@ moveY = 0;
 
 animation_start_time = 0;
 animation_playing = false;
-

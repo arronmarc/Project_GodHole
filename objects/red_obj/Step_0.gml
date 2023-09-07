@@ -36,8 +36,6 @@ if (xx < x) and (isDead != true) {
 	
 }
 
-
-
 //Die
 if (animation_playing) {
     var duration = 40 / 30; 
@@ -49,9 +47,7 @@ if (animation_playing) {
 	
 if (hp == 0) {
 	isDead = true;
-        
-        spd = 0;
-        animation_start_time = current_time;
-        animation_playing = true;
-        
+    spd = 0;
+    animation_start_time = current_time;
+    animation_playing = true;        
 }

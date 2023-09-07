@@ -5,6 +5,6 @@ enum TRANS_TYPE
 	FADE
 }
 percent = 0;
-leading = OUT;
+leading = OUTT;
 width = RES_W;
 height = RES_H;

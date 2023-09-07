@@ -4,16 +4,17 @@
   "name": "wall_obj",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "AI",
-    "path": "folders/Objects/AI.yy",
+    "name": "Placeable",
+    "path": "folders/Objects/Placeable.yy",
   },
   "parentObjectId": {
-    "name": "par_depthobject",
-    "path": "objects/par_depthobject/par_depthobject.yy",
+    "name": "oPlaceableParent",
+    "path": "objects/oPlaceableParent/oPlaceableParent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -29,7 +30,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "sWall",
     "path": "sprites/sWall/sWall.yy",

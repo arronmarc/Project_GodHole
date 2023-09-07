@@ -36,3 +36,4 @@ moveY = 0;
 animation_start_time = 0;
 animation_playing = false;
 
+instance_create_layer(x, y, "Instances", oEnemyCone);	

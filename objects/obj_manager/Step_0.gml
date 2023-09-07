@@ -21,3 +21,6 @@ if (global.pause) {
 if (keyboard_check_pressed(ord("Y"))) {
     global.lightingCycle = !global.lightingCycle;
 }
+if (keyboard_check_pressed(ord("M"))) {
+fun_changeTime(1,1,1,false, false, true)
+}

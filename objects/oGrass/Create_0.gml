@@ -23,8 +23,8 @@ grass_animate = true; //Whether to use a wind shader to animate the grass
 grass_pattern = false; //Whether the grass should sway in a pattern
 
 //These variables can also be changed later
-grass_wind = 0.1; //Power of the grass swaying
-grass_speed = 0.1; //Speed of the grass animation
+grass_wind = 0.08; //Power of the grass swaying
+grass_speed = 0.08; //Speed of the grass animation
 wind_hsp = 0; //Extra horizontal speed of the wind
 			  //Positive: Rightwards, Negative: Leftwards
 			  

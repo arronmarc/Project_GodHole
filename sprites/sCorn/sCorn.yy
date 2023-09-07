@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Crops",
-    "path": "folders/Sprites/Items/Crops.yy",
+    "path": "folders/Sprites/World/Crops.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

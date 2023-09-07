@@ -43,6 +43,7 @@ if (hover && input_check("shoot")) {
 			
 			case INVITEMS.BLOCK_WOOD:
 			case INVITEMS.BLOCK_IRON:
+			case INVITEMS.BLOCK_WALL:
 				TogglePause();
 				
 				with (obj_player) {

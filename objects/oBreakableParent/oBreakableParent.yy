@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Managers",
-    "path": "folders/Objects/Managers.yy",
+    "name": "Placeable",
+    "path": "folders/Objects/Placeable.yy",
   },
   "parentObjectId": {
     "name": "par_depthobject",

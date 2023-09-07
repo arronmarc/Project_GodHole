@@ -1,9 +1,9 @@
 function BulletDebris(){
 
 //Object dust and debris collisions
-if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)) or (place_meeting(x, y, wall_obj)){
+if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)){
 	repeat(6){
-	with (instance_create_depth(x,y,depth-1,oParticle)){
+	with (instance_create_depth(x,y,depth,oParticle)){
 		debris = false;
 		sprite_index = sDust
 		image_angle = random(360)
@@ -13,7 +13,7 @@ if(place_meeting(x, y, obj_collision)) or (place_meeting(x, y, oBreakableParent)
 }
 
 repeat(3){
-	with (instance_create_depth(x,y,depth-1,oParticle)){
+	with (instance_create_depth(x,y,depth,oParticle)){
 		debris = false
 		sprite_index = sSpark
 		fric = 0.9
@@ -23,7 +23,7 @@ repeat(3){
 }
 
 repeat(2){
-	with (instance_create_depth(x,y,depth+5,oParticle)){
+	with (instance_create_depth(x,y,depth+100,oParticle)){
 		debris = false
 		sprite_index = sDebris
 		image_index = random(image_number-1)

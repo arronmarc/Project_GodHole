@@ -19,7 +19,7 @@ function config_timeCycle() {
 	//The starting time for your game
 	curSec = 0;
 	curMin = 0;
-	curHour = 1;
+	curHour = 10;
 	//This creates 10 initial time save slots, storing 10 base variables. Set to 0 if you are not using time saving.
 	//If you know you are not going to use saves, or you want more or less change this number to avoid errors for unused slots.
 	var saveSlots = 10;

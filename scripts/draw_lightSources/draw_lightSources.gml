@@ -30,6 +30,23 @@ function draw_lightSources() {
 	        UpdateTorch()
 	    }
 		
+		with(oEnemyCone) {
+	        if drone.state = 0 {  //if in the search state then draw the view cone with an alpha of 0.1	
+			//draw the view cone
+			gpu_set_blendmode(bm_subtract);
+			draw_sprite_ext(spr_enemyCone, 0, drone.xx, drone.yy, 1, 1, drone.look_dir, c_white, 0.8);
+			gpu_set_blendmode(bm_normal);
+			} 
+		
+			else {
+			//if in the alert state then draw it with an alpha of 0.8
+			gpu_set_blendmode(bm_subtract);
+			draw_sprite_ext(spr_enemyCone, 0, drone.xx, drone.yy, 1, 1, drone.look_dir, c_white, 1);
+			gpu_set_blendmode(bm_normal);
+		
+			}
+	    }
+		
 		with(oPlayerLight) {
 	        gpu_set_blendmode(bm_subtract);
 	        draw_sprite_ext(sprLightPlayer,image_index,obj_player.x,obj_player.y,glowSize,glowSize,0,lightColor,1);

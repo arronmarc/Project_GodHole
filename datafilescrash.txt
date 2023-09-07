@@ -1,9 +1,9 @@
-{ message : "Variable oParticle.debris(101364, -2147483648) not set before reading it.", script : "gml_Object_oParticle_Step_0", stacktrace : [ "gml_Object_oParticle_Step_0 (line 3)" ], longMessage : "ERROR in
+{ message : "Variable oTransition.OUT(104941, -2147483648) not set before reading it.", script : "gml_Object_oTransition_Create_0", stacktrace : [ "gml_Object_oTransition_Create_0 (line 8)","gml_Script_RoomTransition (line 9)","gml_Object_oRoomExit_Step_0 (line 11) - 	RoomTransition(TRANS_TYPE.FADE, targetRoom);" ], longMessage : "ERROR in
 action number 1
-of  Step Event0
-for object oParticle:
+of Create Event
+for object oTransition:
 
 
-Variable oParticle.debris(101364, -2147483648) not set before reading it.
- at gml_Object_oParticle_Step_0 (line 3) - switch(debris){
-", line : 3 }
+Variable oTransition.OUT(104941, -2147483648) not set before reading it.
+ at gml_Object_oTransition_Create_0 (line 8) - leading = OUT;
+", line : 8 }

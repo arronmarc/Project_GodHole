@@ -1,4 +1,4 @@
-/// @description Craft itm
+/// @description Craft item
 //get recipe
 var _recipe = global.itemRecipe[item];
 var _recipeSize = array_length_1d(_recipe);
