@@ -58,6 +58,12 @@ function draw_lightSources() {
 	        draw_sprite_ext(spr_bulletLight,image_index,x,y,glowSize,glowSize,objDir,lightColor,1);
 	        gpu_set_blendmode(bm_normal);
 	    }
+		
+		with(oFireLight) {
+	        gpu_set_blendmode(bm_subtract);
+	        draw_sprite_ext(spr_static_fire,image_index,x,y,glowSize,glowSize,0,lightColor,1);
+	        gpu_set_blendmode(bm_normal);
+	    }
 
 			
 	    }

@@ -38,7 +38,7 @@ repeat(2){
 
 if(place_meeting(x, y, red_obj) or place_meeting(x, y, drone) or place_meeting(x, y, Zombie)) {
 	repeat(6){
-	with (instance_create_depth(x,y,depth-1,oParticle)){
+	with (instance_create_depth(x,y,depth,oParticle)){
 		debris = false;
 		sprite_index = sBloodCircles
 		image_angle = random(360)
@@ -48,7 +48,7 @@ if(place_meeting(x, y, red_obj) or place_meeting(x, y, drone) or place_meeting(x
 }
 
 repeat(3){
-	with (instance_create_depth(x,y,depth-1,oParticle)){
+	with (instance_create_depth(x,y,depth,oParticle)){
 		debris = false
 		sprite_index = sBloodSpurts
 		fric = 0.9
@@ -58,7 +58,7 @@ repeat(3){
 }
 
 repeat(2){
-	with (instance_create_depth(x,y,depth+5,oParticle)){
+	with (instance_create_depth(x,y,depth+100,oParticle)){
 		debris = false
 		sprite_index = sBloodPools
 		image_index = random(image_number-1)

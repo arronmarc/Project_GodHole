@@ -1,6 +1,7 @@
 //Create event
 image_xscale = 0.07;
 image_yscale = 0.07;
+gun_bone_adjusted = false;
 
 fear=0; //player's fear level (used to interact with the shooter ai)
 fear_max=400;
@@ -50,20 +51,9 @@ placingMode = false;
 placingObj = noone;
 placingInst = noone;
 
-
-//heldItem = instance_create_layer(x, y, "Instances", oPickaxe);
-
 aSpeed = 0.6; // Acceleration speed
 dSpeed = 0.4; // Deceleration speed
-currentSpeed = 0; // Current speed of the player, which will change due to acceleration and deceleration
-
-original_bone_y = 0; // Initial value to be updated once we get the real value
-var _map_temp = ds_map_create();
-skeleton_bone_state_get("Gun bone", _map_temp);
-original_bone_y = _map_temp[? "y"];
-ds_map_destroy(_map_temp);
-
-
+currentSpeed = 0;
 
 if (global.targetX != -1)
 {
@@ -74,3 +64,5 @@ if (global.targetX != -1)
 
 currentTorchDir = 0;
 light_active = false;
+
+gun_bone_adjusted = false;

@@ -4,5 +4,11 @@ event_inherited();
 //Resources
 res = [INVITEMS.WOOD];
 
-hp = 4;
+hp = 10;
 hpMax = hp;
+
+isDead = false;
+
+animationHasPlayed = false;
+fallen = false;
+vulnerable = true;  // Indicates if the tree's HP can be reduced

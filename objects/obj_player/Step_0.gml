@@ -54,30 +54,31 @@ input_down = input_check("down");
 keySprint = input_check("sprint");
 keyRoll = input_check("roll");
 keyCrouch = input_check_pressed("crouch");
-keyAttack = input_check_pressed("attack");
+keyAttack = input_check("attack");
 
 script_execute(state);
 
 if (input_check_pressed("weapon1")) {
-
 	skeleton_attachment_set("Weapon", "Gun")
 }
 if (input_check_pressed("weapon2")) {
-	
 	skeleton_attachment_set("Weapon", "Gun2")
 }
 if (input_check_pressed("weapon3")) {
-
 	skeleton_attachment_set("Weapon", "Sword")
 }
+if (input_check_pressed("weapon4")) {
+	skeleton_attachment_set("Weapon", "Shotgun")
+}
 if input_check_pressed("weapon0") { 
-	
 	skeleton_attachment_set("Weapon", "Unarmed")
-	
 }
 
 // Toggle light_active when the "light" key is first pressed
 if (input_check_pressed("light")) {
     light_active = !light_active;
 }
+
+
+
 }

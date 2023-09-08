@@ -40,6 +40,5 @@ if (!global.pause)
     // Set the bone state and destroy the ds_map just once at the end
     skeleton_bone_state_set("Gun bone", _map_left_arm);
     ds_map_destroy(_map_left_arm);
-
  
 }

@@ -21,9 +21,11 @@ switch (state) {
 }
 
 // Handle directional facing
-if (obj_player.x < x) {
-    image_xscale = -0.07;
-} else {
-    image_xscale = 0.07;
+if (!isDead) {
+	if (obj_player.x < x) {
+	    image_xscale = -0.07;
+	} else {
+	    image_xscale = 0.07;
+	}
 }
 

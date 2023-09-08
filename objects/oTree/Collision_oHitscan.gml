@@ -1,0 +1,3 @@
+if (vulnerable) {
+	hp--;
+}

@@ -1,0 +1,77 @@
+skeleton.png
+size:2033,1218
+filter:Linear,Linear
+pma:true
+Default/Shotgun
+bounds:1101,467,317,103
+rotate:90
+Human/Cloak
+bounds:2,249,372,967
+Human/Cloak front
+bounds:376,251,370,965
+Human/Foot
+bounds:1939,791,144,91
+rotate:90
+Human/Head
+bounds:1600,200,130,165
+rotate:90
+Human/Left arm bottom
+bounds:1480,36,118,294
+Human/Left arm top
+bounds:622,17,109,232
+offsets:0,0,109,233
+Human/Left leg bottom
+bounds:1328,471,117,313
+Human/Left leg top
+bounds:748,952,157,330
+rotate:90
+Human/Right arm bottom
+bounds:910,253,187,203
+offsets:0,0,187,204
+rotate:90
+Human/Right arm top
+bounds:1115,280,96,185
+offsets:0,1,97,186
+Human/Right leg bottom
+bounds:1939,937,92,279
+Human/Right leg top
+bounds:748,834,116,330
+rotate:90
+Human/Torso
+bounds:2,4,243,508
+rotate:90
+New skin/Cloak
+bounds:1102,786,430,835
+rotate:90
+New skin/Gun
+bounds:748,284,548,160
+rotate:90
+New skin/Gun 2
+bounds:1447,470,421,173
+New skin/Head
+bounds:1600,44,131,154
+New skin/Left arm bottom
+bounds:748,1111,105,338
+rotate:90
+New skin/Left arm top
+bounds:1102,23,103,228
+New skin/Left leg bottom
+bounds:910,442,189,390
+New skin/Left leg top
+bounds:1870,279,159,364
+offsets:0,0,160,364
+New skin/Right arm bottom
+bounds:1206,470,120,314
+New skin/Right arm top
+bounds:512,9,108,240
+New skin/Right leg bottom
+bounds:733,19,230,367
+rotate:90
+New skin/Right leg top
+bounds:1480,332,136,358
+rotate:90
+New skin/Sword
+bounds:1480,645,548,139
+offsets:0,0,549,139
+New skin/Torso
+bounds:1213,2,265,466

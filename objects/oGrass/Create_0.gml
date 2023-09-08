@@ -19,7 +19,7 @@ grass_sprite = spr_depthgrass; //Sprite used for the grass
 grass_random_image = true; //Can the grass use any sub-image from the sprite, at random? 
 						   //If false, it'll only use the first one.
 
-grass_animate = true; //Whether to use a wind shader to animate the grass
+grass_animate = false; //Whether to use a wind shader to animate the grass
 grass_pattern = false; //Whether the grass should sway in a pattern
 
 //These variables can also be changed later
@@ -122,7 +122,7 @@ repeat(grass_number){
 	var yy = top + spr_h/2;
     
     //depth
-    var dep = 500;
+    var dep = 700;
 	
     //triangle 1
     vertex_position_3d(vbuff, left, top, dep);

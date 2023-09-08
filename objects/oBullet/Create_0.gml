@@ -11,12 +11,6 @@ my_light = instance_create_layer(x, y, "Instances", oBulletLight);
 
 Screenshake(20, 5);
 
-// Initialize alpha and fade speed for light
-//alphaValue = 1; // Start fully opaque
-//fadeSpeed = 0.05; // Adjust this value to control the fade speed of the light
-
-
-
 /*
 //For creating casings on fire
 with (instance_create_depth(obj_player.x, obj_player.y-30, depth-1, oParticle)) {
@@ -35,15 +29,5 @@ with (instance_create_depth(obj_player.x, obj_player.y-30, depth-1, oParticle)) 
     
     // No gravity for now, let's see how it behaves without it.
     gravity = 0;
-}
-
-
-with (instance_create_depth(oWeapon.x, oWeapon.y-30, depth-1, oParticle)) {
-	image_speed = 1;
-    debris = false;
-    sprite_index = sMuzzleFlash;
-    image_angle = point_direction(x, y, crosshair.x, crosshair.y);
-    direction = point_direction(x, y, crosshair.x, crosshair.y); 
-
 }
 */

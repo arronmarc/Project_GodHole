@@ -23,6 +23,7 @@ return {
         weapon1: [input_binding_key("1")],
 		weapon2: [input_binding_key("2")],
 		weapon3: [input_binding_key("3")],
+		weapon4: [input_binding_key("4")],
 		
         accept:  input_binding_key(vk_space),
         cancel:  input_binding_key(vk_backspace),

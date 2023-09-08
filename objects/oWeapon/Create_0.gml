@@ -37,6 +37,19 @@ ds_map_add(weapons[2],"cooldown",5);
 ds_map_add(weapons[2],"bulletspeed",40);
 ds_map_add(weapons[2],"automatic",true);
 
+//Shotgun
+weapons[4] = ds_map_create();
+ds_map_add(weapons[4],"sprite",sWP_Shotgun);
+ds_map_add(weapons[4],"recoil",8);
+ds_map_add(weapons[4],"recoil_push",8);
+ds_map_add(weapons[4],"damage",3);
+ds_map_add(weapons[4],"projectile",oShotgunShell);
+ds_map_add(weapons[4],"startup",0);
+ds_map_add(weapons[4],"length",60);
+ds_map_add(weapons[4],"cooldown",10);
+ds_map_add(weapons[4],"bulletspeed",40);
+ds_map_add(weapons[4],"automatic",false);
+
 weapon = 0;
 ammo[array_length_1d(weapons)-1] = 0;
 ammo[0] = -1;
@@ -52,5 +65,3 @@ _x = x;
 _imgAngle = image_angle;
 curvePos = 0;
 curveSpd = 0;
-
-

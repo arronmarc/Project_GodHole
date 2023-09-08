@@ -23,8 +23,6 @@ col_alert=make_color_rgb(31,31,31)
 isDead = false;
 hp = 5;
 
-playerHealth = global.health;
-
 
 enum States {
     HUNT,
