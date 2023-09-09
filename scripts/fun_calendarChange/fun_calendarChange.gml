@@ -20,19 +20,13 @@ function fun_calendarChange() {
                 
 				if (instance_exists(oTomato)) {
                     with (oTomato) {
-                        if (growthStage < maxGrowthStage) {
-                            daysOld += 1;
-            
-                            var firstGrowth = 0;
-                            if (daysOld > 0) { firstGrowth = 1; }
-            
-                            growthStage = firstGrowth + (daysOld div growthStageDuration);
-                            if (growthStage >= maxGrowthStage) {
-                                growthStage = maxGrowthStage;
-                                fullyGrown = true;
-                                alarm[1] = 1;
-                            }
-                        }
+                        GrowCrop();
+                    }
+                }
+				
+				if (instance_exists(oCarrot)) {
+                    with (oCarrot) {
+                        GrowCrop();
                     }
                 }
             

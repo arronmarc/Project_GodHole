@@ -188,6 +188,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Miscellaneous","folderPath":"folders/YUI/Scribble/Miscellaneous.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Quick Functions","folderPath":"folders/YUI/Scribble/Quick Functions.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Superfonts","folderPath":"folders/YUI/Scribble/Superfonts.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Crops","folderPath":"folders/Objects/Placeable/Crops.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"controllerblacklist.csv","CopyToMask":-1,"filePath":"datafiles",},
@@ -303,6 +304,7 @@
     {"id":{"name":"respawn_crop","path":"scripts/respawn_crop/respawn_crop.yy",},},
     {"id":{"name":"obj_manager","path":"objects/obj_manager/obj_manager.yy",},},
     {"id":{"name":"input_keyboard_check_pressed","path":"scripts/input_keyboard_check_pressed/input_keyboard_check_pressed.yy",},},
+    {"id":{"name":"GrowCrop","path":"scripts/GrowCrop/GrowCrop.yy",},},
     {"id":{"name":"GsplLiteralParselet","path":"scripts/GsplLiteralParselet/GsplLiteralParselet.yy",},},
     {"id":{"name":"sprLightPlayer","path":"sprites/sprLightPlayer/sprLightPlayer.yy",},},
     {"id":{"name":"input_profile_create","path":"scripts/input_profile_create/input_profile_create.yy",},},
@@ -469,6 +471,7 @@
     {"id":{"name":"yui_icon_64","path":"sprites/yui_icon_64/yui_icon_64.yy",},},
     {"id":{"name":"__ppf_sh_render_vhs","path":"shaders/__ppf_sh_render_vhs/__ppf_sh_render_vhs.yy",},},
     {"id":{"name":"scribble_super_clear","path":"scripts/scribble_super_clear/scribble_super_clear.yy",},},
+    {"id":{"name":"oCarrot","path":"objects/oCarrot/oCarrot.yy",},},
     {"id":{"name":"yui_popup_button","path":"objects/yui_popup_button/yui_popup_button.yy",},},
     {"id":{"name":"yui_create_fragment_element","path":"scripts/yui_create_fragment_element/yui_create_fragment_element.yy",},},
     {"id":{"name":"__input_config_touch","path":"scripts/__input_config_touch/__input_config_touch.yy",},},

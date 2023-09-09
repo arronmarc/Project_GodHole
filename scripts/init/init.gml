@@ -88,7 +88,7 @@ enum INVITEMS {
     initItem(INVITEMS.POTATO_SEED, "Potato Seed", sPotatoSeed, []);
     initItem(INVITEMS.POTATO, "Potato", sPotato, [], undefined, 64);
     
-    initItem(INVITEMS.CARROT_SEED, "Carrot Seed", sCarrotSeed, []);
+    initItem(INVITEMS.CARROT_SEED, "Carrot Seed", sCarrotSeed, [], oCarrot, 64);
     initItem(INVITEMS.CARROT, "Carrot", sCarrot, [], undefined, 64);
     
     initItem(INVITEMS.ARTICHOKE_SEED, "Artichoke Seed", sArtichokeSeed, []);

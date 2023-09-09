@@ -1,7 +1,7 @@
 //Create event
 event_inherited();
 
-res = [INVITEMS.TOMATO, INVITEMS.TOMATO_SEED];
+res = [INVITEMS.CARROT, INVITEMS.CARROT_SEED];
 
 hp = 1;
 hpMax = hp;
