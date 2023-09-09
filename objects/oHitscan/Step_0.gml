@@ -14,4 +14,3 @@ with (my_light) {
     y = other.y;
 }
 
-BulletDebris();

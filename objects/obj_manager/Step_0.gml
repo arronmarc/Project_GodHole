@@ -16,6 +16,10 @@ if (global.pause) {
 		y = ystart + other.cMenuScroll;
 	}
 	
+	if (input_check_pressed("roll")) {
+		GiveSelfItems();
+}
+	
 }
 
 if (keyboard_check_pressed(ord("Y"))) {

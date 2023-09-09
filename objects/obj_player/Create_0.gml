@@ -8,14 +8,14 @@ fear_max=400;
 
 global.enemyfearmax=100;  //set the enemy's max fear when they spawn in
 
-global.health = 5;
-global.healthmax = 50;
+global.health = 10;
+global.healthmax = 25;
 
-global.mana = 500;
-global.manamax = 500;
+global.mana = 50;
+global.manamax = 50;
 
-global.stamina = 500;
-global.staminamax = 500;
+global.stamina = 10;
+global.staminamax = 100;
 
 start_timer = false;
 timer = 0;
@@ -28,8 +28,8 @@ skeleton_attachment_set("Weapon", "Gun");
 SmoothAnimTrans()
 
 w_spd = 1;
-n_spd = 4;
-r_spd = 10;
+n_spd = 2;
+r_spd = 5;
 spd = n_spd;
 
 isCrouching = false;
@@ -66,3 +66,6 @@ currentTorchDir = 0;
 light_active = false;
 
 gun_bone_adjusted = false;
+
+//Show key
+showKey = -1;

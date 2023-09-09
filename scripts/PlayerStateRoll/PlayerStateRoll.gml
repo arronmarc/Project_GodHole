@@ -1,4 +1,5 @@
 function PlayerStateRoll() {
+
  if (!global.pause) {
         if (!isRolling) {
             global.stamina -= 100;

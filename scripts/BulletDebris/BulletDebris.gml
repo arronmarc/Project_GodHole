@@ -32,11 +32,11 @@ repeat(2){
 		motion_add(other.image_angle+random_range(-40,40),random_range(-1,-6))
 	}
 }
-	instance_destroy();
+	
 }
 
 
-if(place_meeting(x, y, red_obj) or place_meeting(x, y, drone) or place_meeting(x, y, Zombie)) {
+if (place_meeting(x, y, oEnemyParent)) {
 	repeat(6){
 	with (instance_create_depth(x,y,depth,oParticle)){
 		debris = false;
@@ -67,7 +67,7 @@ repeat(2){
 		motion_add(other.image_angle+random_range(-40,40),random_range(-1,-6))
 	}
 }
-	instance_destroy();
+
 }
 
 

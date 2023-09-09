@@ -15,8 +15,8 @@
     "path": "folders/Objects/Weapons.yy",
   },
   "parentObjectId": {
-    "name": "par_depthobject",
-    "path": "objects/par_depthobject/par_depthobject.yy",
+    "name": "oProjectilesParent",
+    "path": "objects/oProjectilesParent/oProjectilesParent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

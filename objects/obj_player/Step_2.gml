@@ -23,3 +23,14 @@ if (placingMode and instance_exists(placingInst)) {
 		event_user(1);
 	}
 }
+
+//Open chest
+var _chest = collision_circle(x, y, 12, oChestParent, false, false);
+
+if (instance_exists(_chest)) {
+	showKey = sButtonE;
+	
+	if input_check_pressed("action") {
+		TogglePause(_chest);
+	}
+}

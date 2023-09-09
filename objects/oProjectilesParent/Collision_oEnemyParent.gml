@@ -1,0 +1,2 @@
+BulletDebris();
+instance_destroy();

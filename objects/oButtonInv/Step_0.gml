@@ -41,9 +41,8 @@ if (hover && input_check("shoot")) {
 			}
 			break;
 			
-			case INVITEMS.BLOCK_WOOD:
-			case INVITEMS.BLOCK_IRON:
-			case INVITEMS.BLOCK_WALL:
+			default:
+			if (global.itemPlaceable[_item] != noone) {
 				TogglePause();
 				
 				with (obj_player) {
@@ -52,7 +51,7 @@ if (hover && input_check("shoot")) {
 					event_user(0);
 				}
 				_used = true;
-			
+			}
 			break;
 			
 			
@@ -62,6 +61,9 @@ if (hover && input_check("shoot")) {
 		if (_used) {
 			//Reduce count
 			_arr[@ 1] --;
+			
+			//Check if empty
+			event_user(0);
 			
 			show_debug_message("The item was used");
 		}

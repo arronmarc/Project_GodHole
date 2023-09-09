@@ -48,14 +48,14 @@ function AdjustSpeed() {
         spd = r_spd;
     } 
     else if (isCrouching) {
-        spd = w_spd;
+        spd = 0.5;
     } 
     else {
         spd = n_spd;
     }
 
     if(!keySprint) {
-        global.stamina = clamp(global.stamina + 1, 0, 500);
+        global.stamina = clamp(global.stamina + 1, 0, 100);
     }
 }
 
@@ -149,7 +149,7 @@ function HandleCrouchToggle() {
 }
 
 function HandleRollState() {
-    if (keyRoll) {
+    if (keyRoll) and (global.stamina >= 100) {
         state = PlayerStateRoll;
     }
 }

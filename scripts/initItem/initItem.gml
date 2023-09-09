@@ -1,17 +1,14 @@
-function initItem(){
-
 /// @arg item
 /// @arg name
 /// @arg sprite
 /// @arg recipe
 /// @arg <placeable>
+/// @arg <stackSize>
+function initItem(_item, _name, _sprite, _recipe, _placeable, _stackSize){
+global.itemName[_item] = _name;
+global.itemSprite[_item] = _sprite;
+global.itemRecipe[_item] = _recipe;
 
-var _item = argument[0];
-
-global.itemName[_item] = argument[1];
-global.itemSprite[_item] = argument[2];
-global.itemRecipe[_item] = argument[3];
-
-global.itemPlaceable[_item] = (argument_count > 4 ? argument[4] : noone);
-
+global.itemPlaceable[_item] = (_placeable != undefined ? _placeable : noone);
+global.itemStackSize[_item] = (_stackSize != undefined ? _stackSize : 64);
 }

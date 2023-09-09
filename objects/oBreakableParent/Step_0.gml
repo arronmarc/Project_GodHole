@@ -8,7 +8,13 @@ if (object_index == oTree) {
 }
 
 // Handling the resource spawning and destruction
-if (hp <= 0) {
+if (hp == 0 && object_index == obj_crop && !fullyGrown) {
+    // Do nothing, the crop isn't ready to be harvested.
+} else if (hp == 0) {
     spawn_resources();
     instance_destroy();
+}
+
+if (flashAlpha > 0) {
+	flashAlpha -= 0.1;
 }

@@ -80,5 +80,4 @@ if (input_check_pressed("light")) {
 }
 
 
-
 }

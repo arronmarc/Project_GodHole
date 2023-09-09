@@ -23,6 +23,8 @@ enum INVITEMS {
 	BLOCK_WOOD,
 	BLOCK_IRON,
 	BLOCK_WALL,
+	WOODEN_CHEST,
+	WOODEN_CHEST_LARGE,
 	
 	TOMATO_SEED,
     TOMATO,
@@ -46,52 +48,60 @@ enum INVITEMS {
     CORN
 	}
 	
-	initItem(INVITEMS.APPLE, "Apple", sApple, []);
-	initItem(INVITEMS.ORANGE, "Orange", sOrange, []);
-	initItem(INVITEMS.WOOD, "Wood", sWood, []);
+	initItem(INVITEMS.APPLE, "Apple", sApple, [], undefined, 64);
+	initItem(INVITEMS.ORANGE, "Orange", sOrange, [], undefined, 64);
+	initItem(INVITEMS.WOOD, "Wood", sWood, [], undefined, 64);
 	
-	initItem(INVITEMS.STONE, "Stone", sStone, []);
-	initItem(INVITEMS.IRON, "Iron", sIron, []);
+	initItem(INVITEMS.STONE, "Stone", sStone, [], undefined, 64);
+	initItem(INVITEMS.IRON, "Iron", sIron, [], undefined, 64);
 	
 	initItem(INVITEMS.POTION, "Potion", sPotion, [
 		[INVITEMS.APPLE, 2]
-	]);
+	], undefined, 64);
 	initItem(INVITEMS.SYRUP, "Syrup", sSyrup, [
 		[INVITEMS.ORANGE, 1],
 		[INVITEMS.APPLE, 1]
-	]);
+	], undefined, 64);
 	initItem(INVITEMS.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
 		[INVITEMS.WOOD, 2]
-	], oWoodBlock);
+	], oWoodBlock, 64);
 	
 	initItem(INVITEMS.BLOCK_IRON, "Iron Block", sBlock_Iron, [
 	[INVITEMS.IRON, 2]
-	], oIronBlock);
+	], oIronBlock, 64);
 	
 	initItem(INVITEMS.BLOCK_WALL, "Wall Block", sBlock_Wall, [
 	[INVITEMS.STONE, 2]
-	], wall_obj);
+	], wall_obj,64);
+	
+	initItem(INVITEMS.WOODEN_CHEST, "Wooden Chest", sWoodenChest, [
+	[INVITEMS.WOOD, 3]
+	], oWoodenChest, 64);
+	
+	initItem(INVITEMS.WOODEN_CHEST_LARGE, "Large Wooden Chest", sWoodenChestLarge, [
+	[INVITEMS.WOOD, 6]
+	], oWoodenChestLarge, 64);
 	
 	initItem(INVITEMS.TOMATO_SEED, "Tomato Seed", sTomatoSeed, []);
-    initItem(INVITEMS.TOMATO, "Tomato", sTomato, []);
+    initItem(INVITEMS.TOMATO, "Tomato", sTomato, [], undefined, 64);
     
     initItem(INVITEMS.POTATO_SEED, "Potato Seed", sPotatoSeed, []);
-    initItem(INVITEMS.POTATO, "Potato", sPotato, []);
+    initItem(INVITEMS.POTATO, "Potato", sPotato, [], undefined, 64);
     
     initItem(INVITEMS.CARROT_SEED, "Carrot Seed", sCarrotSeed, []);
-    initItem(INVITEMS.CARROT, "Carrot", sCarrot, []);
+    initItem(INVITEMS.CARROT, "Carrot", sCarrot, [], undefined, 64);
     
     initItem(INVITEMS.ARTICHOKE_SEED, "Artichoke Seed", sArtichokeSeed, []);
-    initItem(INVITEMS.ARTICHOKE, "Artichoke", sArtichoke, []);
+    initItem(INVITEMS.ARTICHOKE, "Artichoke", sArtichoke, [], undefined, 64);
     
     initItem(INVITEMS.CHILLI_SEED, "Chilli Seed", sChilliSeed, []);
-    initItem(INVITEMS.CHILLI, "Chilli", sChilli, []);
+    initItem(INVITEMS.CHILLI, "Chilli", sChilli, [], undefined, 64);
     
     initItem(INVITEMS.GOURD_SEED, "Gourd Seed", sGourdSeed, []);
-    initItem(INVITEMS.GOURD, "Gourd", sGourd, []);
+    initItem(INVITEMS.GOURD, "Gourd", sGourd, [], undefined, 64);
     
     initItem(INVITEMS.CORN_SEED, "Corn Seed", sCornSeed, []);
-    initItem(INVITEMS.CORN, "Corn", sCorn, []);
+    initItem(INVITEMS.CORN, "Corn", sCorn, [], undefined, 64);
 	
 
 //Crafting menu
@@ -105,6 +115,10 @@ INVITEMS.SYRUP,
 INVITEMS.BLOCK_WOOD,
 INVITEMS.BLOCK_IRON,
 INVITEMS.BLOCK_WALL,
+
+"Chests",
+INVITEMS.WOODEN_CHEST,
+INVITEMS.WOODEN_CHEST_LARGE
 
 ];
 
