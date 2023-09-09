@@ -7,7 +7,7 @@ function config_timeCycle() {
 	global.dateCalendarOn = true;//TO ENABLE CALENDARS SET TO TRUE:
 	global.lightingCycle = true; //Setting this to false will not draw or modify the darkness. The clock will still work.
 	//-------------------------------
-	cycleLength = 5;      //Length of a entire day/night cycle in REAL WORLD MINUTES.
+	cycleLength = 0.1;      //Length of a entire day/night cycle in REAL WORLD MINUTES.
 	cycleDayPause = 240;    //Choose the length of time in GAME WORLD minutes that Alpha will sit at the minimum(Brightest.)
 	cycleNightPause = 180;  //Choose the length of time in GAME WORLD minutes that Alpha will sit at the maximum(Darkest.)
 	cycleMaxAlpha = .8;     //Choose the max level of darkness. 1 = Absolute Darkness, 0 = Bright as day.

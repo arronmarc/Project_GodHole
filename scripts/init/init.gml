@@ -82,7 +82,7 @@ enum INVITEMS {
 	[INVITEMS.WOOD, 6]
 	], oWoodenChestLarge, 64);
 	
-	initItem(INVITEMS.TOMATO_SEED, "Tomato Seed", sTomatoSeed, []);
+	initItem(INVITEMS.TOMATO_SEED, "Tomato Seed", sTomatoSeed, [], oTomato, 64);
     initItem(INVITEMS.TOMATO, "Tomato", sTomato, [], undefined, 64);
     
     initItem(INVITEMS.POTATO_SEED, "Potato Seed", sPotatoSeed, []);

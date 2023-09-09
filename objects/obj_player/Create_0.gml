@@ -27,8 +27,8 @@ skeleton_attachment_set("Weapon", "Gun");
 
 SmoothAnimTrans()
 
-w_spd = 1;
-n_spd = 2;
+w_spd = 2;
+n_spd = 4;
 r_spd = 5;
 spd = n_spd;
 

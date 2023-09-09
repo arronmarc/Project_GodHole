@@ -1,4 +1,4 @@
-//Room end event
+//crops object room end event
 if(room == r_demo){
 
 //Get the number of crops

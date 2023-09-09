@@ -1,13 +1,5 @@
-//Step event
-if(room != r_demo){ planting = false; exit }
-
 #region Planting
 
-
-if(keyboard_check_pressed(ord("P"))) {
-	planting = !planting 
-	}
-	
 if(planting){
 	mx = clamp(mouse_x, 0, (room_width div cellSize-1)*cellSize);
 	my = clamp(mouse_y, 0, (room_height div cellSize-1)*cellSize);
@@ -25,4 +17,4 @@ if(planting){
 		instance_create_crop(mx, my, selectCrop);
 	}
 }
-#endregion
+

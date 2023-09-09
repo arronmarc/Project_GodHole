@@ -1061,6 +1061,7 @@
     {"name":"spawn_resources","order":44,"path":"scripts/spawn_resources/spawn_resources.yy",},
     {"name":"input_binding_scan_start","order":5,"path":"scripts/input_binding_scan_start/input_binding_scan_start.yy",},
     {"name":"scr_shoot","order":3,"path":"scripts/scr_shoot/scr_shoot.yy",},
+    {"name":"oTomato","order":8,"path":"objects/oTomato/oTomato.yy",},
     {"name":"input_system_import","order":10,"path":"scripts/input_system_import/input_system_import.yy",},
     {"name":"__ppf_sh_ds_box4","order":1,"path":"shaders/__ppf_sh_ds_box4/__ppf_sh_ds_box4.yy",},
     {"name":"yui_resolve_binding","order":9,"path":"scripts/yui_resolve_binding/yui_resolve_binding.yy",},

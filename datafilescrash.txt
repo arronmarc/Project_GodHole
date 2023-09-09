@@ -1,9 +1,9 @@
-{ script : "gml_Script_draw_lightSources", stacktrace : [ "gml_Script_draw_lightSources (line 34)","gml_Object_obj_timeCycle_Draw_0 (line 1)" ], longMessage : "ERROR in
+{ script : "gml_Script_fun_calendarChange", stacktrace : [ "gml_Script_fun_calendarChange (line 29)","gml_Script_fun_cycleCalendar (line 6) - 	if global.curDay <= dateDays then fun_calendarChange("day"); //Run Day Start Code","gml_Script_scr_timeCycle_step (line 30) - 	            if global.dateCalendarOn = true   {fun_cycleCalendar();}","gml_Object_obj_timeCycle_Step_0 (line 1)" ], message : "DoRem :: Divide by zero", longMessage : "ERROR in
 action number 1
-of Draw Event
+of  Step Event0
 for object obj_timeCycle:
 
 
-Unable to find any instance for object index '21' name 'drone'
- at gml_Script_draw_lightSources (line 34) - 	        if drone.state = 0 {  //if in the search state then draw the view cone with an alpha of 0.1	
-", message : "Unable to find any instance for object index '21' name 'drone'", line : 34 }
+DoRem :: Divide by zero
+ at gml_Script_fun_calendarChange (line 29) -                             growthStage = firstGrowth + (daysOld div growthStageDuration);
+", line : 29 }

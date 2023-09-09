@@ -1,6 +1,8 @@
 // Inherit parent behavior
 event_inherited();
 
+//obj_crop step event
+
 if (fullyGrown) {
     // Make this object breakable
     hp = 1;

@@ -1248,6 +1248,7 @@
     {"id":{"name":"input_binding_scan_start","path":"scripts/input_binding_scan_start/input_binding_scan_start.yy",},},
     {"id":{"name":"scr_shoot","path":"scripts/scr_shoot/scr_shoot.yy",},},
     {"id":{"name":"__shd_scribble","path":"shaders/__shd_scribble/__shd_scribble.yy",},},
+    {"id":{"name":"oTomato","path":"objects/oTomato/oTomato.yy",},},
     {"id":{"name":"input_system_import","path":"scripts/input_system_import/input_system_import.yy",},},
     {"id":{"name":"__ppf_sh_ds_box4","path":"shaders/__ppf_sh_ds_box4/__ppf_sh_ds_box4.yy",},},
     {"id":{"name":"yui_resolve_binding","path":"scripts/yui_resolve_binding/yui_resolve_binding.yy",},},

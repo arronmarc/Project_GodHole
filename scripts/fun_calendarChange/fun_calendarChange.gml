@@ -17,9 +17,9 @@ function fun_calendarChange() {
 	    /-----------------------------------------------------------*/
 	        break;
 	    case "day":
-            if (room == r_demo) {
-                if (instance_exists(obj_crop)) {
-                    with (obj_crop) {
+                
+				if (instance_exists(oTomato)) {
+                    with (oTomato) {
                         if (growthStage < maxGrowthStage) {
                             daysOld += 1;
             
@@ -35,13 +35,7 @@ function fun_calendarChange() {
                         }
                     }
                 }
-            } else if (ds_crops_data[# 0, 0] != -1) {
-                var h = ds_grid_height(ds_crops_data);
-                var yy = 0; repeat(h) {
-                    ds_crops_data[# 3, yy] += 1;
-                    yy += 1;
-                }
-            }
+            
 
 	    /*-----------------------------------------------------------/
 	    / Place any code you want to fire off at the beginning of a 

@@ -11,7 +11,7 @@ function GiveSelfItems(){
 		INVITEMS.WOODEN_CHEST,
 		INVITEMS.WOODEN_CHEST_LARGE,
 		INVITEMS.POTION,
-		INVITEMS.SYRUP
+		INVITEMS.TOMATO_SEED
     ];
 
     for(var i = 0; i < array_length_1d(items); i++) {
