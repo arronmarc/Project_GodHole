@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Fonts",
-    "path": "folders/YUI/Scribble/Fonts.yy",
+    "path": "folders/gooey/Dependencies/Scribble 8.7/Fonts.yy",
   },
 }

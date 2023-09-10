@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Miscellaneous",
-    "path": "folders/YUI/Scribble/Miscellaneous.yy",
+    "name": "Colours",
+    "path": "folders/gooey/Dependencies/Scribble 8.7/Colours.yy",
   },
 }

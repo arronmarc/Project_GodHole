@@ -9,7 +9,7 @@ fear_max=400;
 global.enemyfearmax=100;  //set the enemy's max fear when they spawn in
 
 global.health = 10;
-global.healthmax = 25;
+global.healthmax = 50;
 
 global.mana = 50;
 global.manamax = 50;
@@ -29,7 +29,7 @@ SmoothAnimTrans()
 
 w_spd = 2;
 n_spd = 4;
-r_spd = 5;
+r_spd = 8;
 spd = n_spd;
 
 isCrouching = false;

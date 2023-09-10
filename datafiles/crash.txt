@@ -1,0 +1,9 @@
+{ script : "gml_Script_anon_YuiCanvasLayout_gml_GlobalScript_YuiCanvasLayout_1896_YuiCanvasLayout_gml_GlobalScript_YuiCanvasLayout", stacktrace : [ "gml_Script_anon_YuiCanvasLayout_gml_GlobalScript_YuiCanvasLayout_1896_YuiCanvasLayout_gml_GlobalScript_YuiCanvasLayout (line 79)","gml_Script_yui_panel__arrange_gml_Object_yui_panel_Create_0 (line 118) - 	used_layout_size = layout.arrange(bound_values);","gml_Script_anon_gml_Object_yui_document_Create_0_1008_gml_Object_yui_document_Create_0 (line 54) - 	root.arrange(draw_rect);","gml_Object_yui_document_Create_0 (line 62) - load();" ], longMessage : "ERROR in
+action number 1
+of Create Event
+for object yui_document:
+
+
+Variable YuiCanvasLayout.items(101123, -2147483648) not set before reading it.
+ at gml_Script_anon_YuiCanvasLayout_gml_GlobalScript_YuiCanvasLayout_1896_YuiCanvasLayout_gml_GlobalScript_YuiCanvasLayout (line 79) - 		var i = 0; repeat array_length(items) {
+", line : 79, message : "Variable YuiCanvasLayout.items(101123, -2147483648) not set before reading it." }

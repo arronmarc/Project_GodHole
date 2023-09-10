@@ -1,25 +1,25 @@
 /// @description CUSTOMIZE HERE
 #region VARIABLES
 //You can customize these variables, but only here - you cannot modify these elsewhere
-grass_mode = 0; //Grass mode. Explanation inside the documentation (in scripts)
+grass_mode = 1; //Grass mode. Explanation inside the documentation (in scripts)
 
 //Mode 1 variables
-grass_radius = 16; //Radius around the object for creating the grass
+grass_radius = 250; //Radius around the object for creating the grass
 //----------------
 
 //Mode 2 variables (Size of the imaginary rectangle in which the grass is filled)
-grass_rect_hor = 96; //Horizontal (x) size of rectangle
-grass_rect_ver = 48; //Vertical (y) size of rectangle
+grass_rect_hor = 30; //Horizontal (x) size of rectangle
+grass_rect_ver = 12; //Vertical (y) size of rectangle
 //----------------
 
 //General variables
-grass_number = 20000; //Number of grass sprites inside the room
+grass_number = 32; //Number of grass sprites inside the room
 grass_sprite = spr_depthgrass; //Sprite used for the grass
 
 grass_random_image = true; //Can the grass use any sub-image from the sprite, at random? 
 						   //If false, it'll only use the first one.
 
-grass_animate = false; //Whether to use a wind shader to animate the grass
+grass_animate = true; //Whether to use a wind shader to animate the grass
 grass_pattern = false; //Whether the grass should sway in a pattern
 
 //These variables can also be changed later
@@ -55,7 +55,7 @@ if (grass_animate){
 }
 
 //depth
-gpu_set_ztestenable(true);
+gpu_set_ztestenable(false);
 
 //vformat
 vertex_format_begin();

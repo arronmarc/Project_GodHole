@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "(System - don't call these functions)",
-    "path": "folders/YUI/Scribble/(System - don't call these functions).yy",
+    "path": "folders/gooey/Dependencies/Scribble 8.7/(System - don't call these functions).yy",
   },
 }

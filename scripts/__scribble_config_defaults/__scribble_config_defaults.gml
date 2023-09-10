@@ -1,8 +1,8 @@
 // Default font is set by scribble_font_set_default()
 
 #macro SCRIBBLE_DEFAULT_COLOR               c_white  //Default vertex colour when drawing text models. This can be overwritten by the .starting_format() text element method. This will not affect draw_text_scribble() which instead uses draw_get_color()
-#macro SCRIBBLE_DEFAULT_HALIGN              fa_left  //Default horizontal alignment for text. This can be changed using the .align() text element method. This will not affect draw_text_scribble() which instead uses draw_get_halign()
-#macro SCRIBBLE_DEFAULT_VALIGN              fa_top   //Default vertical alignment for text. This can be changed using the .align() text element method. This will not affect draw_text_scribble() which instead uses draw_get_valign()
+#macro SCRIBBLE_DEFAULT_HALIGN              fa_center  //Default horizontal alignment for text. This can be changed using the .align() text element method. This will not affect draw_text_scribble() which instead uses draw_get_halign()
+#macro SCRIBBLE_DEFAULT_VALIGN              fa_middle   //Default vertical alignment for text. This can be changed using the .align() text element method. This will not affect draw_text_scribble() which instead uses draw_get_valign()
 #macro SCRIBBLE_DEFAULT_SPRITE_SPEED        1        //The default animation speed for sprites inserted into text
 #macro SCRIBBLE_LEGACY_ANIMATION_SPEED      false    //Set to <False> to use the old animation speed system which ignores the IDE sprite speed
 #macro SCRIBBLE_DEFAULT_DELAY_DURATION      450      //Default duration of the [delay] command, in milliseconds
@@ -39,4 +39,4 @@
 
 #macro SCRIBBLE_DEFAULT_BLINK_ON_DURATION   50       //Default duration that blinking text should stay on for, in milliseconds
 #macro SCRIBBLE_DEFAULT_BLINK_OFF_DURATION  50       //Default duration that blinking text should turn off for, in milliseconds
-#macro SCRIBBLE_DEFAULT_BLINK_TIME_OFFSET   0        //Default blink time offset, in milliseconds
+#macro SCRIBBLE_DEFAULT_BLINK_TIME_OFFSET   0

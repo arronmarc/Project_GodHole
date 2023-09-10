@@ -37,7 +37,7 @@ return {
 		aim: input_binding_mouse_button(mb_right),
         shoot: input_binding_mouse_button(mb_left),
         
-        pause: input_binding_key(vk_escape),
+        pause: input_binding_key(vk_tab),
     },
     
     gamepad:

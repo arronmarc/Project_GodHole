@@ -1,6 +1,4 @@
 function PlayerStateCrouch() {
-if (!global.pause) 
-{
     if (!isCrouching) {
         isCrouching = true;
         spd = w_spd;
@@ -74,5 +72,4 @@ if (!global.pause)
     if (keyRoll) {
         state = PlayerStateRoll;
     }
-}
 }

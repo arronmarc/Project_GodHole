@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Miscellaneous",
-    "path": "folders/YUI/Scribble/Miscellaneous.yy",
+    "name": "External Assets",
+    "path": "folders/gooey/Dependencies/Scribble 8.7/External Assets.yy",
   },
 }

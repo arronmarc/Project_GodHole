@@ -1,16 +1,3 @@
-//Step event
-if (global.pause) {
-    image_speed = 0;
-    return; // Exit the function early since the game is paused.
-}
-else {
-    image_speed = 1; // Resume the animation. Adjust this value if your standard playback speed is different.
-}
-
-if (!global.pause) 
-{
-
-
 //fear control - in order to work with the shooter AI
 scr_fear_control(red_bullet)
 fear-=1
@@ -77,7 +64,4 @@ if input_check_pressed("weapon0") {
 // Toggle light_active when the "light" key is first pressed
 if (input_check_pressed("light")) {
     light_active = !light_active;
-}
-
-
 }

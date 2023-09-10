@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Animation",
-    "path": "folders/YUI/Scribble/Animation.yy",
+    "path": "folders/gooey/Dependencies/Scribble 8.7/Animation.yy",
   },
 }

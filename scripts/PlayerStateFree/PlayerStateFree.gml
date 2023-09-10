@@ -1,36 +1,28 @@
 function PlayerStateFree() {
-    if (!global.pause) 
-    {
-        // 1. INPUT HANDLING
-        HandleInput();
+    // 1. INPUT HANDLING
+    HandleInput();
 
-        // 2. SPEED ADJUSTMENTS BASED ON STATE
-        AdjustSpeed();
+    // 2. SPEED ADJUSTMENTS BASED ON STATE
+    AdjustSpeed();
 
-        // 3. CALCULATE AND APPLY MOVEMENT
-        CalculateMove();
+    // 3. CALCULATE AND APPLY MOVEMENT
+    CalculateMove();
 
-        // 4. HANDLE ANIMATIONS AND SOUNDS
-        HandleAnimations();
+    // 4. HANDLE ANIMATIONS AND SOUNDS
+    HandleAnimations();
 
-        // 5. CROUCH TOGGLE
-        HandleCrouchToggle();
+    // 5. CROUCH TOGGLE
+    HandleCrouchToggle();
 
-        // 6. HANDLE ROLL STATE
-        HandleRollState();
+    // 6. HANDLE ROLL STATE
+    HandleRollState();
 		
-		// 6. HANDLE STAB ATTACK
-        HandleAttackStab();
+	// 6. HANDLE STAB ATTACK
+    HandleAttackStab();
 
-        // 8. SAVE LAST MOVED DIRECTION
-        SaveLastMoveDirection();
-
-
-    }
-	
-	
+    // 8. SAVE LAST MOVED DIRECTION
+    SaveLastMoveDirection();
 }
-
 
 function HandleInput() {
     self._inputX = input_right - input_left;
@@ -154,18 +146,11 @@ function HandleRollState() {
     }
 }
 
-//function HandleAttackStab() {
-//    if (keyAttack) {
-//        state = PlayerAttackStab;
-//    }
-//}
-
 function HandleAttackStab() {
     if (keyAttack) {
         state = PlayerAttackMagic;
     }
 }
-
 
 function SaveLastMoveDirection() {
     if (moveX != 0 || moveY != 0) {

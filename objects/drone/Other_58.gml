@@ -1,4 +1,4 @@
-if (!global.pause) and (isDead != true) 
+if (isDead != true) 
 {
     // Create the ds_map for the bone state
     var _map_left_arm = ds_map_create();
