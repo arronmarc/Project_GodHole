@@ -1,5 +1,6 @@
 // oCamera end step event
 
+if (!global.pause) {
 // Get current camera position
 var camX = camera_get_view_x(camera);
 var camY = camera_get_view_y(camera);
@@ -112,15 +113,15 @@ var initialZoom = currentZoom;
 
 if (mouse_wheel_up()) {
     currentZoom -= 0.1;
-    currentZoom = clamp(currentZoom, 1.1, 3.0);
+    currentZoom = clamp(currentZoom, 0.1, 2.0);
 }
 else if (mouse_wheel_down()) {
     currentZoom += 0.1;
-    currentZoom = clamp(currentZoom, 1.1, 3.0);
+    currentZoom = clamp(currentZoom, 0.1, 2.0);
 }
 
 // Clamp the zoom level to a reasonable range
-currentZoom = clamp(currentZoom, 1.1, 3.0); // Adjust the range as needed
+currentZoom = clamp(currentZoom, 0.1, 2.0); // Adjust the range as needed
 
 var zoomChange = currentZoom - initialZoom;
 
@@ -167,3 +168,4 @@ newCamY = clamp(newCamY, 0, room_height - newCamH);
 // Apply camera position and size after all calculations and clamping
 camera_set_view_pos(camera, newCamX, newCamY);
 camera_set_view_size(camera, newCamW, newCamH);
+}

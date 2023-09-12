@@ -62,7 +62,6 @@
     {"name":"inst_3095B3EE","path":"rooms/r_demo/r_demo.yy",},
     {"name":"inst_F1DAC39","path":"rooms/r_demo/r_demo.yy",},
     {"name":"inst_52911843","path":"rooms/r_demo/r_demo.yy",},
-    {"name":"inst_4924B098","path":"rooms/r_demo/r_demo.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -138,9 +137,7 @@
 -74,-2147483648,1,0,-12,-2147483648,1,0,-74,-2147483648,1,0,-12,-2147483648,1,0,-74,-2147483648,1,0,-12,-2147483648,1,0,-74,-2147483648,1,0,-6587,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tile_cottage","path":"tilesets/tile_cottage/tile_cottage.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"T_Soil","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":88,"SerialiseWidth":88,"TileCompressedData":[
 -984,0,-5,1157,-83,0,-5,1157,-83,0,-5,1157,-6579,0,],"TileDataFormat":1,},"tilesetId":{"name":"t_base_terrain","path":"tilesets/t_base_terrain/t_base_terrain.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"DepthGrass","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4924B098","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"oGrass","path":"objects/oGrass/oGrass.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":448.0,"y":224.0,},
-      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"DepthGrass","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Base_terrain","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":88,"SerialiseWidth":88,"TileCompressedData":[
 -16,1133,-7,218,-7721,1133,],"TileDataFormat":1,},"tilesetId":{"name":"t_base_terrain","path":"tilesets/t_base_terrain/t_base_terrain.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],

@@ -439,5 +439,3 @@ surface_depth_disable(UI_ENABLE_DEPTH);
 	}
 	
 #endregion
-
-self.__logMessage("Welcome to "+UI_LIBRARY_NAME+" "+UI_LIBRARY_VERSION+", an user interface library by manta ray", UI_MESSAGE_LEVEL.NOTICE);

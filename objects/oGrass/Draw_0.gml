@@ -1,8 +1,8 @@
 /// @description
 //Alpha test enable
 
-gpu_set_alphatestenable(false);
-if (bugfix) gpu_set_ztestenable(false);
+gpu_set_alphatestenable(true);
+if (bugfix) gpu_set_ztestenable(true);
 
 //Shader
 if (grass_animate){
@@ -25,6 +25,7 @@ if (grass_animate){
 }
 
 //Submit vertex buffer
+gpu_set_alphatestenable(true);
 vertex_submit(vbuff, pr_trianglelist, tex);
 
 //Shader

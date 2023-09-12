@@ -1,4 +1,4 @@
-// Inherit the parent event
+// Inherit the parent event of oButtonParent
 event_inherited();
 
 //Get array from slot list

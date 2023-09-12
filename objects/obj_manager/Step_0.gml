@@ -1,4 +1,11 @@
+
+
 if (global.pause) {
+	
+	if (global.inventoryUpdated) {
+    gooeyUI.draw_inventory(true);  // Assuming gooeyUI is accessible and has the draw_inventory method
+    global.inventoryUpdated = false;
+}
 	
 	var _wheel = mouse_wheel_up() - mouse_wheel_down();
 	_wheel *= 32;

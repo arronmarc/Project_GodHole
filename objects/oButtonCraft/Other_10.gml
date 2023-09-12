@@ -19,11 +19,3 @@ for (var i = 0; i < _recipeSize; i++) {
 
 //Add crafted item to inventory
 inv_add(item, 1);
-
-
-
-
-
-
-
-

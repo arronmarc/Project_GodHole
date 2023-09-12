@@ -1,5 +1,5 @@
 function inv_add(){
-
+global.inventoryUpdated = true;
 var _item = argument[0];
 var _count = argument[1];
 

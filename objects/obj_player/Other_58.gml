@@ -3,7 +3,7 @@ var _map_left_arm = ds_map_create();
 skeleton_bone_state_get("Gun bone", _map_left_arm);
 
 // If the player is aiming
-if (input_check("aim")) {
+if (input_check("aim")) and (!global.pause) {
     // Calculate direction to crosshair
     var gun_direction = point_direction(x, y, crosshair.x, crosshair.y);
         

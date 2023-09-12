@@ -8,8 +8,8 @@ grass_radius = 250; //Radius around the object for creating the grass
 //----------------
 
 //Mode 2 variables (Size of the imaginary rectangle in which the grass is filled)
-grass_rect_hor = 30; //Horizontal (x) size of rectangle
-grass_rect_ver = 12; //Vertical (y) size of rectangle
+grass_rect_hor = 64; //Horizontal (x) size of rectangle
+grass_rect_ver = 64; //Vertical (y) size of rectangle
 //----------------
 
 //General variables
@@ -55,7 +55,7 @@ if (grass_animate){
 }
 
 //depth
-gpu_set_ztestenable(false);
+gpu_set_ztestenable(true);
 
 //vformat
 vertex_format_begin();
@@ -171,5 +171,5 @@ repeat(grass_number){
 
 vertex_end(vbuff);
 vertex_freeze(vbuff);
-if (bugfix) gpu_set_ztestenable(false);
+if (bugfix) gpu_set_ztestenable(true);
 #endregion

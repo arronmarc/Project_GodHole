@@ -1,12 +1,13 @@
 function init(){
-global.enemyfearmax = 100;
 gml_pragma("global", "init()");
+
+global.itemDescription = ds_map_create();
 
 #macro TRANSITION_SPEED 0.02
 #macro OUTT 0
 #macro INN 1
 
-#macro INV_SIZE 12
+#macro INV_SIZE 16
 
 #macro PLACING_GRID_SIZE 16
 
@@ -48,8 +49,9 @@ enum INVITEMS {
     CORN
 	}
 	
-	initItem(INVITEMS.APPLE, "Apple", sApple, [], undefined, 64);
-	initItem(INVITEMS.ORANGE, "Orange", sOrange, [], undefined, 64);
+	initItem(INVITEMS.APPLE, "Apple", sApple, [], undefined, 64, "A delicious red apple.");
+	initItem(INVITEMS.ORANGE, "Orange", sOrange, [], undefined, 64, "A juicy orange fruit.");
+
 	initItem(INVITEMS.WOOD, "Wood", sWood, [], undefined, 64);
 	
 	initItem(INVITEMS.STONE, "Stone", sStone, [], undefined, 64);

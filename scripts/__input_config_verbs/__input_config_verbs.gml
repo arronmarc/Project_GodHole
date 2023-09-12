@@ -33,6 +33,8 @@ return {
 		crouch: input_binding_key(vk_control),
 		light: input_binding_key("L"),
 		attack: input_binding_key("E"),
+		inventory: input_binding_key("I"),
+		crafting: input_binding_key("C"),
         
 		aim: input_binding_mouse_button(mb_right),
         shoot: input_binding_mouse_button(mb_left),

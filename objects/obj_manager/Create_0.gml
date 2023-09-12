@@ -7,6 +7,9 @@ global.targetX = -1;
 global.targetY = -1;
 global.targetDirection = 0;
 
+global.inventoryUpdated = false;
+
+
 light_created = false;
 
 invList = ds_list_create();
