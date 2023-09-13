@@ -182,95 +182,24 @@ self.draw_crafting = function(_destroy_preemptively=false) {
         _panel.setCloseButtonSprite(red_cross).setTitle("[fnt_text_24][c_white]CRAFTING").setTitleOffset({x:0, y:15}).setResizable(false);
 		
 		// Create grid with two rows, one column and 80%-20% proportions 
-        var _grid_meta = _panel.add(new UIGrid("MetaGrid", 2, 1));
-        _grid_meta.setRowProportions([0.8,0.2]).setMarginTop(_panel.getDragBarHeight());
+        var _grid_meta = _panel.add(new UIGrid("CraftingMetaGrid", 10, 1));
+        _grid_meta.setShowGridOverlay(true);;
 		
 		// Add inventory grid to upper part of meta-grid
-        var _rows = 4;
-        var _cols = 4;
+        var _rows = 10;
+        var _cols = 1;
 		var _grid = _grid_meta.addToCell(new UIGrid("CraftingGrid", _rows, _cols), 0, 0);
-		
-		// Add an UIText to display the item descriptions when they are hovered - for now set the default text
-		var _text = _grid_meta.addToCell(new UIText("ItemDescription", 0, 0, "[fnt_text_12][c_white]No item selected", UI_RELATIVE_TO.MIDDLE_CENTER), 1, 0);
-		
-		// Process and draw inventory - for each item, create the icon and set interaction
-		for (var _i=0, _n=_rows*_cols; _i<_n; _i++) {
-            var _col = _i % 4;
-            var _row = _i div 4;
-		    var _group = _grid.addToCell(new UIGroup("ItemGroup"+string(_i), 0, 0, 48, 48, spr_Slot, UI_RELATIVE_TO.MIDDLE_CENTER), _row, _col); 
 
-		    if (_i < ds_list_size(obj_manager.invList) && is_array(obj_manager.invList[| _i])) {
-				
-		        var _itemData = obj_manager.invList[| _i];
-        var _mainItem = _itemData[0]; // Rename here
+       //Add crafting options here
 
-        // Crafting Interaction on Mouse Press
-        _spr.setCallback(UI_EVENT.MOUSE_DOWN, method({_mainItem: _mainItem}, function() {
-            var _recipe = global.itemRecipe[_mainItem]; // Use renamed variable here
-            var _recipeSize = array_length_1d(_recipe);
 
-            var _canCraft = true;
-            for (var j = 0; j < _recipeSize; j++) {
-                var _ingr = _recipe[j];
-                var _item = _ingr[0]; // This remains the same
-                var _count = _ingr[1];
 
-                var _arr = inv_get_item_array(_item);
-                if (!is_array(_arr) || (_arr[1] < _count)) {
-                    _canCraft = false;
-                    break;
-                }
-            }
-
-            if (_canCraft) { 
-                craftAnim = 0.02; 
-                if (craftAnim >= 1) {
-                    craft_item(_mainItem); // Use renamed variable here
-                    craftAnim = 0;
-                }
-            }
-        }));
-
-        // Crafting Tooltip on Mouse Hover
-        _spr.setCallback(UI_EVENT.MOUSE_OVER, method({_sprKey: _sprKey}, function() {
-            var _recipe = global.itemRecipe[_sprKey];
-            var _recipeSize = array_length_1d(_recipe);
-            var _text = "";
-            for (var j = 0; j < _recipeSize; j++) {
-                var _ingr = _recipe[j];
-                var _item = _ingr[0];
-                var _count = _ingr[1];
-
-                var _itemName = global.itemName[_item];
-                _text += _itemName + " x" + string(_count) + " ";
-            }
-
-            if (UI.exists("ItemDescription")) UI.get("ItemDescription").setText("[fnt_text_12][c_white]" + _text);
-        }));
-
-        _spr.setCallback(UI_EVENT.MOUSE_EXIT, function() {
-            if (UI.exists("ItemDescription")) UI.get("ItemDescription").setText("[fnt_text_12][c_white]No item selected");
-        });
-    }
-}
-	}
-}
-// Crafting function
-function craft_item(_item) {
-    var _recipe = global.itemRecipe[_item];
-    var _recipeSize = array_length_1d(_recipe);
-
-    for (var j = 0; j < _recipeSize; j++) {
-        var _ingr = _recipe[j];
-        var _item = _ingr[0];
-        var _count = _ingr[1];
-
-        var _arr = inv_get_item_array(_item);
-        _arr[@ 1] -= _count;
-    }
+        
     
-    inv_add(_item, 1);
+	} 
 }
+
+
 	
 
 // Call this function when necessary
