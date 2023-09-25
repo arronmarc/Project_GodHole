@@ -1,6 +1,8 @@
 // Inherit the parent event of oButtonParent
 event_inherited();
 
+//Draw GUI event
+
 //Crafting animation
 if (craftAnim > 0) {
 	draw_rectangle(x, y, x + width * craftAnim, y + height, 0);

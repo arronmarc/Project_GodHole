@@ -1,7 +1,8 @@
 function showInventory(){
 
-obj_Game.paused = UI.exists("InventoryPanel");
-
+if (input_check_pressed("crafting")) {
+UI.exists("TestInventoryPanel");
+}
 var _panel = new UIPanel("Example", 20, 40, 400, 300, grey_panel);
 var _button = _panel.add(new UIButton("TestButton", 0, -60, 300, 50, "Button", blue_button00, UI_RELATIVE_TO.BOTTOM_CENTER));
 _panel.setCloseButtonSprite(green_cross);

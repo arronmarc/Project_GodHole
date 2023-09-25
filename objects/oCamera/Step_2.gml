@@ -108,7 +108,7 @@ if (shakeRemain > 0) {
 
 
 
-//Zooming
+#region Zooming
 var initialZoom = currentZoom;
 
 if (mouse_wheel_up()) {
@@ -150,6 +150,10 @@ var newCamX = camX;
 var newCamY = camY;
 var newCamW = camW;
 var newCamH = camH;
+
+#endregion
+
+
 
 // Apply screenshake if needed
 if (shakeRemain > 0) {

@@ -1,6 +1,4 @@
 /// @description Craft item
-
-//User event 0
 //get recipe
 var _recipe = global.itemRecipe[item];
 var _recipeSize = array_length_1d(_recipe);

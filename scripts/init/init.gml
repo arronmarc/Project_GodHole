@@ -7,7 +7,7 @@ global.itemDescription = ds_map_create();
 #macro OUTT 0
 #macro INN 1
 
-#macro INV_SIZE 16
+#macro INV_SIZE 30
 
 #macro PLACING_GRID_SIZE 16
 
@@ -59,30 +59,30 @@ enum INVITEMS {
 	
 	initItem(INVITEMS.POTION, "Potion", sPotion, [
 		[INVITEMS.APPLE, 2]
-	], undefined, 64);
+	], undefined, 64, "Restores 20 health.");
 	initItem(INVITEMS.SYRUP, "Syrup", sSyrup, [
 		[INVITEMS.ORANGE, 1],
 		[INVITEMS.APPLE, 1]
-	], undefined, 64);
+	], undefined, 64, "Restores 20 mana.");
 	initItem(INVITEMS.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
 		[INVITEMS.WOOD, 2]
-	], oWoodBlock, 64);
+	], oWoodBlock, 64, "A wood wall.");
 	
 	initItem(INVITEMS.BLOCK_IRON, "Iron Block", sBlock_Iron, [
 	[INVITEMS.IRON, 2]
-	], oIronBlock, 64);
+	], oIronBlock, 64, "An iron wall.");
 	
 	initItem(INVITEMS.BLOCK_WALL, "Wall Block", sBlock_Wall, [
 	[INVITEMS.STONE, 2]
-	], wall_obj,64);
+	], wall_obj,64, "A stone wall.");
 	
 	initItem(INVITEMS.WOODEN_CHEST, "Wooden Chest", sWoodenChest, [
 	[INVITEMS.WOOD, 3]
-	], oWoodenChest, 64);
+	], oWoodenChest, 64, "Wooden chest with 8 slots.");
 	
 	initItem(INVITEMS.WOODEN_CHEST_LARGE, "Large Wooden Chest", sWoodenChestLarge, [
 	[INVITEMS.WOOD, 6]
-	], oWoodenChestLarge, 64);
+	], oWoodenChestLarge, 64, "Wooden chest with 12 slots.");
 	
 	initItem(INVITEMS.TOMATO_SEED, "Tomato Seed", sTomatoSeed, [], oTomato, 64);
     initItem(INVITEMS.TOMATO, "Tomato", sTomato, [], undefined, 64);
@@ -108,7 +108,6 @@ enum INVITEMS {
 
 //Crafting menu
 global.craftingMenu = [
-"CRAFTING",
 "Stats",
 INVITEMS.POTION,
 INVITEMS.SYRUP,

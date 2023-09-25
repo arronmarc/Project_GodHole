@@ -1,3 +1,5 @@
+//Step event
+
 // Check if the inventory is full
 var _held = hover && input_check("shoot");
 
