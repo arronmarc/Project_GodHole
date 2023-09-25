@@ -71,8 +71,3 @@ if (current_delay == 0) && (projectile != -1) && (input_check("aim")) && (input_
 current_delay = max(-1,current_delay-1);
 if (current_delay == -1) current_cd = max(0,current_cd-1);
 current_recoil = max(0,floor(current_recoil*0.005));
-
-if (input_check_pressed("weapon1") && ammo[1] > 0) ChangeWeapon(1);
-if (input_check_pressed("weapon2") && ammo[2] > 0) ChangeWeapon(2);
-if (input_check_pressed("weapon4") && ammo[4] > 0) ChangeWeapon(4);
-if input_check_pressed("weapon0") ChangeWeapon(0);

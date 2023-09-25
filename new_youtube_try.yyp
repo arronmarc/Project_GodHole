@@ -1059,6 +1059,7 @@
     {"id":{"name":"input_player_ghost_set","path":"scripts/input_player_ghost_set/input_player_ghost_set.yy",},},
     {"id":{"name":"scribble_font_scale","path":"scripts/scribble_font_scale/scribble_font_scale.yy",},},
     {"id":{"name":"input_binding_gamepad_get","path":"scripts/input_binding_gamepad_get/input_binding_gamepad_get.yy",},},
+    {"id":{"name":"spr_SlotSelected","path":"sprites/spr_SlotSelected/spr_SlotSelected.yy",},},
     {"id":{"name":"red_button13","path":"sprites/red_button13/red_button13.yy",},},
     {"id":{"name":"fun_alphaCorrection","path":"scripts/fun_alphaCorrection/fun_alphaCorrection.yy",},},
     {"id":{"name":"sCarrot","path":"sprites/sCarrot/sCarrot.yy",},},

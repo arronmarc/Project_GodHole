@@ -1,6 +1,7 @@
 // Inherit the parent event of oButtonParent
 event_inherited();
 
+//Draw GUI event
 //Get array from slot list
 var _list = list;
 var _arr = _list[| slotID];

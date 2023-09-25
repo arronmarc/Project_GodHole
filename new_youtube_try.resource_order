@@ -927,6 +927,7 @@
     {"name":"oTree","order":1,"path":"objects/oTree/oTree.yy",},
     {"name":"input_player_ghost_set","order":10,"path":"scripts/input_player_ghost_set/input_player_ghost_set.yy",},
     {"name":"scribble_font_scale","order":13,"path":"scripts/scribble_font_scale/scribble_font_scale.yy",},
+    {"name":"spr_SlotSelected","order":152,"path":"sprites/spr_SlotSelected/spr_SlotSelected.yy",},
     {"name":"red_button13","order":115,"path":"sprites/red_button13/red_button13.yy",},
     {"name":"fun_alphaCorrection","order":3,"path":"scripts/fun_alphaCorrection/fun_alphaCorrection.yy",},
     {"name":"sCarrot","order":6,"path":"sprites/sCarrot/sCarrot.yy",},

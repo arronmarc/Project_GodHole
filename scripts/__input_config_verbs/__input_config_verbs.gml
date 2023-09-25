@@ -32,9 +32,10 @@ return {
 		roll: input_binding_key(vk_space),
 		crouch: input_binding_key(vk_control),
 		light: input_binding_key("L"),
-		attack: input_binding_key("E"),
+		attack: input_binding_key("F"),
 		inventory: input_binding_key("I"),
 		crafting: input_binding_key("C"),
+		use: input_binding_key("E"),
         
 		aim: input_binding_mouse_button(mb_right),
         shoot: input_binding_mouse_button(mb_left),

@@ -1,17 +1,11 @@
 function GiveSelfItems(){
     var items = [
+		INVITEMS.WEAPON_AR,
+		INVITEMS.WEAPON_RIFLE,
+		INVITEMS.WEAPON_SHOTGUN,
         INVITEMS.APPLE,
         INVITEMS.ORANGE,
-        INVITEMS.WOOD,
-        INVITEMS.STONE,
         INVITEMS.IRON,
-        INVITEMS.BLOCK_WOOD,
-        INVITEMS.BLOCK_IRON,
-        INVITEMS.BLOCK_WALL,
-		INVITEMS.WOODEN_CHEST,
-		INVITEMS.WOODEN_CHEST_LARGE,
-		INVITEMS.CARROT_SEED,
-		INVITEMS.TOMATO_SEED
     ];
 
     for(var i = 0; i < array_length_1d(items); i++) {

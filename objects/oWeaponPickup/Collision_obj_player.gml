@@ -1,3 +1,4 @@
+/*
 with (oWeapon) 
 {
 	ChangeWeapon(other.weapon);

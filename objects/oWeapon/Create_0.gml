@@ -54,6 +54,11 @@ weapon = 0;
 ammo[array_length_1d(weapons)-1] = 0;
 ammo[0] = -1;
 
+ammo[1] += 500;
+ammo[2] += 500;
+ammo[3] += 500;
+ammo[4] += 500;
+
 ChangeWeapon(0);
 
 //Current cooldown

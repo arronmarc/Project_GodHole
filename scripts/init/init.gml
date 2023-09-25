@@ -2,6 +2,7 @@ function init(){
 gml_pragma("global", "init()");
 
 global.itemDescription = ds_map_create();
+global.weaponAttachments = ds_map_create();
 
 #macro TRANSITION_SPEED 0.02
 #macro OUTT 0
@@ -26,6 +27,10 @@ enum INVITEMS {
 	BLOCK_WALL,
 	WOODEN_CHEST,
 	WOODEN_CHEST_LARGE,
+	
+	WEAPON_AR,
+	WEAPON_RIFLE,
+	WEAPON_SHOTGUN,
 	
 	TOMATO_SEED,
     TOMATO,
@@ -60,10 +65,12 @@ enum INVITEMS {
 	initItem(INVITEMS.POTION, "Potion", sPotion, [
 		[INVITEMS.APPLE, 2]
 	], undefined, 64, "Restores 20 health.");
+	
 	initItem(INVITEMS.SYRUP, "Syrup", sSyrup, [
 		[INVITEMS.ORANGE, 1],
 		[INVITEMS.APPLE, 1]
 	], undefined, 64, "Restores 20 mana.");
+	
 	initItem(INVITEMS.BLOCK_WOOD, "Wood Block", sBlock_Wood, [
 		[INVITEMS.WOOD, 2]
 	], oWoodBlock, 64, "A wood wall.");
@@ -83,6 +90,21 @@ enum INVITEMS {
 	initItem(INVITEMS.WOODEN_CHEST_LARGE, "Large Wooden Chest", sWoodenChestLarge, [
 	[INVITEMS.WOOD, 6]
 	], oWoodenChestLarge, 64, "Wooden chest with 12 slots.");
+	
+	initItem(INVITEMS.WEAPON_AR, "An AR15", sWP_Plasma, [
+	[INVITEMS.IRON, 6]
+	], undefined, 64, "An AR15 that shoots stuff.");
+	global.weaponAttachments[? INVITEMS.WEAPON_AR] = "Gun2";
+	
+	initItem(INVITEMS.WEAPON_RIFLE, "A rifle", sWP_AR, [
+	[INVITEMS.IRON, 6]
+	], undefined, 64, "A rifle that shoots stuff.");
+	global.weaponAttachments[? INVITEMS.WEAPON_RIFLE] = "Gun";
+	
+	initItem(INVITEMS.WEAPON_SHOTGUN, "A shotgun", sWP_Shotgun, [
+	[INVITEMS.IRON, 6]
+	], undefined, 64, "A shotgun that shoots stuff.");
+	global.weaponAttachments[? INVITEMS.WEAPON_SHOTGUN] = "Shotgun";
 	
 	initItem(INVITEMS.TOMATO_SEED, "Tomato Seed", sTomatoSeed, [], oTomato, 64);
     initItem(INVITEMS.TOMATO, "Tomato", sTomato, [], undefined, 64);
@@ -117,10 +139,14 @@ INVITEMS.BLOCK_WOOD,
 INVITEMS.BLOCK_IRON,
 INVITEMS.BLOCK_WALL,
 
+"Weapons",
+INVITEMS.WEAPON_AR,
+INVITEMS.WEAPON_RIFLE,
+INVITEMS.WEAPON_SHOTGUN,
+
 "Chests",
 INVITEMS.WOODEN_CHEST,
 INVITEMS.WOODEN_CHEST_LARGE
 
 ];
-
 }

@@ -9,8 +9,9 @@ global.targetDirection = 0;
 
 global.inventoryUpdated = false;
 
-global.selectedCraftingItem = -1; // assuming -1 means no item selected
+global.selectedCraftingItem = -1;
 
+global.selectedSlot = 0;  
 
 light_created = false;
 

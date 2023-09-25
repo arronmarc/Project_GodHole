@@ -48,6 +48,7 @@ self.draw_inventory = function(_destroy_preemptively=false) {
 				
 				
 				#region USING ITEMS
+
 				//Use item
 				_spr.setCallback(UI_EVENT.LEFT_CLICK, method({_i: _i}, function() {
 				    var _arr = obj_manager.invList[| _i];

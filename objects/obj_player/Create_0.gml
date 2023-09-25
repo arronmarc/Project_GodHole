@@ -23,7 +23,7 @@ timer = 0;
 state = PlayerStateFree;
 
 skeleton_skin_set("Human");
-skeleton_attachment_set("Weapon", "Gun");
+global.currentWeaponAttachment = "Unarmed";
 
 SmoothAnimTrans()
 
