@@ -450,6 +450,7 @@
     {"name":"r_demo2","order":6,"path":"rooms/r_demo2/r_demo2.yy",},
     {"name":"__ppf_system","order":6,"path":"scripts/__ppf_system/__ppf_system.yy",},
     {"name":"yellow_button07","order":135,"path":"sprites/yellow_button07/yellow_button07.yy",},
+    {"name":"CreateEquipmentUI","order":7,"path":"scripts/CreateEquipmentUI/CreateEquipmentUI.yy",},
     {"name":"sWP_AR","order":5,"path":"sprites/sWP_AR/sWP_AR.yy",},
     {"name":"draw_lightSources","order":1,"path":"scripts/draw_lightSources/draw_lightSources.yy",},
     {"name":"input_gamepad_get_map","order":6,"path":"scripts/input_gamepad_get_map/input_gamepad_get_map.yy",},

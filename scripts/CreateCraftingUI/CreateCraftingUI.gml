@@ -16,7 +16,7 @@ self.draw_crafting = function(_destroy_preemptively=false) {
 
         var _infoGroup = _grid_meta.addToCell(new UIGroup("InfoGroup", 0, 0, 100, 100, noone, UI_RELATIVE_TO.TOP_LEFT), 0, 1);
         _infoGroup.add(new UIText("ItemName", 100, 20, "[fnt_text_24][c_white]Name:", UI_RELATIVE_TO.TOP_LEFT));
-        _infoGroup.add(new UIText("ItemDescription", 100, 60, "[fnt_text_18][c_white]Description:", UI_RELATIVE_TO.TOP_LEFT));
+        _infoGroup.add(new UIText("CraftingItemDescription", 100, 60, "[fnt_text_18][c_white]Description:", UI_RELATIVE_TO.TOP_LEFT));
         _infoGroup.add(new UIText("ItemRecipe", 100, 110, "[fnt_text_18][c_white]Required Items:", UI_RELATIVE_TO.TOP_LEFT));
 		
 		// Button
@@ -80,7 +80,7 @@ self.draw_crafting = function(_destroy_preemptively=false) {
 
                     // Now update the UI
                     UI.get("ItemName").setText("[fnt_text_24][c_white]" + itemName);
-                    UI.get("ItemDescription").setText("[fnt_text_18][c_white]" + itemDesc);
+                    UI.get("CraftingItemDescription").setText("[fnt_text_18][c_white]" + itemDesc);
                     UI.get("ItemRecipe").setText("[fnt_text_18][c_white]Required Items:\n" + recipeStr);
 					
 					global.selectedCraftingItem = _item;
@@ -105,7 +105,7 @@ self.draw_crafting = function(_destroy_preemptively=false) {
             }
 
             UI.get("ItemName").setText("[fnt_text_24][c_white]" + itemName);
-            UI.get("ItemDescription").setText("[fnt_text_18][c_white]" + itemDesc);
+            UI.get("CraftingItemDescription").setText("[fnt_text_18][c_white]" + itemDesc);
             UI.get("ItemRecipe").setText("[fnt_text_18][c_white]Required Items:\n" + recipeStr);
         }
     } else {

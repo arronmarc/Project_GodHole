@@ -35,6 +35,7 @@ return {
 		attack: input_binding_key("F"),
 		inventory: input_binding_key("I"),
 		crafting: input_binding_key("C"),
+		equipment: input_binding_key("U"),
 		use: input_binding_key("E"),
         
 		aim: input_binding_mouse_button(mb_right),

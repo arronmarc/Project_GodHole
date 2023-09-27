@@ -28,7 +28,7 @@ self.draw_inventory = function(_destroy_preemptively=false) {
             var _row = _i div 10;
 		    var _group = _grid.addToCell(new UIGroup("ItemGroup"+string(_i), 0, 0, 48, 48, spr_Slot, UI_RELATIVE_TO.MIDDLE_CENTER), _row, _col); 
 
-		    if (_i < ds_list_size(obj_manager.invList) && is_array(obj_manager.invList[| _i])) {
+		    if (_i < ds_list_size(obj_manager.invList) && is_array(obj_manager.invList[| _i]) && _i != global.invSelectedSlot) {
 				
 		        var _itemData = obj_manager.invList[| _i];
 		        var _sprKey = _itemData[0];
@@ -45,6 +45,7 @@ self.draw_inventory = function(_destroy_preemptively=false) {
 	            _spr.setCallback(UI_EVENT.MOUSE_EXIT, function() {
 	                if (UI.exists("ItemDescription")) UI.get("ItemDescription").setText("[fnt_text_18][c_white]No item selected");
 	            });
+				
 				
 				
 				#region USING ITEMS
@@ -153,6 +154,39 @@ self.draw_inventory = function(_destroy_preemptively=false) {
 					gooeyUI.draw_inventory(true);
 	            }));
 				
+				// Picking up the item
+				_spr.setCallback(UI_EVENT.LEFT_HOLD, method({_i: _i}, function() {
+				    if (global.invSelectedSlot == -1) {
+					    global.invSelectedSlot = _i;
+					    var _itemData = obj_manager.invList[| _i];
+					    global.draggedItemSprite = global.itemSprite[_itemData[0]];
+					    global.draggedItemQuantity = _itemData[1];
+					}
+				}));
+
+			    // Dropping the item
+			    _spr.setCallback(UI_EVENT.LEFT_RELEASE, method({_i: _i}, function() {
+			        if (global.invSelectedSlot != -1 && global.invSelectedSlot != _i) {
+			            // If another slot was already selected
+			            global.targetSlot = _i;
+            
+			            // Swapping the items
+			            swapSlots(global.invSelectedSlot, global.targetSlot);
+
+			            // Resetting the selection
+			            global.invSelectedSlot = -1;
+			            global.targetSlot = -1;
+            
+			            gooeyUI.draw_inventory(true);
+			        } else if(global.invSelectedSlot == _i) {
+			            // If we released on the same slot, just reset the selection
+			            global.invSelectedSlot = -1;
+			        }
+					global.draggedItemSprite = -1;
+				global.draggedItemQuantity = 0;
+			    }));
+	
+	
             }
         }
     }
@@ -166,4 +200,16 @@ self.draw_inventory = function(_destroy_preemptively=false) {
 if (input_check_pressed("inventory")) {
     self.draw_inventory();
 }
+}
+
+
+function swapSlots(source, dest) {
+    // If source or dest is out of bounds or the same, just return
+    if (source == dest || source < 0 || dest < 0 || source >= ds_list_size(obj_manager.invList) || dest >= ds_list_size(obj_manager.invList)) {
+        return;
+    }
+    
+    var tempItem = obj_manager.invList[| source];
+    obj_manager.invList[| source] = obj_manager.invList[| dest];
+    obj_manager.invList[| dest] = tempItem;
 }

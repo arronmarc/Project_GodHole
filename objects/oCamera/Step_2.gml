@@ -1,11 +1,9 @@
-// oCamera end step event
-
 if (!global.pause) {
 // Get current camera position
-var camX = camera_get_view_x(camera);
-var camY = camera_get_view_y(camera);
-var camW = camera_get_view_width(camera);
-var camH = camera_get_view_height(camera);
+var camX = camera_get_view_x(global.camera);
+var camY = camera_get_view_y(global.camera);
+var camW = camera_get_view_width(global.camera);
+var camH = camera_get_view_height(global.camera);
 
 var innerBound = 250; // This is the distance from the actual boundary where the camera will start moving
 var leftBound = camX + innerBound;
@@ -86,38 +84,6 @@ else if (obj_player.y > bottomBound)
 }
 
 // Lerp and other functions to smoothen the camera movement
-    var lerpSpeed = 0.05; 
-    camX = lerp(camX, targetX, lerpSpeed);
-    camY = lerp(camY, targetY, lerpSpeed);
-
-    // Clamp the camera to room bounds
-    camX = clamp(camX, 0, room_width - camW);
-    camY = clamp(camY, 0, room_height - camH);
-
-    // Apply screenshake if needed (keep it only once in the code, so removing the second occurrence)
-    if (shakeRemain > 0) {
-        var dir = point_direction(obj_player.x, obj_player.y, crosshair.x, crosshair.y) + 180; // Opposite direction of mouse
-        var recoilX = lengthdir_x(shakeRemain, dir);
-        var recoilY = lengthdir_y(shakeRemain, dir);
-        camX += recoilX;
-        camY += recoilY;
-        shakeRemain = max(0, shakeRemain - ((1/shakeLength) * shakeMagnitude));
-    }
-
-    // Clamp the camera position to room bounds
-    camX = clamp(camX, 0, room_width - camW);
-    camY = clamp(camY, 0, room_height - camH);
-
-    // Apply camera position and size after all calculations and clamping
-    camera_set_view_pos(camera, camX, camY);
-    camera_set_view_size(camera, camW, camH);
-
-
-}
-
-/* Code with camera zooming
-
-// Lerp and other functions to smoothen the camera movement
 var lerpSpeed = 0.05; 
 camX = lerp(camX, targetX, lerpSpeed);
 camY = lerp(camY, targetY, lerpSpeed);
@@ -145,31 +111,16 @@ var initialZoom = currentZoom;
 
 if (mouse_wheel_up()) {
     currentZoom -= 0.1;
-    currentZoom = clamp(currentZoom, 0.1, 2.0);
+    currentZoom = clamp(currentZoom, 0.1, 1.0);
 }
 else if (mouse_wheel_down()) {
     currentZoom += 0.1;
-    currentZoom = clamp(currentZoom, 0.1, 2.0);
+    currentZoom = clamp(currentZoom, 0.1, 1.0);
 }
 
-// Clamp the zoom level to a reasonable range
-currentZoom = clamp(currentZoom, 0.1, 2.0); // Adjust the range as needed
-
-var zoomChange = currentZoom - initialZoom;
-
-// Adjust the target position based on zoom change
-targetX -= (zoomChange * RES_W / 2);
-targetY -= (zoomChange * RES_H / 2);
-
-if (currentZoom > initialZoom) {
-    // If zooming in, ensure the target position stays centered on the player
-    targetX = obj_player.x - RES_W / 2;
-    targetY = obj_player.y - RES_H / 2;
-}
-
-// Lerp and other functions to smoothen the camera movement
-camX = lerp(camX, targetX, lerpSpeed);
-camY = lerp(camY, targetY, lerpSpeed);
+// Regardless of the zoom level, set the camera to be centered on the player.
+targetX = obj_player.x - (RES_W * focusZoom * currentZoom) / 2;
+targetY = obj_player.y - (RES_H * focusZoom * currentZoom) / 2;
 
 targetW = RES_W * focusZoom * currentZoom;
 targetH = RES_H * focusZoom * currentZoom;
@@ -178,11 +129,10 @@ camW = lerp(camW, targetW, CAM_SMOOTH);
 camH = lerp(camH, targetH, CAM_SMOOTH);
 
 // Calculate camera position and size before clamping
-var newCamX = camX;
-var newCamY = camY;
+var newCamX = lerp(camX, targetX, lerpSpeed);
+var newCamY = lerp(camY, targetY, lerpSpeed);
 var newCamW = camW;
 var newCamH = camH;
-
 #endregion
 
 
@@ -202,6 +152,7 @@ newCamX = clamp(newCamX, 0, room_width - newCamW);
 newCamY = clamp(newCamY, 0, room_height - newCamH);
 
 // Apply camera position and size after all calculations and clamping
-camera_set_view_pos(camera, newCamX, newCamY);
-camera_set_view_size(camera, newCamW, newCamH);
-*/
+camera_set_view_pos(global.camera, newCamX, newCamY);
+camera_set_view_size(global.camera, newCamW, newCamH);
+
+}

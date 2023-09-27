@@ -518,6 +518,7 @@
     {"id":{"name":"r_demo2","path":"rooms/r_demo2/r_demo2.yy",},},
     {"id":{"name":"__ppf_system","path":"scripts/__ppf_system/__ppf_system.yy",},},
     {"id":{"name":"yellow_button07","path":"sprites/yellow_button07/yellow_button07.yy",},},
+    {"id":{"name":"CreateEquipmentUI","path":"scripts/CreateEquipmentUI/CreateEquipmentUI.yy",},},
     {"id":{"name":"sWP_AR","path":"sprites/sWP_AR/sWP_AR.yy",},},
     {"id":{"name":"draw_lightSources","path":"scripts/draw_lightSources/draw_lightSources.yy",},},
     {"id":{"name":"input_gamepad_get_map","path":"scripts/input_gamepad_get_map/input_gamepad_get_map.yy",},},

@@ -1,16 +1,3 @@
-//Crafting animation
-if (craftAnim > 0) {
-	craftAnim += 0.02;
-	
-	if (craftAnim >= 1) {
-		event_user(0);
-		craftAnim = 0;
-	}
-}
-else {
-	craftAnim = 0;
-}
-
 // Update weapon attachment 
 if (global.selectedSlot < ds_list_size(obj_manager.invList)) {
     var _arr = obj_manager.invList[| global.selectedSlot];
@@ -30,13 +17,12 @@ if (global.selectedSlot < ds_list_size(obj_manager.invList)) {
 
 
 
-if (keyboard_check_pressed(ord("E")) && global.selectedSlot < ds_list_size(obj_manager.invList)) {
+if (input_check_pressed("use") && global.selectedSlot < ds_list_size(obj_manager.invList)) {
 					
 					var _arr = obj_manager.invList[| global.selectedSlot];
 
 				    if (is_array(_arr)) {
 				        var _item = _arr[0];
-				        var _count = _arr[1];
 				        var _used = false;
 
 				        switch (_item) {

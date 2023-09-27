@@ -22,12 +22,12 @@ camXSpeed = 0;
 camYSpeed = 0;
 
 //Create camera
-camera = camera_create_view(0, 0, RES_W, RES_H);
+global.camera = camera_create_view(0, 0, RES_W, RES_H);
 
-view_set_camera(0, camera);
+view_set_camera(0, global.camera);
 
-viewWidthHalf = camera_get_view_width(camera) * 0.5;
-viewHeightHalf = camera_get_view_height(camera) * 0.5;
+viewWidthHalf = camera_get_view_width(global.camera) * 0.5;
+viewHeightHalf = camera_get_view_height(global.camera) * 0.5;
 
 //Resize window & application surface
 window_set_size(RES_W * RES_SCALE, RES_H * RES_SCALE);
